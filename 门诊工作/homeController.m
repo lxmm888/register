@@ -6,8 +6,9 @@
 //  Copyright © 2017年 Xuan. All rights reserved.
 //
 #import "regView.h"
-#import "homeController.h"
-
+#import "homeController.h"//
+#import "LXSegment.h"
+#import "desView.h"
 @interface homeController ()
 
 @end
@@ -35,27 +36,36 @@
     border.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:border];
     
-    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[@"预约挂号",@"医院简介"]];
-    seg.frame = CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width-10, 44);
-//    seg.backgroundColor = [UIColor whiteColor];
-    seg.tintColor=[UIColor magentaColor];
-    [seg setSelectedSegmentIndex:0];
-    [seg addTarget:self action:@selector(segAction:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:seg];
     
     
-    
-    
+    LXSegment *seg = [[LXSegment alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width, 44)];
     choosenRect = CGRectMake(0, CGRectGetMaxY(seg.frame), self.view.width, self.view.height - 44 - CGRectGetMaxY(seg.frame));
     
     rView = [[regView alloc] initWithFrame:choosenRect];
-//    rView.backgroundColor = [UIColor blueColor];
     [self.view addSubview:rView];
     
     lView=[[UIView alloc]initWithFrame:rView.frame];
     lView.backgroundColor=[UIColor cyanColor];
     [self.view addSubview:lView];
     lView.hidden=!rView.hidden;
+
+    NSDictionary *dic1 = [NSDictionary dictionaryWithObject:rView forKey:@"预约挂号"];
+    NSDictionary *dic2 = [NSDictionary dictionaryWithObject:lView forKey:@"医院简介"];
+    NSArray *arr = @[dic1,dic2];
+    [seg addViewAndTitleWithArray:arr];
+    [self.view addSubview:seg];
+    
+//    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[@"预约挂号",@"医院简介"]];
+//    seg.frame = CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width, 44);
+////    seg.backgroundColor = [UIColor whiteColor];
+////    seg.tintColor=[UIColor magentaColor];
+//    [seg setSelectedSegmentIndex:0];
+//    [seg addTarget:self action:@selector(segAction:) forControlEvents:UIControlEventValueChanged];
+//    [self.view addSubview:seg];
+    
+    
+    
+    
     
     
 //    UIView *segView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width, 44)];

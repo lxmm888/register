@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DF04804F1E6FA0380058FC86 /* LXSegment.m */; };
+		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
 		DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11141E6CF44B00405BDF /* AppDelegate.m */; };
 		DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9E11191E6CF44B00405BDF /* Main.storyboard */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF04804E1E6FA0380058FC86 /* LXSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSegment.h; sourceTree = "<group>"; };
+		DF04804F1E6FA0380058FC86 /* LXSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSegment.m; sourceTree = "<group>"; };
+		DF0480511E6FB5760058FC86 /* DepartmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DepartmentList.plist; sourceTree = "<group>"; };
 		DF9E110D1E6CF44B00405BDF /* 门诊工作.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "门诊工作.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9E11111E6CF44B00405BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF9E11131E6CF44B00405BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -124,6 +129,8 @@
 				DF9E11521E6CFC2D00405BDF /* tab.m */,
 				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
 				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
+				DF04804E1E6FA0380058FC86 /* LXSegment.h */,
+				DF04804F1E6FA0380058FC86 /* LXSegment.m */,
 				DF9E11191E6CF44B00405BDF /* Main.storyboard */,
 				DF9E111C1E6CF44B00405BDF /* Assets.xcassets */,
 				DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */,
@@ -131,6 +138,7 @@
 				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
 				DF9E114B1E6CF54D00405BDF /* UIView+Extension.h */,
 				DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */,
+				DF0480511E6FB5760058FC86 /* DepartmentList.plist */,
 				DF9E11101E6CF44B00405BDF /* Supporting Files */,
 			);
 			path = "门诊工作";
@@ -280,6 +288,7 @@
 			files = (
 				DF9E11201E6CF44B00405BDF /* LaunchScreen.storyboard in Resources */,
 				DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */,
+				DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */,
 				DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +322,7 @@
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
 				DF9E11121E6CF44B00405BDF /* main.m in Sources */,
 				DF9E11531E6CFC2D00405BDF /* tab.m in Sources */,
+				DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
