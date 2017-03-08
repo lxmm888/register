@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "classModel.h"
 
 @interface regView : UIView
+@property (nonatomic, strong) void(^btnBlock)(id object);
 
+@end
+
+@interface MyButton : UIButton
+@property (nonatomic,strong) classModel* m;
 @end

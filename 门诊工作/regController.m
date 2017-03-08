@@ -1,29 +1,28 @@
 //
-//  tab.m
+//  regController.m
 //  门诊工作
 //
-//  Created by Xuan on 2017/3/6.
+//  Created by Xuan on 2017/3/8.
 //  Copyright © 2017年 Xuan. All rights reserved.
 //
 
-#import "tab.h"
-#import "homeController.h"
-#import "LXNav.h"
+#import "regController.h"
 
-@interface tab ()
+@interface regController ()
 
 @end
 
-@implementation tab
+@implementation regController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    homeController *home = [homeController new];
-//    [home.tabBarItem setImage:[UIImage imageNamed:@"1"]];
-    LXNav* nav=[[LXNav alloc]initWithRootViewController:home];
-    [self addChildViewController:nav];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
+}
+
+- (void)setClassDoctor:(NSArray *)classDoctor
+{
+    _classDoctor = classDoctor;
 }
 
 - (void)didReceiveMemoryWarning {

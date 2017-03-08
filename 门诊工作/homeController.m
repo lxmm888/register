@@ -9,6 +9,7 @@
 #import "homeController.h"//
 #import "LXSegment.h"
 #import "desView.h"
+#import "LXBorder.h"
 @interface homeController ()
 
 @end
@@ -30,18 +31,40 @@
     CGFloat topViewH = 60;
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, topViewH)];
     topView.backgroundColor = [UIColor whiteColor];
+    UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1"]];
+    iconView.frame = CGRectMake(20, 20, 40, 40);
+    iconView.center = CGPointMake(40, topView.height * 0.5);
+    iconView.layer.masksToBounds = YES;
+    iconView.layer.cornerRadius = 20;
+    [topView addSubview:iconView];
     [self.view addSubview:topView];
     
-    UIView *border = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), self.view.width, 10)];
-    border.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:border];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 20, CGRectGetMinY(iconView.frame), 200, 20)];
+    label.text = @"K322全科医院";
+    [topView addSubview:label];
+    
+    UILabel *detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(label.x, CGRectGetMaxY(label.frame), 100, 20)];
+    detailLabel.text = @"三级丙等";
+    detailLabel.textColor = [UIColor lightGrayColor];
+    [detailLabel setFont:[UIFont systemFontOfSize:13]];
+    [topView addSubview:detailLabel];
+    
+    LXBorder *border1 = [[LXBorder alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), self.view.width, 10)];
+
+    [self.view addSubview:border1];
     
     
     
-    LXSegment *seg = [[LXSegment alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width, 44)];
+    LXSegment *seg = [[LXSegment alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(border1.frame), self.view.width, 44)];
     choosenRect = CGRectMake(0, CGRectGetMaxY(seg.frame), self.view.width, self.view.height - 44 - CGRectGetMaxY(seg.frame));
     
     rView = [[regView alloc] initWithFrame:choosenRect];
+    __weak typeof (self) ws=self;
+    rView.btnBlock=^(id obj){
+        if ([obj isKindOfClass:[UIViewController class]]) {
+            [ws.navigationController pushViewController:obj animated:YES];
+        }
+    };
     [self.view addSubview:rView];
     
     lView=[[UIView alloc]initWithFrame:rView.frame];
@@ -54,6 +77,9 @@
     NSArray *arr = @[dic1,dic2];
     [seg addViewAndTitleWithArray:arr];
     [self.view addSubview:seg];
+    
+    LXBorder *border2 = [[LXBorder alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(seg.frame), self.view.width, 2)];
+    [self.view addSubview:border2];
     
 //    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[@"预约挂号",@"医院简介"]];
 //    seg.frame = CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width, 44);

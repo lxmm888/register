@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DF04804F1E6FA0380058FC86 /* LXSegment.m */; };
 		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
+		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
 		DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11141E6CF44B00405BDF /* AppDelegate.m */; };
 		DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9E11191E6CF44B00405BDF /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E114F1E6CFAB200405BDF /* LXNav.m */; };
 		DF9E11531E6CFC2D00405BDF /* tab.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11521E6CFC2D00405BDF /* tab.m */; };
 		DFC123131E6F9C0700C6D82B /* desView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC123121E6F9C0700C6D82B /* desView.m */; };
+		DFD056311E6FC2660015D7E6 /* departModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056301E6FC2660015D7E6 /* departModel.m */; };
+		DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056341E6FC6A60015D7E6 /* classModel.m */; };
+		DFD056391E6FD2FD0015D7E6 /* LXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056381E6FD2FD0015D7E6 /* LXBorder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 		DF04804E1E6FA0380058FC86 /* LXSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSegment.h; sourceTree = "<group>"; };
 		DF04804F1E6FA0380058FC86 /* LXSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSegment.m; sourceTree = "<group>"; };
 		DF0480511E6FB5760058FC86 /* DepartmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DepartmentList.plist; sourceTree = "<group>"; };
+		DF32CDF31E70067900BF2D58 /* regController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regController.h; sourceTree = "<group>"; };
+		DF32CDF41E70067900BF2D58 /* regController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regController.m; sourceTree = "<group>"; };
 		DF9E110D1E6CF44B00405BDF /* 门诊工作.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "门诊工作.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9E11111E6CF44B00405BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF9E11131E6CF44B00405BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +78,12 @@
 		DF9E11521E6CFC2D00405BDF /* tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tab.m; sourceTree = "<group>"; };
 		DFC123111E6F9C0700C6D82B /* desView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desView.h; sourceTree = "<group>"; };
 		DFC123121E6F9C0700C6D82B /* desView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = desView.m; sourceTree = "<group>"; };
+		DFD0562F1E6FC2660015D7E6 /* departModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = departModel.h; sourceTree = "<group>"; };
+		DFD056301E6FC2660015D7E6 /* departModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = departModel.m; sourceTree = "<group>"; };
+		DFD056331E6FC6A60015D7E6 /* classModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classModel.h; sourceTree = "<group>"; };
+		DFD056341E6FC6A60015D7E6 /* classModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classModel.m; sourceTree = "<group>"; };
+		DFD056371E6FD2FD0015D7E6 /* LXBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBorder.h; sourceTree = "<group>"; };
+		DFD056381E6FD2FD0015D7E6 /* LXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBorder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF32CDF21E70066100BF2D58 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF9E11431E6CF47C00405BDF /* homeController.h */,
+				DF9E11441E6CF47C00405BDF /* homeController.m */,
+				DF32CDF31E70067900BF2D58 /* regController.h */,
+				DF32CDF41E70067900BF2D58 /* regController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 		DF9E11041E6CF44B00405BDF = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +147,8 @@
 			children = (
 				DF9E11131E6CF44B00405BDF /* AppDelegate.h */,
 				DF9E11141E6CF44B00405BDF /* AppDelegate.m */,
+				DFD056371E6FD2FD0015D7E6 /* LXBorder.h */,
+				DFD056381E6FD2FD0015D7E6 /* LXBorder.m */,
 				DF9E11461E6CF48300405BDF /* home */,
 				DF9E11511E6CFC2D00405BDF /* tab.h */,
 				DF9E11521E6CFC2D00405BDF /* tab.m */,
@@ -173,14 +198,33 @@
 		DF9E11461E6CF48300405BDF /* home */ = {
 			isa = PBXGroup;
 			children = (
-				DF9E11431E6CF47C00405BDF /* homeController.h */,
-				DF9E11441E6CF47C00405BDF /* homeController.m */,
+				DFD056321E6FC68E0015D7E6 /* model */,
+				DF32CDF21E70066100BF2D58 /* controller */,
+				DFD056361E6FD2EC0015D7E6 /* view */,
+			);
+			name = home;
+			sourceTree = "<group>";
+		};
+		DFD056321E6FC68E0015D7E6 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DFD0562F1E6FC2660015D7E6 /* departModel.h */,
+				DFD056301E6FC2660015D7E6 /* departModel.m */,
+				DFD056331E6FC6A60015D7E6 /* classModel.h */,
+				DFD056341E6FC6A60015D7E6 /* classModel.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		DFD056361E6FD2EC0015D7E6 /* view */ = {
+			isa = PBXGroup;
+			children = (
 				DF9E11471E6CF50900405BDF /* regView.h */,
 				DF9E11481E6CF50900405BDF /* regView.m */,
 				DFC123111E6F9C0700C6D82B /* desView.h */,
 				DFC123121E6F9C0700C6D82B /* desView.m */,
 			);
-			name = home;
+			name = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,10 +361,14 @@
 				DF9E114D1E6CF54D00405BDF /* UIView+Extension.m in Sources */,
 				DF9E11451E6CF47C00405BDF /* homeController.m in Sources */,
 				DF9E11491E6CF50900405BDF /* regView.m in Sources */,
+				DFD056391E6FD2FD0015D7E6 /* LXBorder.m in Sources */,
 				DFC123131E6F9C0700C6D82B /* desView.m in Sources */,
 				DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */,
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
+				DF32CDF51E70067900BF2D58 /* regController.m in Sources */,
 				DF9E11121E6CF44B00405BDF /* main.m in Sources */,
+				DFD056311E6FC2660015D7E6 /* departModel.m in Sources */,
+				DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */,
 				DF9E11531E6CFC2D00405BDF /* tab.m in Sources */,
 				DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */,
 			);

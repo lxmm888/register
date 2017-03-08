@@ -1,14 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   DepartmentList.plist
-   门诊工作
-
-   Created by lxmm on 17/3/8.
-   Copyright (c) 2017年 Xuan. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>departName</key>
+		<string>妇产科</string>
+		<key>departClass</key>
+		<array>
+			<dict>
+				<key>className</key>
+				<string>妇科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>long</string>
+					<string>pan</string>
+					<string>chu</string>
+				</array>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>产科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>long</string>
+					<string>pan</string>
+					<string>chu</string>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>departClass</key>
+		<array>
+			<dict>
+				<key>className</key>
+				<string>耳鼻喉科</string>
+				<key>classDoctor</key>
+				<array>
+					<string>long</string>
+					<string>pan</string>
+					<string>chu</string>
+				</array>
+			</dict>
+		</array>
+		<key>departName</key>
+		<string>耳鼻喉科</string>
+	</dict>
+	<dict>
+		<key>departName</key>
+		<string>疼痛科</string>
+		<key>departClass</key>
+		<array>
+			<dict>
+				<key>className</key>
+				<string>针灸科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>long</string>
+					<string>pan</string>
+					<string>chu</string>
+				</array>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>理疗科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>long</string>
+					<string>pan</string>
+					<string>chu</string>
+				</array>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>按摩科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>long</string>
+					<string>pan</string>
+					<string>chu</string>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</array>
 </plist>
