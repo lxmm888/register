@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
 		DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11141E6CF44B00405BDF /* AppDelegate.m */; };
-		DF9E11181E6CF44B00405BDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11171E6CF44B00405BDF /* ViewController.m */; };
 		DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9E11191E6CF44B00405BDF /* Main.storyboard */; };
 		DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9E111C1E6CF44B00405BDF /* Assets.xcassets */; };
 		DF9E11201E6CF44B00405BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */; };
 		DF9E112B1E6CF44B00405BDF /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E112A1E6CF44B00405BDF /* ____Tests.m */; };
 		DF9E11361E6CF44B00405BDF /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11351E6CF44B00405BDF /* ____UITests.m */; };
+		DF9E11451E6CF47C00405BDF /* homeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11441E6CF47C00405BDF /* homeController.m */; };
+		DF9E11491E6CF50900405BDF /* regView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11481E6CF50900405BDF /* regView.m */; };
+		DF9E114D1E6CF54D00405BDF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */; };
+		DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E114F1E6CFAB200405BDF /* LXNav.m */; };
+		DF9E11531E6CFC2D00405BDF /* tab.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11521E6CFC2D00405BDF /* tab.m */; };
+		DFC123131E6F9C0700C6D82B /* desView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC123121E6F9C0700C6D82B /* desView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +44,6 @@
 		DF9E11111E6CF44B00405BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF9E11131E6CF44B00405BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF9E11141E6CF44B00405BDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DF9E11161E6CF44B00405BDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DF9E11171E6CF44B00405BDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DF9E111A1E6CF44B00405BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF9E111C1E6CF44B00405BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF9E111F1E6CF44B00405BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,19 @@
 		DF9E11311E6CF44B00405BDF /* 门诊工作UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "门诊工作UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9E11351E6CF44B00405BDF /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		DF9E11371E6CF44B00405BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF9E11431E6CF47C00405BDF /* homeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeController.h; sourceTree = "<group>"; };
+		DF9E11441E6CF47C00405BDF /* homeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeController.m; sourceTree = "<group>"; };
+		DF9E11471E6CF50900405BDF /* regView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regView.h; sourceTree = "<group>"; };
+		DF9E11481E6CF50900405BDF /* regView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regView.m; sourceTree = "<group>"; };
+		DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DF9E114B1E6CF54D00405BDF /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		DF9E114E1E6CFAB200405BDF /* LXNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNav.h; sourceTree = "<group>"; };
+		DF9E114F1E6CFAB200405BDF /* LXNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNav.m; sourceTree = "<group>"; };
+		DF9E11511E6CFC2D00405BDF /* tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab.h; sourceTree = "<group>"; };
+		DF9E11521E6CFC2D00405BDF /* tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tab.m; sourceTree = "<group>"; };
+		DFC123111E6F9C0700C6D82B /* desView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desView.h; sourceTree = "<group>"; };
+		DFC123121E6F9C0700C6D82B /* desView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = desView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +119,18 @@
 			children = (
 				DF9E11131E6CF44B00405BDF /* AppDelegate.h */,
 				DF9E11141E6CF44B00405BDF /* AppDelegate.m */,
-				DF9E11161E6CF44B00405BDF /* ViewController.h */,
-				DF9E11171E6CF44B00405BDF /* ViewController.m */,
+				DF9E11461E6CF48300405BDF /* home */,
+				DF9E11511E6CFC2D00405BDF /* tab.h */,
+				DF9E11521E6CFC2D00405BDF /* tab.m */,
+				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
+				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
 				DF9E11191E6CF44B00405BDF /* Main.storyboard */,
 				DF9E111C1E6CF44B00405BDF /* Assets.xcassets */,
 				DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */,
 				DF9E11211E6CF44B00405BDF /* Info.plist */,
+				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
+				DF9E114B1E6CF54D00405BDF /* UIView+Extension.h */,
+				DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */,
 				DF9E11101E6CF44B00405BDF /* Supporting Files */,
 			);
 			path = "门诊工作";
@@ -138,6 +160,19 @@
 				DF9E11371E6CF44B00405BDF /* Info.plist */,
 			);
 			path = "门诊工作UITests";
+			sourceTree = "<group>";
+		};
+		DF9E11461E6CF48300405BDF /* home */ = {
+			isa = PBXGroup;
+			children = (
+				DF9E11431E6CF47C00405BDF /* homeController.h */,
+				DF9E11441E6CF47C00405BDF /* homeController.m */,
+				DF9E11471E6CF50900405BDF /* regView.h */,
+				DF9E11481E6CF50900405BDF /* regView.m */,
+				DFC123111E6F9C0700C6D82B /* desView.h */,
+				DFC123121E6F9C0700C6D82B /* desView.m */,
+			);
+			name = home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF9E11181E6CF44B00405BDF /* ViewController.m in Sources */,
+				DF9E114D1E6CF54D00405BDF /* UIView+Extension.m in Sources */,
+				DF9E11451E6CF47C00405BDF /* homeController.m in Sources */,
+				DF9E11491E6CF50900405BDF /* regView.m in Sources */,
+				DFC123131E6F9C0700C6D82B /* desView.m in Sources */,
+				DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */,
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
 				DF9E11121E6CF44B00405BDF /* main.m in Sources */,
+				DF9E11531E6CFC2D00405BDF /* tab.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +455,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/门诊工作/PrefixHeader.pch";
 				INFOPLIST_FILE = "门诊工作/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jj.----";
@@ -426,6 +468,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/门诊工作/PrefixHeader.pch";
 				INFOPLIST_FILE = "门诊工作/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jj.----";
@@ -498,6 +542,7 @@
 				DF9E113C1E6CF44B00405BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF9E113D1E6CF44B00405BDF /* Build configuration list for PBXNativeTarget "门诊工作Tests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +551,7 @@
 				DF9E113F1E6CF44B00405BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF9E11401E6CF44B00405BDF /* Build configuration list for PBXNativeTarget "门诊工作UITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +560,7 @@
 				DF9E11421E6CF44B00405BDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

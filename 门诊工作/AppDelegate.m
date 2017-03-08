@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "homeController.h"
+#import "LXNav.h"
+#import "tab.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +19,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window.frame = [UIScreen mainScreen].bounds;
+    self.window.rootViewController = [[tab alloc]init];//[[LXNav alloc] initWithRootViewController:[[tab alloc] init]];
+//    self.window.rootViewController = [[homeController alloc] init];
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }
