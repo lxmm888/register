@@ -1,29 +1,33 @@
 //
-//  tab.m
+//  noticeController.m
 //  门诊工作
 //
-//  Created by Xuan on 2017/3/6.
+//  Created by Xuan on 2017/3/9.
 //  Copyright © 2017年 Xuan. All rights reserved.
 //
 
-#import "tab.h"
-#import "homeController.h"
-#import "LXNav.h"
+#import "noticeController.h"
 
-@interface tab ()
+@interface noticeController ()
 
 @end
 
-@implementation tab
+@implementation noticeController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    homeController *home = [homeController new];
-    [home.tabBarController.tabBar setBarTintColor:[UIColor whiteColor]];
-//    [home.tabBarItem setImage:[UIImage imageNamed:@"1"]];
-    LXNav* nav=[[LXNav alloc]initWithRootViewController:home];
-    [self addChildViewController:nav];
+    CGFloat contentH = 100;
+    CGFloat btnH = (self.view.height - contentH) * 0.5;
     
+    UIButton *topBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.view.width, btnH)];
+    topBtn.backgroundColor = [UIColor orangeColor];
+    [topBtn setTitle:@"挂号" forState:UIControlStateNormal];
+    topBtn.titleLabel.textColor = [UIColor whiteColor];
+    
+    [self.view addSubview:topBtn];
+    
+    //圆角
+    self.view.layer.cornerRadius = 10;
     
     // Do any additional setup after loading the view.
 }

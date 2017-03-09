@@ -49,13 +49,14 @@
     detailView = [[UIView alloc] initWithFrame:CGRectMake(tableWidth, 0, self.width - tableWidth, self.height)];
     detailView.backgroundColor = [UIColor whiteColor];
     [self addSubview:detailView];
+    
     UITableView *tView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, tableWidth, self.height)];
     tView.dataSource = self;
     tView.delegate = self;
     NSIndexPath *ip = [NSIndexPath indexPathForRow:0 inSection:0];
     
     [tView setSeparatorColor:[UIColor clearColor]];
-    [tView setBackgroundColor:[UIColor lightGrayColor]];
+    [tView setBackgroundColor:[UIColor colorWithRed:211/255.0 green:211/255.0 blue:211/255.0 alpha:1.0]];
     [self addSubview:tView];
 
     [self tableView:tView didSelectRowAtIndexPath:ip];
@@ -81,7 +82,7 @@
     
     departModel *model = dataSource[indexPath.row];
     cell.textLabel.text = model.departName;
-    cell.backgroundColor = [UIColor lightGrayColor];
+    cell.backgroundColor = [UIColor colorWithRed:211/255.0 green:211/255.0 blue:211/255.0 alpha:1.0];
     return cell;
 }
 
@@ -116,13 +117,11 @@
 {
 //    NSLog(@"%lu",(unsigned long)btn.m.classDoctor.count);
 
-    classModel *m = btn.m;
+//    classModel *m = btn.m;
     regController *rc = [regController new];
-    rc.classDoctor = m.classDoctor;
-    NSLog(@"%lu",(unsigned long)m.classDoctor.count);
-
+    rc.m = btn.m;
     if (self.btnBlock != nil) {
-        self.btnBlock([regController new]);
+        self.btnBlock(rc);
         
     }
 }

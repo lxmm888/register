@@ -23,11 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNav];
     self.title = @"挂号";
-    self.navigationItem.title = @"李氏中医精神病院";
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-    [self.navigationController.navigationBar setTitleTextAttributes:dict];
-    
+    [self setHidesBottomBarWhenPushed:YES];
+
     CGFloat topViewH = 60;
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, topViewH)];
     topView.backgroundColor = [UIColor whiteColor];
@@ -80,40 +79,20 @@
     
     LXBorder *border2 = [[LXBorder alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(seg.frame), self.view.width, 2)];
     [self.view addSubview:border2];
-    
-//    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[@"预约挂号",@"医院简介"]];
-//    seg.frame = CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width, 44);
-////    seg.backgroundColor = [UIColor whiteColor];
-////    seg.tintColor=[UIColor magentaColor];
-//    [seg setSelectedSegmentIndex:0];
-//    [seg addTarget:self action:@selector(segAction:) forControlEvents:UIControlEventValueChanged];
-//    [self.view addSubview:seg];
+
+}
+
+- (void)setNav
+{
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleDone target:nil action:nil];
     
     
-    
-    
-    
-    
-//    UIView *segView = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(border.frame), self.view.width, 44)];
-//    segView.backgroundColor = [UIColor whiteColor];
-//    [self.view addSubview:segView];
-//    CGFloat viewCenterX = self.view.width * 0.5;
-////    CGFloat viewCenterY = 0.5 * (CGRectGetMaxX(segView.frame) - CGRectGetMaxY(border.frame));
-//    CGFloat viewCenterY = segView.height * 0.5;
-//    UIButton *regBtn = [UIButton new];
-//    [regBtn setTitle:@"预约挂号" forState:UIControlStateNormal];
-//    [regBtn setTitleColor:[UIColor greenColor] forState:UIControlStateHighlighted];
-//    regBtn.center = CGPointMake(0.5 * viewCenterX, viewCenterY);
-//    regBtn.size = CGSizeMake(100, 30);
-//    [segView addSubview:regBtn];
-//    
-//    UIButton *introBtn = [UIButton new];
-//    [introBtn setTitle:@"医院简介" forState:UIControlStateNormal];
-//    [introBtn setTitleColor:[UIColor greenColor] forState:UIControlStateHighlighted];
-//    introBtn.center = CGPointMake(1.5 * viewCenterX, viewCenterY);
-//    introBtn.size = CGSizeMake(100, 30);
-//    [segView addSubview:introBtn];
-    // Do any additional setup after loading the view.
+    self.navigationItem.title = @"李氏中医精神病院";
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+    [self.navigationController.navigationBar setTitleTextAttributes:dict];
+    //    NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
+//    [self.navigationItem.backBarButtonItem setTitleTextAttributes:dict forState:UIControlStateNormal];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 }
 
 - (void)segAction:(UISegmentedControl *)seg

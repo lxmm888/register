@@ -22,6 +22,9 @@
 		DF9E114D1E6CF54D00405BDF /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */; };
 		DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E114F1E6CFAB200405BDF /* LXNav.m */; };
 		DF9E11531E6CFC2D00405BDF /* tab.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11521E6CFC2D00405BDF /* tab.m */; };
+		DFA4C1C61E70E5DB00BA0E4D /* regCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C51E70E5DB00BA0E4D /* regCell.m */; };
+		DFA4C1C91E71622500BA0E4D /* noticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C81E71622500BA0E4D /* noticeView.m */; };
+		DFA4C1CC1E71645600BA0E4D /* noticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1CB1E71645600BA0E4D /* noticeController.m */; };
 		DFC123131E6F9C0700C6D82B /* desView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC123121E6F9C0700C6D82B /* desView.m */; };
 		DFD056311E6FC2660015D7E6 /* departModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056301E6FC2660015D7E6 /* departModel.m */; };
 		DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056341E6FC6A60015D7E6 /* classModel.m */; };
@@ -76,6 +79,12 @@
 		DF9E114F1E6CFAB200405BDF /* LXNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNav.m; sourceTree = "<group>"; };
 		DF9E11511E6CFC2D00405BDF /* tab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tab.h; sourceTree = "<group>"; };
 		DF9E11521E6CFC2D00405BDF /* tab.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tab.m; sourceTree = "<group>"; };
+		DFA4C1C41E70E5DB00BA0E4D /* regCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regCell.h; sourceTree = "<group>"; };
+		DFA4C1C51E70E5DB00BA0E4D /* regCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regCell.m; sourceTree = "<group>"; };
+		DFA4C1C71E71622500BA0E4D /* noticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeView.h; sourceTree = "<group>"; };
+		DFA4C1C81E71622500BA0E4D /* noticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeView.m; sourceTree = "<group>"; };
+		DFA4C1CA1E71645600BA0E4D /* noticeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeController.h; sourceTree = "<group>"; };
+		DFA4C1CB1E71645600BA0E4D /* noticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeController.m; sourceTree = "<group>"; };
 		DFC123111E6F9C0700C6D82B /* desView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desView.h; sourceTree = "<group>"; };
 		DFC123121E6F9C0700C6D82B /* desView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = desView.m; sourceTree = "<group>"; };
 		DFD0562F1E6FC2660015D7E6 /* departModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = departModel.h; sourceTree = "<group>"; };
@@ -118,6 +127,8 @@
 				DF9E11441E6CF47C00405BDF /* homeController.m */,
 				DF32CDF31E70067900BF2D58 /* regController.h */,
 				DF32CDF41E70067900BF2D58 /* regController.m */,
+				DFA4C1CA1E71645600BA0E4D /* noticeController.h */,
+				DFA4C1CB1E71645600BA0E4D /* noticeController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -219,8 +230,12 @@
 		DFD056361E6FD2EC0015D7E6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DFA4C1C41E70E5DB00BA0E4D /* regCell.h */,
+				DFA4C1C51E70E5DB00BA0E4D /* regCell.m */,
 				DF9E11471E6CF50900405BDF /* regView.h */,
 				DF9E11481E6CF50900405BDF /* regView.m */,
+				DFA4C1C71E71622500BA0E4D /* noticeView.h */,
+				DFA4C1C81E71622500BA0E4D /* noticeView.m */,
 				DFC123111E6F9C0700C6D82B /* desView.h */,
 				DFC123121E6F9C0700C6D82B /* desView.m */,
 			);
@@ -358,11 +373,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA4C1C61E70E5DB00BA0E4D /* regCell.m in Sources */,
 				DF9E114D1E6CF54D00405BDF /* UIView+Extension.m in Sources */,
 				DF9E11451E6CF47C00405BDF /* homeController.m in Sources */,
+				DFA4C1CC1E71645600BA0E4D /* noticeController.m in Sources */,
 				DF9E11491E6CF50900405BDF /* regView.m in Sources */,
 				DFD056391E6FD2FD0015D7E6 /* LXBorder.m in Sources */,
 				DFC123131E6F9C0700C6D82B /* desView.m in Sources */,
+				DFA4C1C91E71622500BA0E4D /* noticeView.m in Sources */,
 				DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */,
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
 				DF32CDF51E70067900BF2D58 /* regController.m in Sources */,

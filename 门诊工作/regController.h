@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "classModel.h"
 
 @interface regController : UIViewController
 @property (nonatomic, strong) NSArray *classDoctor;
+@property (nonatomic, strong) NSString *className;
+
+@property (nonatomic, strong) classModel *m;
 
 @end
