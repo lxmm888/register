@@ -44,7 +44,7 @@
 
 - (void)setViews
 {
-    CGFloat tableWidth = 100;
+    CGFloat tableWidth = 130;
 
     detailView = [[UIView alloc] initWithFrame:CGRectMake(tableWidth, 0, self.width - tableWidth, self.height)];
     detailView.backgroundColor = [UIColor whiteColor];
@@ -53,6 +53,7 @@
     UITableView *tView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, tableWidth, self.height)];
     tView.dataSource = self;
     tView.delegate = self;
+    
     NSIndexPath *ip = [NSIndexPath indexPathForRow:0 inSection:0];
     
     [tView setSeparatorColor:[UIColor clearColor]];
@@ -81,8 +82,12 @@
     }
     
     departModel *model = dataSource[indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:13];
     cell.textLabel.text = model.departName;
     cell.backgroundColor = [UIColor colorWithRed:211/255.0 green:211/255.0 blue:211/255.0 alpha:1.0];
+    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+    cell.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
+
     return cell;
 }
 

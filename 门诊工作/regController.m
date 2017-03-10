@@ -52,8 +52,9 @@
     [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
     
     nc = [[noticeController alloc] init];
-    nc.view.frame = CGRectMake(0, self.view.height, 300, 140);
+    nc.view.frame = CGRectMake(0, self.view.height, 300, 100);
     nc.view.centerX = self.view.width * 0.5;
+    [fuzzyView addSubview:nc.view];
 //    [self presentViewController:nc animated:YES completion:^{
 //        
 //    }];
@@ -65,6 +66,7 @@
     nView.centerX = self.view.width * 0.5; 
     [nView addGestureRecognizer:gr];
 //    [fuzzyView addSubview:nView];
+    
    
 }
 

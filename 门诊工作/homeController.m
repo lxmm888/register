@@ -17,7 +17,7 @@
 @implementation homeController{
     UIView *choosenView;
     regView *rView;
-    UIView* lView;
+    desView* lView;
     CGRect choosenRect;
 }
 
@@ -25,27 +25,27 @@
     [super viewDidLoad];
     [self setNav];
     self.title = @"挂号";
-    [self setHidesBottomBarWhenPushed:YES];
-
+//    self.hidesBottomBarWhenPushed = YES;
     CGFloat topViewH = 60;
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, topViewH)];
     topView.backgroundColor = [UIColor whiteColor];
     UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1"]];
-    iconView.frame = CGRectMake(20, 20, 40, 40);
+    iconView.frame = CGRectMake(20, 20, 44, 44);
     iconView.center = CGPointMake(40, topView.height * 0.5);
     iconView.layer.masksToBounds = YES;
-    iconView.layer.cornerRadius = 20;
+    iconView.layer.cornerRadius = 22;
     [topView addSubview:iconView];
     [self.view addSubview:topView];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 20, CGRectGetMinY(iconView.frame), 200, 20)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 20, CGRectGetMinY(iconView.frame) + 3, 200, 20)];
     label.text = @"K322全科医院";
+    label.font = [UIFont systemFontOfSize:16];
     [topView addSubview:label];
     
     UILabel *detailLabel = [[UILabel alloc] initWithFrame:CGRectMake(label.x, CGRectGetMaxY(label.frame), 100, 20)];
     detailLabel.text = @"三级丙等";
     detailLabel.textColor = [UIColor lightGrayColor];
-    [detailLabel setFont:[UIFont systemFontOfSize:13]];
+    [detailLabel setFont:[UIFont systemFontOfSize:12]];
     [topView addSubview:detailLabel];
     
     LXBorder *border1 = [[LXBorder alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), self.view.width, 10)];
@@ -66,8 +66,8 @@
     };
     [self.view addSubview:rView];
     
-    lView=[[UIView alloc]initWithFrame:rView.frame];
-    lView.backgroundColor=[UIColor cyanColor];
+    lView=[[desView alloc]initWithFrame:rView.frame];
+    lView.backgroundColor=[UIColor whiteColor];
     [self.view addSubview:lView];
     lView.hidden=!rView.hidden;
 
@@ -81,6 +81,8 @@
     [self.view addSubview:border2];
 
 }
+
+
 
 - (void)setNav
 {

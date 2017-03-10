@@ -43,6 +43,7 @@
         UIView *v = [[dic allValues] firstObject];
 
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(margin + i * (btnW + margin), 0, 100, 50)];
+        
 //        btn.centerX = wid * (2 * i - 1);
         [btn setTitle:[dic.allKeys firstObject] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
