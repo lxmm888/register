@@ -48,6 +48,53 @@
 	</dict>
 	<dict>
 		<key>departName</key>
+		<string>内科</string>
+		<key>departClass</key>
+		<array>
+			<dict>
+				<key>className</key>
+				<string>心血管内科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>秋位</string>
+					<string>肖申克</string>
+					<string>阿龙</string>
+				</array>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>内分泌科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>秋位</string>
+					<string>肖申克</string>
+					<string>阿龙</string>
+				</array>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>呼吸内科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>李玉龙</string>
+					<string>李玉亮</string>
+					<string>鲤鱼亮</string>
+				</array>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>肾内科门诊</string>
+				<key>classDoctor</key>
+				<array>
+					<string>秋位</string>
+					<string>肖申克</string>
+					<string>阿龙</string>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>departName</key>
 		<string>疼痛科</string>
 		<key>departClass</key>
 		<array>

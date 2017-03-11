@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface noticeView : UIView
+@property (nonatomic, strong) void(^btnBlock)(id object);
 
 @end

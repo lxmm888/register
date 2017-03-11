@@ -9,6 +9,7 @@
 #import "tab.h"
 #import "homeController.h"
 #import "LXNav.h"
+#import "manageController.h"
 
 @interface tab ()
 
@@ -18,38 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_background"]];
+//    [self.tabBar setBackgroundColor:[UIColor blackColor]];
+//    [self.tabBar setBarTintColor:[UIColor blackColor]];
     homeController *home = [homeController new];
-//    [self addChild:home imageName:@"tabbar_home" selectImageName:@"tabbar_home_selected"];
-//    [home.tabBarController.tabBar setBarTintColor:[UIColor whiteColor]];
-    [self.tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar_background_os7"]];
-//    [home.tabBarItem setImage:[UIImage imageNamed:@"1"]];
-//    home.title = title;
-    // 设置tabbarItem图片（普通状态和选中状态）
-    home.tabBarItem.image = [UIImage imageNamed:@"tabbar_home"];
-    //
-    UIImage *selectedImage = [UIImage imageNamed:@"tabbar_home_selected"];
-    //
-    //    // 声明这张图片用原图(别渲染)
-    selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    //
-    ////    childVc.tabBarItem.selectedImage = selectedImage;
-    home.tabBarItem.selectedImage = selectedImage;
-
+    [self addChild:home imageName:@"tabbar_home" selectImageName:@"tabbar_home_selected"];
     
-    NSMutableDictionary *textAttr = [NSMutableDictionary dictionary];
-    textAttr[UITextAttributeTextColor] = [UIColor blackColor];
-    textAttr[UITextAttributeFont] = [UIFont systemFontOfSize:10];
-    [home.tabBarItem setTitleTextAttributes:textAttr forState:UIControlStateNormal];
-    
-    NSMutableDictionary *selectdTextAttr = [NSMutableDictionary dictionary];
-    selectdTextAttr[UITextAttributeTextColor] = [UIColor orangeColor];
-    [home.tabBarItem setTitleTextAttributes:selectdTextAttr forState:UIControlStateSelected];
-    LXNav* nav=[[LXNav alloc]initWithRootViewController:home];
-    [self addChildViewController:nav];
-    
-    
-    // Do any additional setup after loading the view.
+    manageController *mc = [manageController new];
+    mc.title = @"管理";
+    [self addChild:mc imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
 }
 
 - (void)addChild:(UIViewController *)childVc imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName

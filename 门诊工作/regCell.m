@@ -22,6 +22,7 @@
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+//    self.textLabel.textAlignment = NSTextAlignmentLeft
     self.detailTextLabel.text = @"专治疑难杂症";
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return self;

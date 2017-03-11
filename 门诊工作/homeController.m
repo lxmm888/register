@@ -91,7 +91,8 @@
     
     self.navigationItem.title = @"李氏中医精神病院";
     NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
-    [self.navigationController.navigationBar setTitleTextAttributes:dict];
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20],NSFontAttributeName, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:dic];
     //    NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
 //    [self.navigationItem.backBarButtonItem setTitleTextAttributes:dict forState:UIControlStateNormal];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];

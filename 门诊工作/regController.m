@@ -44,28 +44,45 @@
 
 - (void)setNoticeView
 {
-    
+    //毛玻璃效果
     fuzzyView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, [UIScreen mainScreen].bounds.size.height)];
     fuzzyView.backgroundColor = [UIColor lightGrayColor];
 //    fuzzyView.hidden = YES;
     fuzzyView.alpha = 0;
-    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
+//    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
+    [self.view addSubview:fuzzyView];
+//    nc = [[noticeController alloc] init];
+//    nc.view.frame = self.view.bounds;
+//    nc.view.centerX = self.view.width * 0.5;
+//    [[UIApplication sharedApplication].keyWindow addSubview:nc.view];
+
+//    [fuzzyView addSubview:nc.view];
     
-    nc = [[noticeController alloc] init];
-    nc.view.frame = CGRectMake(0, self.view.height, 300, 100);
-    nc.view.centerX = self.view.width * 0.5;
-    [fuzzyView addSubview:nc.view];
 //    [self presentViewController:nc animated:YES completion:^{
 //        
 //    }];
 
     UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] init];
     [gr addTarget:self action:@selector(grTap)];
-    nView = [[noticeView alloc] initWithFrame:CGRectMake(0, self.view.height, 300, 140)];
-    nView.backgroundColor = [UIColor magentaColor];
-    nView.centerX = self.view.width * 0.5; 
-    [nView addGestureRecognizer:gr];
-//    [fuzzyView addSubview:nView];
+//    [nc.view addGestureRecognizer:gr];
+    nView = [[noticeView alloc] initWithFrame:CGRectMake(0, self.view.height, 330, 150)];
+    nView.backgroundColor = [UIColor blackColor];
+    nView.centerX = self.view.width * 0.5;
+    __weak typeof (self) ws=self;
+
+    nView.btnBlock=^(id obj){
+        if ([obj isKindOfClass:[UIView class]]) {
+//            [ws.navigationController pushViewController:obj animated:YES];
+            [UIView animateWithDuration:0.5 animations:^{
+                ((UIView *)obj).y = ws.view.height;
+                fuzzyView.alpha = 0;
+
+            }];
+        }
+    };
+    
+//    [nView addGestureRecognizer:gr];
+    [self.view  addSubview:nView];
     
    
 }
@@ -73,7 +90,8 @@
 - (void)grTap
 {
     [UIView animateWithDuration:0.5 animations:^{
-        nc.view.y = self.view.height;
+//        nc.view.y = self.view.height;
+        nView.y = self.view.height;
         fuzzyView.alpha = 0;
     } completion:^(BOOL finished) {
 //        fuzzyView.hidden = YES;
@@ -96,8 +114,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [UIView animateWithDuration:0.5 animations:^{
-        nc.view.centerY = self.view.centerY;
+//        nc.view.centerY = self.view.centerY;
+        nView.centerY = self.view.centerY;
         fuzzyView.alpha = 0.6;
+//        nView.alpha = 1.0;
 //        fuzzyView.hidden = NO;
     }];
 }

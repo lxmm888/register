@@ -8,6 +8,9 @@
 
 #import "desView.h"
 #import "LXBorder.h"
+#define smallFont [UIFont systemFontOfSize:15]
+#define desFont [UIFont systemFontOfSize:17]
+
 @implementation desView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -21,6 +24,9 @@
 
 - (void)setViews
 {
+    
+    
+    
     UIScrollView *sv = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height)];
     sv.scrollEnabled = YES;
     [self addSubview:sv];
@@ -28,6 +34,16 @@
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, 100)];
     topView.backgroundColor = [UIColor whiteColor];
     [sv addSubview:topView];
+    
+    CGFloat telLabelH = 30;
+    UILabel *telLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, telLabelH)];
+    telLabel.text = @"电话：";
+    telLabel.font = desFont;
+    [topView addSubview:telLabel];
+    
+    UILabel *phoneNum = [[UILabel alloc] initWithFrame:CGRectMake(10, CGRectGetMaxY(telLabel.frame), self.width - 20, topView.height - telLabelH)];
+    phoneNum.text = @"020 - 39358182";
+    [topView addSubview:phoneNum];
     
     LXBorder *border = [[LXBorder alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), self.width, 5)];
     [sv addSubview:border];
@@ -42,7 +58,7 @@
     textView.userInteractionEnabled = NO;
     textView.text = @"\tK322李氏精神病医院是一个比较特殊的专科医院，无论从设址、服务对象、管理模式、医疗护理方式、方法，以及社会地位等诸多方面，都显示出其不同于综合医院或其他专科医院的特点。近年来，随着我国精神病患病率的提高，精神病治疗服务需求不断增加，供需缺口将进一步加大。但受社会认知和历史遗留等问题的影响，我国精神病医院的发展道路越走越窄，想要突破就必须回到源头，从提升医院的核心竞争能力入手。\n\t李氏精神病医院应在保证医疗安全的前提下，以低廉的价格优先收治疗社会三无人员和慈善救助病人，取得较好的社会效益。同时，根据国内其他医院的发展经验，精神病医院可以扩大老年病区，开展临终关怀服务，为政府和千万家庭分忧。";
     textView.textColor = [UIColor colorWithRed:155/255.0 green:155/255.0 blue:155/255.0 alpha:1.0];
-    textView.font = [UIFont systemFontOfSize:15];
+    textView.font = smallFont;
 //    textView.contentInset = UIEdgeInsetsMake(10, 20, 10, 20);
     sv.contentSize = CGSizeMake(self.width, CGRectGetMaxY(textView.frame));
 
