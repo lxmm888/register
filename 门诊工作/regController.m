@@ -25,7 +25,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = _m.className;
-
+    self.hidesBottomBarWhenPushed = YES;
     [self setTableView];
     [self setNoticeView];
     // Do any additional setup after loading the view.
@@ -49,8 +49,8 @@
     fuzzyView.backgroundColor = [UIColor lightGrayColor];
 //    fuzzyView.hidden = YES;
     fuzzyView.alpha = 0;
-//    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
-    [self.view addSubview:fuzzyView];
+    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
+//    [self.view addSubview:fuzzyView];
 //    nc = [[noticeController alloc] init];
 //    nc.view.frame = self.view.bounds;
 //    nc.view.centerX = self.view.width * 0.5;
@@ -82,7 +82,9 @@
     };
     
 //    [nView addGestureRecognizer:gr];
-    [self.view  addSubview:nView];
+        [[UIApplication sharedApplication].keyWindow addSubview:nView];
+
+//    [self.view  addSubview:nView];
     
    
 }
