@@ -5,19 +5,48 @@
 //  Created by Xuan on 2017/3/10.
 //  Copyright © 2017年 Xuan. All rights reserved.
 //
-
+#import "manageCell.h"
 #import "manageController.h"
 
-@interface manageController ()
+@interface manageController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation manageController
+@implementation manageController{
+    UITableView *tView;
+    NSMutableArray *dataSource;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    dataSource = [NSMutableArray array];
+    [self setTableView];
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
+}
+
+- (void)setTableView
+{
+    tView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    tView.delegate = self;
+    tView.dataSource = self;
+    [self.view addSubview:tView];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    manageCell *cell = [manageCell tableViewToCell:tableView];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {
