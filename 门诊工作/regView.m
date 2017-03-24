@@ -97,7 +97,6 @@
 //        UIView *tempView = [[UIView alloc] initWithFrame:CGRectMake(100, 0, self.width - 100, self.height)];
 //        
 //    }
-    NSLog(@"%@",indexPath);
     for (UIView *view in detailView.subviews) {
         [view removeFromSuperview];
     }
@@ -121,7 +120,6 @@
 
 - (void)btnClick:(MyButton*)btn
 {
-//    NSLog(@"%lu",(unsigned long)btn.m.classDoctor.count);
 
 //    classModel *m = btn.m;
     regController *rc = [regController new];

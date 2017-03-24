@@ -25,7 +25,7 @@
     [self addChild:home imageName:@"tabbar_home" selectImageName:@"tabbar_home_selected"];
     
     manageController *mc = [manageController new];
-    mc.title = @"管理";
+    mc.title = @"我的预约";
     [self addChild:mc imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
 }
 

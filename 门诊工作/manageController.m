@@ -5,18 +5,25 @@
 //  Created by Xuan on 2017/3/10.
 //  Copyright © 2017年 Xuan. All rights reserved.
 //
-
+#import "manageCell.h"
 #import "manageController.h"
 #import "popMenu.h"
 
-@interface manageController ()
+@interface manageController ()<UITableViewDelegate, UITableViewDataSource>
 
 @end
 
-@implementation manageController
+@implementation manageController{
+//    UITableView *__tView;
+    NSMutableArray *dataSource;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    dataSource = [NSMutableArray array];
+
+    [self initData];
+    [self setTableView];
     self.view.backgroundColor = [UIColor whiteColor];
     UIButton *titleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     [titleBtn setTitle:@"点击弹出" forState:UIControlStateNormal];

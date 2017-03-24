@@ -11,7 +11,7 @@
 #import "noticeController.h"
 #import "AlphaViewController.h"
 
-@interface regController ()<UITableViewDelegate,UITableViewDataSource>
+@interface regController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverPresentationControllerDelegate>
 
 @end
 
@@ -76,6 +76,7 @@
     nView = [[noticeView alloc] initWithFrame:CGRectMake(0, self.view.height, 330, 150)];
     nView.backgroundColor = [UIColor blackColor];
     nView.centerX = self.view.width * 0.5;
+    nView.regController = self;
     __weak typeof (self) ws=self;
 
     nView.btnBlock=^(id obj){
@@ -119,6 +120,7 @@
     regCell *cell = [regCell tableViewToCell:tableView];
     cell.doctorName = _m.classDoctor[indexPath.row];
     return cell;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,11 +129,35 @@
 //    return;
     [UIView animateWithDuration:0.5 animations:^{
 //        nc.view.centerY = self.view.centerY;
+        nView.m = _m;
         nView.centerY = self.view.centerY;
         fuzzyView.alpha = 1;
 //        nView.alpha = 1.0;
 //        fuzzyView.hidden = NO;
     }];
+//    [self popAMenu];
+}
+
+-(void)popAMenu
+{
+    UINavigationController* nav=[[UINavigationController alloc]initWithRootViewController:[[UITableViewController alloc]initWithStyle:UITableViewStylePlain]];
+    nav.modalPresentationStyle=UIModalPresentationPopover;
+    nav.preferredContentSize=CGSizeMake(200, 200);
+    
+    UIView* vi=[[UIView alloc]init];
+    
+    UIPopoverPresentationController* pop=nav.popoverPresentationController;
+    pop.delegate=self;
+//    pop.sourceView=vi;
+    pop.sourceRect=vi.bounds;
+//    pop.v
+    
+    [self presentViewController:nav animated:YES completion:nil];
+}
+
+-(UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
+{
+    return UIModalPresentationNone;
 }
 
 - (void)didReceiveMemoryWarning {
