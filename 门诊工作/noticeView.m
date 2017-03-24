@@ -8,6 +8,7 @@
 //
 
 #import "noticeView.h"
+#import "manageController.h"
 
 @implementation noticeView
 - (instancetype)initWithFrame:(CGRect)frame
@@ -78,27 +79,17 @@
 
 - (void)bottomBtnClick
 {
-//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"您正在挂号" preferredStyle:UIAlertControllerStyleAlert];
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-//        
-//        NSLog(@"点击取消");
-//        
-//    }]];
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"RegList.plist" ofType:nil];
     NSString *p = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject];
-    //    NSString *plistPath1 = [paths objectAtIndex:0]//[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
+        NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
     NSFileManager *fm = [NSFileManager defaultManager];
     if (![fm fileExistsAtPath:path]) {
-        BOOL isCreate=[fm createFileAtPath:path contents:nil attributes:nil];
-//        [[NSDictionary dictionaryWithObject:@"value" forKey:@"key"]writeToFile:path atomically:YES];
-//        NSLog(@"%@",path);
-        NSLog(@"%@",isCreate?@"c":@"f");
+        [fm createFileAtPath:path contents:nil attributes:nil];
+        
+        
     }
-    
-    
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-    [dict setObject:@"leiloumou" forKey:@"www"];
+    [dict setObject:_m.classDoctor.firstObject forKey:_m.className];
+    [dict writeToFile:path atomically:YES];
 //
 //    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
 //    NSString *plistPath1 = [paths objectAtIndex:0];
@@ -110,26 +101,13 @@
     //那怎么证明我的数据写入了呢？读出来看看
     NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     NSLog(@"%@", data1);
+    for (UIViewController *vc in _regController.tabBarController.viewControllers) {
+        if ([vc isKindOfClass:[manageController class]]) {
+            [((manageController *)vc) initData];
+            [((manageController *)vc).tView reloadData];
+        }
+    }
     
-    
-//    [dict setObject:@"leiloumou" forKey:@"www"];
-//    [dict writeToFile:path atomically:YES];
-//    NSDictionary *dict2 = [NSDictionary dictionaryWithContentsOfFile:path];
-//    NSLog(@"%@",dict2);
-    
-//    NSString *str = _m.className;
-//    [arr addObject:str];
-//    
-//    [arr writeToFile:path atomically:YES];
-    
-    //
-//    
-//    
-//    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//        
-//        NSLog(@"点击确认");
-//        
-//    }]];
     
 }
 

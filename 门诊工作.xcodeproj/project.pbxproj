@@ -291,9 +291,9 @@
 			isa = PBXGroup;
 			children = (
 				DF88A5F41E7288400091ABD4 /* manageController.h */,
+				DF88A5F51E7288400091ABD4 /* manageController.m */,
 				DFDBFBFB1E76420B005AE652 /* manageCell.h */,
 				DFDBFBFC1E76420B005AE652 /* manageCell.m */,
-				DF88A5F51E7288400091ABD4 /* manageController.m */,
 				DFDBFBF81E763FE1005AE652 /* ManageList.plist */,
 			);
 			name = Manege;
@@ -398,6 +398,7 @@
 				TargetAttributes = {
 					DF9E110C1E6CF44B00405BDF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7EP93Z2D6P;
 					};
 					DF9E11251E6CF44B00405BDF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -633,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7EP93Z2D6P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/门诊工作/PrefixHeader.pch";
 				INFOPLIST_FILE = "门诊工作/Info.plist";
@@ -646,6 +648,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7EP93Z2D6P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/门诊工作/PrefixHeader.pch";
 				INFOPLIST_FILE = "门诊工作/Info.plist";

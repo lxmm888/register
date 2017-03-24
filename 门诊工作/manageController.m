@@ -13,39 +13,56 @@
 @end
 
 @implementation manageController{
-    UITableView *tView;
+//    UITableView *__tView;
     NSMutableArray *dataSource;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     dataSource = [NSMutableArray array];
+
+    [self initData];
     [self setTableView];
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 
+- (void)initData
+{
+    NSString *p = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject];
+    NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if (![fm fileExistsAtPath:path]) {
+        return;
+    }
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    dataSource = dict.allKeys;
+
+}
+
 - (void)setTableView
 {
-    tView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-    tView.delegate = self;
-    tView.dataSource = self;
-    [self.view addSubview:tView];
+    _tView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    _tView.delegate = self;
+    _tView.dataSource = self;
+    _tView.allowsSelection = NO;
+    [self.view addSubview:_tView];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return dataSource.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     manageCell *cell = [manageCell tableViewToCell:tableView];
+    cell.textLabel.text = [dataSource objectAtIndex:indexPath.row];
     return cell;
 }
 

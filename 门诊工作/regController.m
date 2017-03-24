@@ -68,6 +68,7 @@
     nView = [[noticeView alloc] initWithFrame:CGRectMake(0, self.view.height, 330, 150)];
     nView.backgroundColor = [UIColor blackColor];
     nView.centerX = self.view.width * 0.5;
+    nView.regController = self;
     __weak typeof (self) ws=self;
 
     nView.btnBlock=^(id obj){
@@ -109,19 +110,20 @@
     regCell *cell = [regCell tableViewToCell:tableView];
     cell.doctorName = _m.classDoctor[indexPath.row];
     return cell;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [UIView animateWithDuration:0.5 animations:^{
-////        nc.view.centerY = self.view.centerY;
-//        nView.m = _m;
-//        nView.centerY = self.view.centerY;
-//        fuzzyView.alpha = 0.6;
-////        nView.alpha = 1.0;
-////        fuzzyView.hidden = NO;
-//    }];
-    [self popAMenu];
+    [UIView animateWithDuration:0.5 animations:^{
+//        nc.view.centerY = self.view.centerY;
+        nView.m = _m;
+        nView.centerY = self.view.centerY;
+        fuzzyView.alpha = 0.6;
+//        nView.alpha = 1.0;
+//        fuzzyView.hidden = NO;
+    }];
+//    [self popAMenu];
 }
 
 -(void)popAMenu

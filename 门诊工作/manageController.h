@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface manageController : UIViewController
+@property (nonatomic, strong) UITableView *tView;
+- (void)initData;
 
 @end

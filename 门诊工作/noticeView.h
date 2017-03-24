@@ -11,6 +11,8 @@
 @interface noticeView : UIView
 @property (nonatomic, strong) void(^btnBlock)(id object);
 @property (nonatomic, strong) classModel *m;
+@property (nonatomic, strong) UIViewController *regController;
+
 
 
 @end
