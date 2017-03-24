@@ -10,6 +10,8 @@
 		DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DF04804F1E6FA0380058FC86 /* LXSegment.m */; };
 		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
 		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
+		DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D1FF91E82103500D16612 /* popMenu.m */; };
+		DF5DA72E1E7404F3000E10A3 /* AlphaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5DA72D1E7404F3000E10A3 /* AlphaViewController.m */; };
 		DF88A5F61E7288400091ABD4 /* manageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF88A5F51E7288400091ABD4 /* manageController.m */; };
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
 		DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11141E6CF44B00405BDF /* AppDelegate.m */; };
@@ -55,6 +57,10 @@
 		DF0480511E6FB5760058FC86 /* DepartmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DepartmentList.plist; sourceTree = "<group>"; };
 		DF32CDF31E70067900BF2D58 /* regController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regController.h; sourceTree = "<group>"; };
 		DF32CDF41E70067900BF2D58 /* regController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regController.m; sourceTree = "<group>"; };
+		DF3D1FF81E82103500D16612 /* popMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popMenu.h; sourceTree = "<group>"; };
+		DF3D1FF91E82103500D16612 /* popMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popMenu.m; sourceTree = "<group>"; };
+		DF5DA72C1E7404F3000E10A3 /* AlphaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaViewController.h; sourceTree = "<group>"; };
+		DF5DA72D1E7404F3000E10A3 /* AlphaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaViewController.m; sourceTree = "<group>"; };
 		DF88A5F41E7288400091ABD4 /* manageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageController.h; sourceTree = "<group>"; };
 		DF88A5F51E7288400091ABD4 /* manageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageController.m; sourceTree = "<group>"; };
 		DF9E110D1E6CF44B00405BDF /* 门诊工作.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "门诊工作.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,8 +138,29 @@
 				DF32CDF41E70067900BF2D58 /* regController.m */,
 				DFA4C1CA1E71645600BA0E4D /* noticeController.h */,
 				DFA4C1CB1E71645600BA0E4D /* noticeController.m */,
+				DF5DA72C1E7404F3000E10A3 /* AlphaViewController.h */,
+				DF5DA72D1E7404F3000E10A3 /* AlphaViewController.m */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		DF3D1FF61E82100300D16612 /* manage */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D1FF71E82101300D16612 /* view */,
+				DF88A5F41E7288400091ABD4 /* manageController.h */,
+				DF88A5F51E7288400091ABD4 /* manageController.m */,
+			);
+			name = manage;
+			sourceTree = "<group>";
+		};
+		DF3D1FF71E82101300D16612 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DF3D1FF81E82103500D16612 /* popMenu.h */,
+				DF3D1FF91E82103500D16612 /* popMenu.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		DF9E11041E6CF44B00405BDF = {
@@ -166,8 +193,7 @@
 				DF9E11461E6CF48300405BDF /* home */,
 				DF9E11511E6CFC2D00405BDF /* tab.h */,
 				DF9E11521E6CFC2D00405BDF /* tab.m */,
-				DF88A5F41E7288400091ABD4 /* manageController.h */,
-				DF88A5F51E7288400091ABD4 /* manageController.m */,
+				DF3D1FF61E82100300D16612 /* manage */,
 				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
 				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
 				DF9E11191E6CF44B00405BDF /* Main.storyboard */,
@@ -391,6 +417,8 @@
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
 				DF32CDF51E70067900BF2D58 /* regController.m in Sources */,
 				DF9E11121E6CF44B00405BDF /* main.m in Sources */,
+				DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */,
+				DF5DA72E1E7404F3000E10A3 /* AlphaViewController.m in Sources */,
 				DFD056311E6FC2660015D7E6 /* departModel.m in Sources */,
 				DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */,
 				DF9E11531E6CFC2D00405BDF /* tab.m in Sources */,

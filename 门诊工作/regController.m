@@ -9,6 +9,7 @@
 #import "regController.h"
 #import "noticeView.h"
 #import "noticeController.h"
+#import "AlphaViewController.h"
 
 @interface regController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -44,12 +45,19 @@
 
 - (void)setNoticeView
 {
-    //毛玻璃效果
+//    毛玻璃效果
     fuzzyView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, [UIScreen mainScreen].bounds.size.height)];
-    fuzzyView.backgroundColor = [UIColor lightGrayColor];
+    fuzzyView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 //    fuzzyView.hidden = YES;
     fuzzyView.alpha = 0;
     [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
+//
+//    
+//    fuzzyView=[[UIVisualEffectView alloc]initWithFrame:self.view.bounds];
+//    fuzzyView.effect=[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//    fuzzyView.alpha = 0;
+//    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
+    
 //    [self.view addSubview:fuzzyView];
 //    nc = [[noticeController alloc] init];
 //    nc.view.frame = self.view.bounds;
@@ -83,8 +91,8 @@
     
 //    [nView addGestureRecognizer:gr];
         [[UIApplication sharedApplication].keyWindow addSubview:nView];
-
-//    [self.view  addSubview:nView];
+    AlphaViewController *ac = [[AlphaViewController alloc] init];
+    [self.view addSubview:ac.view];
     
    
 }
@@ -115,10 +123,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    [self presentViewController:[[AlphaViewController alloc]init] animated:YES completion:nil];
+//    return;
     [UIView animateWithDuration:0.5 animations:^{
 //        nc.view.centerY = self.view.centerY;
         nView.centerY = self.view.centerY;
-        fuzzyView.alpha = 0.6;
+        fuzzyView.alpha = 1;
 //        nView.alpha = 1.0;
 //        fuzzyView.hidden = NO;
     }];

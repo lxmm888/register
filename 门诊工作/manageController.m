@@ -7,6 +7,7 @@
 //
 
 #import "manageController.h"
+#import "popMenu.h"
 
 @interface manageController ()
 
@@ -17,22 +18,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    UIButton *titleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    [titleBtn setTitle:@"点击弹出" forState:UIControlStateNormal];
+    titleBtn.backgroundColor = [UIColor blackColor];
+    self.navigationItem.titleView = titleBtn;
+    [titleBtn addTarget:self action:@selector(titleBtnClick) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)titleBtnClick
+{
+    popMenu *pm = [[popMenu alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.height)];
+    pm.isDim = YES;
+    [[UIApplication sharedApplication].keyWindow addSubview:pm];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
