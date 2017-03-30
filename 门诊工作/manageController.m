@@ -23,7 +23,7 @@
     dataSource = [NSMutableArray array];
 
     [self initData];
-    [self setTableView];
+//    [self setTableView];
     self.view.backgroundColor = [UIColor whiteColor];
     UIButton *titleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     [titleBtn setTitle:@"点击弹出" forState:UIControlStateNormal];

@@ -12,6 +12,7 @@
 		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
 		DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D1FF91E82103500D16612 /* popMenu.m */; };
 		DF5DA72E1E7404F3000E10A3 /* AlphaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5DA72D1E7404F3000E10A3 /* AlphaViewController.m */; };
+		DF7F2ECE1E8D180500057FF0 /* manageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7F2ECD1E8D180500057FF0 /* manageCell.m */; };
 		DF88A5F61E7288400091ABD4 /* manageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF88A5F51E7288400091ABD4 /* manageController.m */; };
 		DF9A99861E8529530010F24E /* RegList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9A99851E8529530010F24E /* RegList.plist */; };
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
@@ -34,8 +35,6 @@
 		DFD056311E6FC2660015D7E6 /* departModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056301E6FC2660015D7E6 /* departModel.m */; };
 		DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056341E6FC6A60015D7E6 /* classModel.m */; };
 		DFD056391E6FD2FD0015D7E6 /* LXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056381E6FD2FD0015D7E6 /* LXBorder.m */; };
-		DFDBFBF91E763FE1005AE652 /* ManageList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFDBFBF81E763FE1005AE652 /* ManageList.plist */; };
-		DFDBFBFD1E76420B005AE652 /* manageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDBFBFC1E76420B005AE652 /* manageCell.m */; };
 		DFDBFC181E764375005AE652 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDBFC001E764375005AE652 /* MASCompositeConstraint.m */; };
 		DFDBFC191E764375005AE652 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDBFC031E764375005AE652 /* MASConstraint.m */; };
 		DFDBFC1A1E764375005AE652 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDBFC051E764375005AE652 /* MASConstraintMaker.m */; };
@@ -75,6 +74,8 @@
 		DF3D1FF91E82103500D16612 /* popMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popMenu.m; sourceTree = "<group>"; };
 		DF5DA72C1E7404F3000E10A3 /* AlphaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaViewController.h; sourceTree = "<group>"; };
 		DF5DA72D1E7404F3000E10A3 /* AlphaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaViewController.m; sourceTree = "<group>"; };
+		DF7F2ECC1E8D180500057FF0 /* manageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageCell.h; sourceTree = "<group>"; };
+		DF7F2ECD1E8D180500057FF0 /* manageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageCell.m; sourceTree = "<group>"; };
 		DF88A5F41E7288400091ABD4 /* manageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageController.h; sourceTree = "<group>"; };
 		DF88A5F51E7288400091ABD4 /* manageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageController.m; sourceTree = "<group>"; };
 		DF9A99851E8529530010F24E /* RegList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegList.plist; sourceTree = "<group>"; };
@@ -120,8 +121,6 @@
 		DFD056371E6FD2FD0015D7E6 /* LXBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBorder.h; sourceTree = "<group>"; };
 		DFD056381E6FD2FD0015D7E6 /* LXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBorder.m; sourceTree = "<group>"; };
 		DFDBFBF81E763FE1005AE652 /* ManageList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManageList.plist; sourceTree = "<group>"; };
-		DFDBFBFB1E76420B005AE652 /* manageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageCell.h; sourceTree = "<group>"; };
-		DFDBFBFC1E76420B005AE652 /* manageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageCell.m; sourceTree = "<group>"; };
 		DFDBFBFF1E764375005AE652 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		DFDBFC001E764375005AE652 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		DFDBFC011E764375005AE652 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -204,6 +203,8 @@
 			children = (
 				DF3D1FF81E82103500D16612 /* popMenu.h */,
 				DF3D1FF91E82103500D16612 /* popMenu.m */,
+				DF7F2ECC1E8D180500057FF0 /* manageCell.h */,
+				DF7F2ECD1E8D180500057FF0 /* manageCell.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -320,18 +321,6 @@
 				DFC123121E6F9C0700C6D82B /* desView.m */,
 			);
 			name = view;
-			sourceTree = "<group>";
-		};
-		DFDBFBFA1E763FE9005AE652 /* Manege */ = {
-			isa = PBXGroup;
-			children = (
-				DF88A5F41E7288400091ABD4 /* manageController.h */,
-				DF88A5F51E7288400091ABD4 /* manageController.m */,
-				DFDBFBFB1E76420B005AE652 /* manageCell.h */,
-				DFDBFBFC1E76420B005AE652 /* manageCell.m */,
-				DFDBFBF81E763FE1005AE652 /* ManageList.plist */,
-			);
-			name = Manege;
 			sourceTree = "<group>";
 		};
 		DFDBFBFE1E764375005AE652 /* Masonry */ = {
@@ -510,6 +499,7 @@
 				DFDBFC181E764375005AE652 /* MASCompositeConstraint.m in Sources */,
 				DFDBFC201E764375005AE652 /* View+MASAdditions.m in Sources */,
 				DF9E11491E6CF50900405BDF /* regView.m in Sources */,
+				DF7F2ECE1E8D180500057FF0 /* manageCell.m in Sources */,
 				DFD056391E6FD2FD0015D7E6 /* LXBorder.m in Sources */,
 				DFC123131E6F9C0700C6D82B /* desView.m in Sources */,
 				DFA4C1C91E71622500BA0E4D /* noticeView.m in Sources */,
@@ -522,7 +512,6 @@
 				DFDBFC211E764375005AE652 /* ViewController+MASAdditions.m in Sources */,
 				DFDBFC1D1E764375005AE652 /* MASViewConstraint.m in Sources */,
 				DFDBFC1A1E764375005AE652 /* MASConstraintMaker.m in Sources */,
-				DFDBFBFD1E76420B005AE652 /* manageCell.m in Sources */,
 				DF9E11121E6CF44B00405BDF /* main.m in Sources */,
 				DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */,
 				DF5DA72E1E7404F3000E10A3 /* AlphaViewController.m in Sources */,
