@@ -7,6 +7,7 @@
 //
 #import "manageCell.h"
 #import "manageController.h"
+#import "popMenu.h"
 
 @interface manageController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -24,10 +25,15 @@
     [self initData];
     [self setTableView];
     self.view.backgroundColor = [UIColor whiteColor];
+    UIButton *titleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    [titleBtn setTitle:@"点击弹出" forState:UIControlStateNormal];
+    titleBtn.backgroundColor = [UIColor blackColor];
+    self.navigationItem.titleView = titleBtn;
+    [titleBtn addTarget:self action:@selector(titleBtnClick) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view.
 }
 
-- (void)initData
+- (void)titleBtnClick
 {
     NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
     
@@ -81,6 +87,5 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

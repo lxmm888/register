@@ -9,6 +9,7 @@
 #import "regController.h"
 #import "noticeView.h"
 #import "noticeController.h"
+#import "AlphaViewController.h"
 
 @interface regController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverPresentationControllerDelegate>
 
@@ -25,7 +26,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.navigationItem.title = _m.className;
-
+    self.hidesBottomBarWhenPushed = YES;
     [self setTableView];
     [self setNoticeView];
     // Do any additional setup after loading the view.
@@ -44,13 +45,20 @@
 
 - (void)setNoticeView
 {
-    //毛玻璃效果
+//    毛玻璃效果
     fuzzyView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, [UIScreen mainScreen].bounds.size.height)];
-    fuzzyView.backgroundColor = [UIColor lightGrayColor];
+    fuzzyView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 //    fuzzyView.hidden = YES;
     fuzzyView.alpha = 0;
+    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
+//
+//    
+//    fuzzyView=[[UIVisualEffectView alloc]initWithFrame:self.view.bounds];
+//    fuzzyView.effect=[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+//    fuzzyView.alpha = 0;
 //    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
-    [self.view addSubview:fuzzyView];
+    
+//    [self.view addSubview:fuzzyView];
 //    nc = [[noticeController alloc] init];
 //    nc.view.frame = self.view.bounds;
 //    nc.view.centerX = self.view.width * 0.5;
@@ -115,6 +123,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+//    [self presentViewController:[[AlphaViewController alloc]init] animated:YES completion:nil];
+//    return;
     [UIView animateWithDuration:0.5 animations:^{
 //        nc.view.centerY = self.view.centerY;
         nView.m = _m;

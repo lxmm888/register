@@ -76,7 +76,8 @@
     [bottomBtn addTarget:self action:@selector(bottomBtnClick) forControlEvents:UIControlEventTouchUpInside];
     
     self.layer.cornerRadius = 8;
-    self.clipsToBounds = YES;
+    self.clipsToBounds=YES;
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
