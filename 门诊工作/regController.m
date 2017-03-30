@@ -91,7 +91,9 @@
     };
     
 //    [nView addGestureRecognizer:gr];
-    [self.view addSubview:nView];
+        [[UIApplication sharedApplication].keyWindow addSubview:nView];
+    AlphaViewController *ac = [[AlphaViewController alloc] init];
+    [self.view addSubview:ac.view];
     
    
 }
@@ -130,8 +132,7 @@
         nView.m = _m;
         nView.row = indexPath.row;
         nView.centerY = self.view.centerY;
-        fuzzyView.alpha = 0.6;
-        
+        fuzzyView.alpha = 1;
 //        nView.alpha = 1.0;
 //        fuzzyView.hidden = NO;
     }];
