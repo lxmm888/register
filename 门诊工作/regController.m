@@ -83,7 +83,7 @@
     };
     
 //    [nView addGestureRecognizer:gr];
-    [self.view  addSubview:nView];
+    [self.view addSubview:nView];
     
    
 }
@@ -118,8 +118,10 @@
     [UIView animateWithDuration:0.5 animations:^{
 //        nc.view.centerY = self.view.centerY;
         nView.m = _m;
+        nView.row = indexPath.row;
         nView.centerY = self.view.centerY;
         fuzzyView.alpha = 0.6;
+        
 //        nView.alpha = 1.0;
 //        fuzzyView.hidden = NO;
     }];

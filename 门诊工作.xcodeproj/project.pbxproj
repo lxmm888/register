@@ -11,6 +11,7 @@
 		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
 		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
 		DF88A5F61E7288400091ABD4 /* manageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF88A5F51E7288400091ABD4 /* manageController.m */; };
+		DF9A99861E8529530010F24E /* RegList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9A99851E8529530010F24E /* RegList.plist */; };
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
 		DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11141E6CF44B00405BDF /* AppDelegate.m */; };
 		DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9E11191E6CF44B00405BDF /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		DFA4C1C61E70E5DB00BA0E4D /* regCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C51E70E5DB00BA0E4D /* regCell.m */; };
 		DFA4C1C91E71622500BA0E4D /* noticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C81E71622500BA0E4D /* noticeView.m */; };
 		DFA4C1CC1E71645600BA0E4D /* noticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1CB1E71645600BA0E4D /* noticeController.m */; };
+		DFB03C741E889E2C00731FC9 /* noticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB03C731E889E2C00731FC9 /* noticeCell.m */; };
 		DFC123131E6F9C0700C6D82B /* desView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC123121E6F9C0700C6D82B /* desView.m */; };
 		DFD056311E6FC2660015D7E6 /* departModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056301E6FC2660015D7E6 /* departModel.m */; };
 		DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056341E6FC6A60015D7E6 /* classModel.m */; };
@@ -69,6 +71,7 @@
 		DF32CDF41E70067900BF2D58 /* regController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regController.m; sourceTree = "<group>"; };
 		DF88A5F41E7288400091ABD4 /* manageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageController.h; sourceTree = "<group>"; };
 		DF88A5F51E7288400091ABD4 /* manageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageController.m; sourceTree = "<group>"; };
+		DF9A99851E8529530010F24E /* RegList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegList.plist; sourceTree = "<group>"; };
 		DF9E110D1E6CF44B00405BDF /* 门诊工作.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "门诊工作.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9E11111E6CF44B00405BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF9E11131E6CF44B00405BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 		DFA4C1C81E71622500BA0E4D /* noticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeView.m; sourceTree = "<group>"; };
 		DFA4C1CA1E71645600BA0E4D /* noticeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeController.h; sourceTree = "<group>"; };
 		DFA4C1CB1E71645600BA0E4D /* noticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeController.m; sourceTree = "<group>"; };
+		DFB03C721E889E2C00731FC9 /* noticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeCell.h; sourceTree = "<group>"; };
+		DFB03C731E889E2C00731FC9 /* noticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeCell.m; sourceTree = "<group>"; };
 		DFC123111E6F9C0700C6D82B /* desView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = desView.h; sourceTree = "<group>"; };
 		DFC123121E6F9C0700C6D82B /* desView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = desView.m; sourceTree = "<group>"; };
 		DFD0562F1E6FC2660015D7E6 /* departModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = departModel.h; sourceTree = "<group>"; };
@@ -217,6 +222,7 @@
 				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
 				DF9E114B1E6CF54D00405BDF /* UIView+Extension.h */,
 				DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */,
+				DF9A99851E8529530010F24E /* RegList.plist */,
 				DF0480511E6FB5760058FC86 /* DepartmentList.plist */,
 				DF9E11101E6CF44B00405BDF /* Supporting Files */,
 			);
@@ -281,6 +287,8 @@
 				DF9E11481E6CF50900405BDF /* regView.m */,
 				DFA4C1C71E71622500BA0E4D /* noticeView.h */,
 				DFA4C1C81E71622500BA0E4D /* noticeView.m */,
+				DFB03C721E889E2C00731FC9 /* noticeCell.h */,
+				DFB03C731E889E2C00731FC9 /* noticeCell.m */,
 				DFC123111E6F9C0700C6D82B /* desView.h */,
 				DFC123121E6F9C0700C6D82B /* desView.m */,
 			);
@@ -438,6 +446,7 @@
 				DF9E11201E6CF44B00405BDF /* LaunchScreen.storyboard in Resources */,
 				DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */,
 				DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */,
+				DF9A99861E8529530010F24E /* RegList.plist in Resources */,
 				DFDBFBF91E763FE1005AE652 /* ManageList.plist in Resources */,
 				DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */,
 			);
@@ -481,6 +490,7 @@
 				DFDBFC1F1E764375005AE652 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */,
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
+				DFB03C741E889E2C00731FC9 /* noticeCell.m in Sources */,
 				DF32CDF51E70067900BF2D58 /* regController.m in Sources */,
 				DFDBFC211E764375005AE652 /* ViewController+MASAdditions.m in Sources */,
 				DFDBFC1D1E764375005AE652 /* MASViewConstraint.m in Sources */,

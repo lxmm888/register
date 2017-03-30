@@ -29,12 +29,14 @@
 
 - (void)initData
 {
-    NSString *p = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject];
+    NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
+    
+//    NSString *p = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject];
     NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
-    NSFileManager *fm = [NSFileManager defaultManager];
-    if (![fm fileExistsAtPath:path]) {
-        return;
-    }
+//    NSFileManager *fm = [NSFileManager defaultManager];
+//    if (![fm fileExistsAtPath:path]) {
+//        return;
+//    }
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     dataSource = dict.allKeys;
 

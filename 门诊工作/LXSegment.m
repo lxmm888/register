@@ -36,7 +36,6 @@
     CGFloat btnW = 100;
     
     CGFloat margin = (self.width - c * btnW) / (c + 1);
-    NSLog(@"%f",margin);
     CGFloat wid = self.width / (c * 2);
     for (int i = 0; i < c; i ++) {
         NSDictionary *dic = arr[i];

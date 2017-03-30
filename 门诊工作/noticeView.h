@@ -12,7 +12,7 @@
 @property (nonatomic, strong) void(^btnBlock)(id object);
 @property (nonatomic, strong) classModel *m;
 @property (nonatomic, strong) UIViewController *regController;
-
+@property (nonatomic, assign) NSInteger row;
 
 
 @end
