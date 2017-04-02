@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "classModel.h"
+#import "noticeView.h"
+
 
 @interface regController : UIViewController
 @property (nonatomic, strong) NSArray *classDoctor;
 @property (nonatomic, strong) NSString *className;
 
 @property (nonatomic, strong) classModel *m;
+
+@property (nonatomic, strong) noticeView *nView;
+
 
 @end

@@ -15,6 +15,8 @@
 @end
 
 @implementation noticeView{
+    UIButton *cover;
+    UIView *containView;
     CGFloat cellH;
     NSMutableDictionary *nameDict;
     NSMutableDictionary *telDict;
@@ -24,16 +26,91 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setViews];
+        [self setCover];
+        [self setContainView];
+//        [self setViews];
+        
     }
     return self;
 }
 
-- (void)setViews
+- (void)setCover
 {
+    cover = [[UIButton alloc] initWithFrame:self.frame];
+    cover.backgroundColor = [UIColor blackColor];
+    cover.alpha = 0.3;
+    [self addSubview:cover];
+    [cover addTarget:self action:@selector(coverClick) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)coverClick
+{
+    cover.backgroundColor = [UIColor clearColor];
+}
+
+- (void)setContainView
+{
+    containView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 330, 150)];
+    containView.center = self.center;
+    [self addSubview:containView];
     CGFloat contentH = 140;
     CGFloat topViewH = 35;
-    CGFloat btnH = self.height - contentH;
+    //圆角
+    
+    
+    
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, containView.width, topViewH)];
+    topView.backgroundColor = [UIColor orangeColor];
+    [containView addSubview:topView];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    //    title.backgroundColor = [UIColor lightGrayColor];
+    title.centerX = topView.centerX;
+    title.centerY = topView.centerY;
+    title.textAlignment = NSTextAlignmentCenter;
+    
+    title.text = @"挂号";
+    title.textColor = [UIColor whiteColor];
+    [topView addSubview:title];
+    
+    UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, 20, 20)];
+    closeBtn.centerY = topView.centerY;
+    closeBtn.backgroundColor = [UIColor blackColor];
+    [closeBtn addTarget:self action:@selector(closeBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [topView addSubview:closeBtn];
+    
+    UITableView *tView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), containView.width, containView.height - 2 * topViewH)];
+    tView.scrollEnabled = NO;
+    tView.delegate = self;
+    tView.dataSource = self;
+    cellH = tView.height / 2;
+    tView.allowsSelection = NO;
+    tView.rowHeight = cellH;
+    [containView addSubview:tView];
+    
+    
+    
+    UIButton *bottomBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(tView.frame), containView.width, topViewH)];
+    [bottomBtn setBackgroundColor:[UIColor orangeColor]];
+    [bottomBtn setTitle:@"立即挂号" forState:UIControlStateNormal];
+    [bottomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [containView addSubview:bottomBtn];
+    [bottomBtn addTarget:self action:@selector(bottomBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    containView.layer.cornerRadius = 8;
+    containView.clipsToBounds=YES;
+
+    
+    
+}
+
+- (void)setViews
+{
+    nameDict = [NSMutableDictionary dictionary];
+    telDict = [NSMutableDictionary dictionary];
+    
+    CGFloat contentH = 140;
+    CGFloat topViewH = 35;
     //圆角
     
     
@@ -59,6 +136,7 @@
     [topView addSubview:closeBtn];
     
     UITableView *tView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), self.width, self.height - 2 * topViewH)];
+    tView.scrollEnabled = NO;
     tView.delegate = self;
     tView.dataSource = self;
     cellH = tView.height / 2;
@@ -92,7 +170,14 @@
     UITableViewCell *cell = [[UITableViewCell alloc] init];
 //    cell.backgroundColor = [UIColor yellowColor];
     UILabel *nameLabel = [UILabel new];
-    nameLabel.text = @"姓名";
+    nameLabel.textColor = [UIColor blueColor];
+    if (indexPath.row == 0) {
+        nameLabel.text = @"姓名";
+
+    }else{
+        nameLabel.text = @"电话";
+
+    }
     [cell.contentView addSubview:nameLabel];
     
     
@@ -107,7 +192,10 @@
 //        make.center.mas_equalTo(CGPointMake(50, cell.contentView.centerY));
 //        make.left.top.equalTo(cell.contentView).insets(UIEdgeInsetsMake(10, 10, 10, 10));
         make.size.mas_equalTo(CGSizeMake(80, 30));
+//        make.top.equalTo(cell.contentView).offset(10);
+        make.centerY.equalTo(cell.contentView);
         make.left.equalTo(cell.contentView).offset(10);
+
 //        make.centerY.mas_equalTo(cell.contentView.centerY);
     
         
@@ -124,8 +212,6 @@
 
 - (void)textFieldChange:(UITextField *)textField
 {
-    nameDict = [NSMutableDictionary dictionary];
-    telDict = [NSMutableDictionary dictionary];
     if (textField.tag == 0) {
         [nameDict setValue:textField.text forKey:@"name"];
     }
@@ -133,7 +219,8 @@
         [telDict setValue:textField.text forKey:@"tel"];
     }
     
-//    NSLog(@"%@",[dict valueForKey:@"text"]);
+    NSLog(@"name:%@",[nameDict valueForKey:@"name"]);
+    NSLog(@"tel:%@",[telDict valueForKey:@"tel"]);
 }
 
 
@@ -156,6 +243,7 @@
 
 - (void)bottomBtnClick
 {
+    [self endEditing:YES];
 //    NSString *path =[[NSBundle mainBundle] pathForResource:@"RegList.plist" ofType:nil];
 //    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:path];
 //    [dict setObject:@"888" forKey:@"111"];
@@ -165,8 +253,12 @@
     NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
 //    NSString *p = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject];
     NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
-    [telDict writeToFile:path atomically:YES];
-    [nameDict writeToFile:path atomically:YES];
+    
+    NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict, nil];
+    [arr writeToFile:path atomically:YES];
+//    
+//    [telDict writeToFile:path atomically:YES];
+//    [nameDict writeToFile:path atomically:YES];
 //    NSLog(@"%@",path);
 //    NSFileManager *fm = [NSFileManager defaultManager];
 //    if (![fm fileExistsAtPath:path]) {
@@ -190,13 +282,13 @@
     //那怎么证明我的数据写入了呢？读出来看看
     NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
     NSLog(@"%@", data1);
-    for (UIViewController *vc in _regController.tabBarController.viewControllers) {
-        if ([vc isKindOfClass:[manageController class]]) {
-            [((manageController *)vc) initData];
-            [((manageController *)vc).tView reloadData];
-        }
-    }
-    
+//    for (UIViewController *vc in _regController.tabBarController.viewControllers) {
+//        if ([vc isKindOfClass:[manageController class]]) {
+//            [((manageController *)vc) initData];
+//            [((manageController *)vc).tView reloadData];
+//        }
+//    }
+    self.y = [UIScreen mainScreen].bounds.size.height;
     
 }
 

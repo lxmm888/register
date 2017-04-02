@@ -7,7 +7,6 @@
 //  挂号页面控制器
 #import "regCell.h"
 #import "regController.h"
-#import "noticeView.h"
 #import "noticeController.h"
 #import "AlphaViewController.h"
 
@@ -17,7 +16,7 @@
 
 @implementation regController{
     UITableView *tView;
-    noticeView *nView;
+//    noticeView *nView;
     UIView *fuzzyView;
     noticeController *nc;
 }
@@ -28,7 +27,7 @@
     self.navigationItem.title = _m.className;
     self.hidesBottomBarWhenPushed = YES;
     [self setTableView];
-    [self setNoticeView];
+//    [self setNoticeView];
     // Do any additional setup after loading the view.
 }
 
@@ -50,36 +49,21 @@
     fuzzyView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 //    fuzzyView.hidden = YES;
     fuzzyView.alpha = 0;
-    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
-//
-//    
-//    fuzzyView=[[UIVisualEffectView alloc]initWithFrame:self.view.bounds];
-//    fuzzyView.effect=[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//    fuzzyView.alpha = 0;
 //    [[UIApplication sharedApplication].keyWindow addSubview:fuzzyView];
-    
-//    [self.view addSubview:fuzzyView];
-//    nc = [[noticeController alloc] init];
-//    nc.view.frame = self.view.bounds;
-//    nc.view.centerX = self.view.width * 0.5;
-//    [[UIApplication sharedApplication].keyWindow addSubview:nc.view];
 
-//    [fuzzyView addSubview:nc.view];
-    
-//    [self presentViewController:nc animated:YES completion:^{
-//        
-//    }];
-
+    __weak typeof (self) ws=self;
     UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] init];
     [gr addTarget:self action:@selector(grTap)];
 //    [nc.view addGestureRecognizer:gr];
-    nView = [[noticeView alloc] initWithFrame:CGRectMake(0, self.view.height, 330, 150)];
-    nView.backgroundColor = [UIColor blackColor];
-    nView.centerX = self.view.width * 0.5;
-    nView.regController = self;
-    __weak typeof (self) ws=self;
+//    _nView = [[noticeView alloc] initWithFrame:CGRectMake(0, self.view.height, 330, 150)];
+    _nView = [[noticeView alloc] initWithFrame:self.view.frame];
+    _nView.backgroundColor = [UIColor blackColor];
+    _nView.centerX = self.view.width * 0.5;
+    _nView.regController = ws;
+//    [self.view addSubview:nView];
+    
 
-    nView.btnBlock=^(id obj){
+    _nView.btnBlock=^(id obj){
         if ([obj isKindOfClass:[UIView class]]) {
 //            [ws.navigationController pushViewController:obj animated:YES];
             [UIView animateWithDuration:0.5 animations:^{
@@ -91,9 +75,9 @@
     };
     
 //    [nView addGestureRecognizer:gr];
-        [[UIApplication sharedApplication].keyWindow addSubview:nView];
-    AlphaViewController *ac = [[AlphaViewController alloc] init];
-    [self.view addSubview:ac.view];
+        [[UIApplication sharedApplication].keyWindow addSubview:_nView];
+//    AlphaViewController *ac = [[AlphaViewController alloc] init];
+//    [self.view addSubview:ac.view];
     
    
 }
@@ -102,7 +86,7 @@
 {
     [UIView animateWithDuration:0.5 animations:^{
 //        nc.view.y = self.view.height;
-        nView.y = self.view.height;
+        _nView.y = self.view.height;
         fuzzyView.alpha = 0;
     } completion:^(BOOL finished) {
 //        fuzzyView.hidden = YES;
@@ -127,15 +111,17 @@
 {
 //    [self presentViewController:[[AlphaViewController alloc]init] animated:YES completion:nil];
 //    return;
-    [UIView animateWithDuration:0.5 animations:^{
-//        nc.view.centerY = self.view.centerY;
-        nView.m = _m;
-        nView.row = indexPath.row;
-        nView.centerY = self.view.centerY;
-        fuzzyView.alpha = 1;
-//        nView.alpha = 1.0;
-//        fuzzyView.hidden = NO;
-    }];
+//    [UIView animateWithDuration:0.5 animations:^{
+////        nc.view.centerY = self.view.centerY;
+//        _nView.m = _m;
+//        _nView.row = indexPath.row;
+//        _nView.centerY = self.view.centerY;
+//        fuzzyView.alpha = 1;
+////        nView.alpha = 1.0;
+////        fuzzyView.hidden = NO;
+//    }];
+    noticeView *nview = [[noticeView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:nview];
 //    [self popAMenu];
 }
 
