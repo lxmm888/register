@@ -12,9 +12,9 @@
 				<string>妇科门诊</string>
 				<key>classDoctor</key>
 				<array>
-					<string>long</string>
-					<string>pan</string>
-					<string>chu</string>
+					<string>龙初盘</string>
+					<string>盘龙出</string>
+					<string>潘楚龙</string>
 				</array>
 			</dict>
 			<dict>
@@ -22,9 +22,9 @@
 				<string>产科门诊</string>
 				<key>classDoctor</key>
 				<array>
-					<string>long</string>
-					<string>pan</string>
-					<string>chu</string>
+					<string>秋微</string>
+					<string>微球</string>
+					<string>秋闱</string>
 				</array>
 			</dict>
 		</array>
@@ -103,30 +103,30 @@
 				<string>针灸科门诊</string>
 				<key>classDoctor</key>
 				<array>
-					<string>long</string>
-					<string>pan</string>
-					<string>chu</string>
+					<string>秋位</string>
+					<string>肖申克</string>
+					<string>阿龙</string>
 				</array>
 			</dict>
 			<dict>
+				<key>classDoctor</key>
+				<array>
+					<string>秋位</string>
+					<string>肖申克</string>
+					<string>阿龙</string>
+				</array>
 				<key>className</key>
 				<string>理疗科门诊</string>
-				<key>classDoctor</key>
-				<array>
-					<string>long</string>
-					<string>pan</string>
-					<string>chu</string>
-				</array>
 			</dict>
 			<dict>
-				<key>className</key>
-				<string>按摩科门诊</string>
 				<key>classDoctor</key>
 				<array>
-					<string>long</string>
-					<string>pan</string>
-					<string>chu</string>
+					<string>秋位</string>
+					<string>肖申克</string>
+					<string>阿龙</string>
 				</array>
+				<key>className</key>
+				<string>按摩科门诊</string>
 			</dict>
 		</array>
 	</dict>

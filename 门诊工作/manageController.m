@@ -52,14 +52,20 @@
 
 - (void)initData
 {
-    NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
+    NSFileManager *fm = [NSFileManager defaultManager];
     
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *regPath = [documentsDirectory stringByAppendingPathComponent:@"regList.plist"];
     
-    NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
-//    [dataSource addObject:[NSArray arrayWithContentsOfFile:path]];
-    dataSource = [NSArray arrayWithContentsOfFile:path];
-//    [dataSource addObject:[NSDictionary dictionaryWithContentsOfFile:path]];
-    NSLog(@"%d",dataSource.count);
+//    NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
+//    
+//    
+//    NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
+////    [dataSource addObject:[NSArray arrayWithContentsOfFile:path]];
+    dataSource = [NSArray arrayWithContentsOfFile:regPath];
+//    [dataSource addObject:[NSDictionary dictionaryWithContentsOfFile:regPath]];
+    NSLog(@"%lu",(unsigned long)dataSource.count);
     
 }
 

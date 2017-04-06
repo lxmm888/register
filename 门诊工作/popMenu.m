@@ -114,7 +114,7 @@
 
 - (void)coverClick
 {
-    self.isDim = NO;
+//    self.isDim = NO;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

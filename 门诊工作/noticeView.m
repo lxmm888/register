@@ -37,8 +37,8 @@
 - (void)setCover
 {
     cover = [[UIButton alloc] initWithFrame:self.frame];
-    cover.backgroundColor = [UIColor blackColor];
-    cover.alpha = 0.3;
+    cover.backgroundColor = [UIColor clearColor];
+//    cover.alpha = 0.3;
     [self addSubview:cover];
     [cover addTarget:self action:@selector(coverClick) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -50,10 +50,12 @@
 
 - (void)setContainView
 {
-    containView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 330, 150)];
-    containView.center = self.center;
+    nameDict = [NSMutableDictionary dictionary];
+    telDict = [NSMutableDictionary dictionary];
+    
+    containView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height, 330, 150)];
+    containView.centerX = self.centerX;
     [self addSubview:containView];
-    CGFloat contentH = 140;
     CGFloat topViewH = 35;
     //圆角
     
@@ -75,7 +77,9 @@
     
     UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, 20, 20)];
     closeBtn.centerY = topView.centerY;
-    closeBtn.backgroundColor = [UIColor blackColor];
+    
+//    closeBtn.backgroundColor = [UIColor blackColor];
+    [closeBtn setImage:[UIImage imageNamed:@"delete"] forState:UIControlStateNormal];
     [closeBtn addTarget:self action:@selector(closeBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [topView addSubview:closeBtn];
     
@@ -87,8 +91,6 @@
     tView.allowsSelection = NO;
     tView.rowHeight = cellH;
     [containView addSubview:tView];
-    
-    
     
     UIButton *bottomBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(tView.frame), containView.width, topViewH)];
     [bottomBtn setBackgroundColor:[UIColor orangeColor]];
@@ -104,58 +106,32 @@
     
 }
 
-- (void)setViews
+
+
+- (void)setIsDim:(BOOL)isDim
 {
-    nameDict = [NSMutableDictionary dictionary];
-    telDict = [NSMutableDictionary dictionary];
-    
-    CGFloat contentH = 140;
-    CGFloat topViewH = 35;
-    //圆角
-    
-    
-    
-    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.width, topViewH)];
-    topView.backgroundColor = [UIColor orangeColor];
-    [self addSubview:topView];
+    _isDim = isDim;
+    [UIView animateWithDuration:0.5 animations:^{
+        if (_isDim) {
+            cover.backgroundColor = [UIColor blackColor];
+            cover.alpha = 0.3;
+            containView.centerY = self.centerY;
+        }else{
+            cover.backgroundColor = [UIColor clearColor];
+            cover.alpha = 1.0;
+            containView.y = self.height;
 
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-//    title.backgroundColor = [UIColor lightGrayColor];
-    title.centerX = topView.centerX;
-    title.centerY = topView.centerY;
-    title.textAlignment = NSTextAlignmentCenter;
+            //
+            
+        }
+    } completion:^(BOOL finished) {
+        if (_isDim == NO) {
+            [self removeFromSuperview];
+            
+        }
+    }];
 
-    title.text = @"挂号";
-    title.textColor = [UIColor whiteColor];
-    [topView addSubview:title];
     
-    UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 0, 20, 20)];
-    closeBtn.centerY = topView.centerY;
-    closeBtn.backgroundColor = [UIColor blackColor];
-    [closeBtn addTarget:self action:@selector(closeBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [topView addSubview:closeBtn];
-    
-    UITableView *tView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(topView.frame), self.width, self.height - 2 * topViewH)];
-    tView.scrollEnabled = NO;
-    tView.delegate = self;
-    tView.dataSource = self;
-    cellH = tView.height / 2;
-    tView.allowsSelection = NO;
-    tView.rowHeight = cellH;
-    [self addSubview:tView];
-    
-    
-    
-    UIButton *bottomBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, self.height - topViewH, self.width, topViewH)];
-    [bottomBtn setBackgroundColor:[UIColor orangeColor]];
-    [bottomBtn setTitle:@"立即挂号" forState:UIControlStateNormal];
-    [bottomBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self addSubview:bottomBtn];
-    [bottomBtn addTarget:self action:@selector(bottomBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.layer.cornerRadius = 8;
-    self.clipsToBounds=YES;
-
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -228,76 +204,64 @@
 
 - (void)closeBtnClick
 {
-    if (self.btnBlock != nil) {
-        self.btnBlock(self);
+//    if (self.btnBlock != nil) {
+//        self.btnBlock(self);
+//        
+//    }
+    [UIView animateWithDuration:0.5 animations:^{
+        self.isDim = NO;
         
-    }
+    }];
+    
 //    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"您正在挂号" preferredStyle:UIAlertControllerStyleAlert];
 //    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
 //        
 //        NSLog(@"点击取消");
-//        
+////
 //    }]];
-    //
+  
 }
 
 - (void)bottomBtnClick
 {
     [self endEditing:YES];
-//    NSString *path =[[NSBundle mainBundle] pathForResource:@"RegList.plist" ofType:nil];
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-//    [dict setObject:@"888" forKey:@"111"];
-//    [dict writeToFile:path atomically:YES];
+    NSDictionary *dcDict = [NSDictionary dictionaryWithObjectsAndKeys:_m.className,@"className",_doctorName,@"doctorName", nil];
     
+    NSFileManager *fm = [NSFileManager defaultManager];
+
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSLog(@"app_home_doc: %@",documentsDirectory);
+    NSString *regPath = [documentsDirectory stringByAppendingPathComponent:@"regList.plist"];
+
+    if ([fm fileExistsAtPath:regPath]) {
+        NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict,dcDict,nil];
+        [arr writeToFile:regPath atomically:YES];
+        NSLog(@"文件存在");
+    }
+    else{
+        [fm createFileAtPath:regPath contents:nil attributes:nil];
+        NSLog(@"新建文件");
+    }
     
-    NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
-//    NSString *p = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) firstObject];
-    NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
+
     
-    NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict, nil];
-    [arr writeToFile:path atomically:YES];
-//    
-//    [telDict writeToFile:path atomically:YES];
-//    [nameDict writeToFile:path atomically:YES];
-//    NSLog(@"%@",path);
-//    NSFileManager *fm = [NSFileManager defaultManager];
-//    if (![fm fileExistsAtPath:path]) {
-//        
-//        [fm createFileAtPath:path contents:nil attributes:nil];
-//        NSDictionary *dic = [NSDictionary dictionaryWithObject:@"hahaha" forKey:@"dicName"];
-//        [dic writeToFile:path atomically:YES];
-//        
-//    }
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile:path];
-//    [dict setObject:[_m.classDoctor objectAtIndex:_row] forKey:_m.className];
-//    [dict writeToFile:path atomically:YES];
+//    NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
 //
-//    NSArray *paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-//    NSString *plistPath1 = [paths objectAtIndex:0];
+//    NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
 //    
-//    //得到完整的文件名
-//    NSString *filename=[plistPath1 stringByAppendingPathComponent:@"RegList.plist"];
-    //输入写入
-//    BOOL isWrite = [dict writeToFile:path atomically:YES];
-    //那怎么证明我的数据写入了呢？读出来看看
-    NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-    NSLog(@"%@", data1);
-//    for (UIViewController *vc in _regController.tabBarController.viewControllers) {
-//        if ([vc isKindOfClass:[manageController class]]) {
-//            [((manageController *)vc) initData];
-//            [((manageController *)vc).tView reloadData];
-//        }
-//    }
-    self.y = [UIScreen mainScreen].bounds.size.height;
+//    NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict, nil];
+//    [arr writeToFile:path atomically:YES];
+//
+//    NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
+//    NSLog(@"%@", data1);
+
     
+    [UIView animateWithDuration:0.5 animations:^{
+        self.isDim = NO;
+    }];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+
 
 @end

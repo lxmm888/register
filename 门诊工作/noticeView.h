@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "classModel.h"
+
 @interface noticeView : UIView
 @property (nonatomic, strong) void(^btnBlock)(id object);
 @property (nonatomic, strong) classModel *m;
 @property (nonatomic, strong) UIViewController *regController;
 @property (nonatomic, assign) NSInteger row;
+@property (nonatomic, strong) NSString *doctorName;
+/** */
 
+@property (nonatomic, assign) BOOL isDim;
 
 @end

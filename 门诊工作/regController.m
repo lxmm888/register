@@ -109,20 +109,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [self presentViewController:[[AlphaViewController alloc]init] animated:YES completion:nil];
-//    return;
-//    [UIView animateWithDuration:0.5 animations:^{
-////        nc.view.centerY = self.view.centerY;
-//        _nView.m = _m;
-//        _nView.row = indexPath.row;
-//        _nView.centerY = self.view.centerY;
-//        fuzzyView.alpha = 1;
-////        nView.alpha = 1.0;
-////        fuzzyView.hidden = NO;
-//    }];
+
     noticeView *nview = [[noticeView alloc] initWithFrame:self.view.frame];
+    NSString *doctorName = _m.classDoctor[indexPath.row];
+    nview.doctorName = doctorName;
+    nview.isDim = YES;
+    nview.m = _m;
     [self.view addSubview:nview];
-//    [self popAMenu];
+    
 }
 
 -(void)popAMenu

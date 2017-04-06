@@ -17,7 +17,6 @@
 		DF9A99861E8529530010F24E /* RegList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9A99851E8529530010F24E /* RegList.plist */; };
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
 		DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11141E6CF44B00405BDF /* AppDelegate.m */; };
-		DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9E11191E6CF44B00405BDF /* Main.storyboard */; };
 		DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF9E111C1E6CF44B00405BDF /* Assets.xcassets */; };
 		DF9E11201E6CF44B00405BDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */; };
 		DF9E112B1E6CF44B00405BDF /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E112A1E6CF44B00405BDF /* ____Tests.m */; };
@@ -83,7 +82,6 @@
 		DF9E11111E6CF44B00405BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF9E11131E6CF44B00405BDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DF9E11141E6CF44B00405BDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DF9E111A1E6CF44B00405BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF9E111C1E6CF44B00405BDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF9E111F1E6CF44B00405BDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF9E11211E6CF44B00405BDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		DFD056341E6FC6A60015D7E6 /* classModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classModel.m; sourceTree = "<group>"; };
 		DFD056371E6FD2FD0015D7E6 /* LXBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBorder.h; sourceTree = "<group>"; };
 		DFD056381E6FD2FD0015D7E6 /* LXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBorder.m; sourceTree = "<group>"; };
-		DFDBFBF81E763FE1005AE652 /* ManageList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ManageList.plist; sourceTree = "<group>"; };
 		DFDBFBFF1E764375005AE652 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		DFDBFC001E764375005AE652 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		DFDBFC011E764375005AE652 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -242,7 +239,6 @@
 				DF3D1FF61E82100300D16612 /* manage */,
 				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
 				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
-				DF9E11191E6CF44B00405BDF /* Main.storyboard */,
 				DF9E111C1E6CF44B00405BDF /* Assets.xcassets */,
 				DFDBFBFE1E764375005AE652 /* Masonry */,
 				DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */,
@@ -463,8 +459,6 @@
 				DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */,
 				DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */,
 				DF9A99861E8529530010F24E /* RegList.plist in Resources */,
-				DFDBFBF91E763FE1005AE652 /* ManageList.plist in Resources */,
-				DF9E111B1E6CF44B00405BDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,14 +549,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DF9E11191E6CF44B00405BDF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DF9E111A1E6CF44B00405BDF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
