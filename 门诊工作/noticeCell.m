@@ -29,12 +29,7 @@
     UITextField *textField = [UITextField new];
     [self.contentView addSubview:textField];
                         
-//    [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.equalTo(self.contentView);
-//        make.size.mas_equalTo(CGSizeMake(100, 30));
-//        
-//    }];
-//    
+
     return self;
 }
 

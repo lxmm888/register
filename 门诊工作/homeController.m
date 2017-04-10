@@ -25,7 +25,8 @@
     [super viewDidLoad];
     [self setNav];
     self.title = @"挂号";
-//    self.hidesBottomBarWhenPushed = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
+    //    self.hidesBottomBarWhenPushed = YES;
     CGFloat topViewH = 60;
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, topViewH)];
     topView.backgroundColor = [UIColor whiteColor];

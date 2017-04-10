@@ -10,6 +10,7 @@
 #import "noticeView.h"
 #import "manageController.h"
 #import "noticeCell.h"
+#import "regPerson.h"
 @interface noticeView()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
 @end
@@ -20,6 +21,8 @@
     CGFloat cellH;
     NSMutableDictionary *nameDict;
     NSMutableDictionary *telDict;
+    NSString *nameStr;
+    NSString *telStr;
     
 }
 - (instancetype)initWithFrame:(CGRect)frame
@@ -45,7 +48,7 @@
 
 - (void)coverClick
 {
-    cover.backgroundColor = [UIColor clearColor];
+//    cover.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setContainView
@@ -147,38 +150,38 @@
 //    cell.backgroundColor = [UIColor yellowColor];
     UILabel *nameLabel = [UILabel new];
     nameLabel.textColor = [UIColor blueColor];
+    nameLabel.textAlignment = NSTextAlignmentCenter;
+    
+    UITextField *textField = [UITextField new];
+    textField.tag = indexPath.row;
+    textField.delegate = self;
+    [textField addTarget:self  action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
+    [cell.contentView addSubview:textField];
     if (indexPath.row == 0) {
+        textField.placeholder = @"请输入您的姓名";
         nameLabel.text = @"姓名";
 
     }else{
+        textField.placeholder = @"请输入您的电话";
+
         nameLabel.text = @"电话";
 
     }
     [cell.contentView addSubview:nameLabel];
     
     
-    UITextField *textField = [UITextField new];
-    textField.tag = indexPath.row;
-    textField.backgroundColor = [UIColor lightGrayColor];
-    textField.delegate = self;
-    [textField addTarget:self  action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
-    [cell.contentView addSubview:textField];
+   
     
     [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.center.mas_equalTo(CGPointMake(50, cell.contentView.centerY));
-//        make.left.top.equalTo(cell.contentView).insets(UIEdgeInsetsMake(10, 10, 10, 10));
         make.size.mas_equalTo(CGSizeMake(80, 30));
-//        make.top.equalTo(cell.contentView).offset(10);
         make.centerY.equalTo(cell.contentView);
-        make.left.equalTo(cell.contentView).offset(10);
-
-//        make.centerY.mas_equalTo(cell.contentView.centerY);
+        make.left.equalTo(cell.contentView).with.offset(50);
     
         
     }];
     
     [textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(cell.contentView).offset(20);
+        make.left.equalTo(nameLabel.mas_right).offset(20);
         make.width.equalTo(@(150));
         make.height.equalTo(@(cellH));
     }];
@@ -190,13 +193,15 @@
 {
     if (textField.tag == 0) {
         [nameDict setValue:textField.text forKey:@"name"];
+        nameStr = textField.text;
     }
     else{
         [telDict setValue:textField.text forKey:@"tel"];
+        telStr = textField.text;
     }
     
-    NSLog(@"name:%@",[nameDict valueForKey:@"name"]);
-    NSLog(@"tel:%@",[telDict valueForKey:@"tel"]);
+    NSLog(@"name:%@",nameStr);
+    NSLog(@"tel:%@",telStr);
 }
 
 
@@ -225,7 +230,10 @@
 - (void)bottomBtnClick
 {
     [self endEditing:YES];
-    NSDictionary *dcDict = [NSDictionary dictionaryWithObjectsAndKeys:_m.className,@"className",_doctorName,@"doctorName", nil];
+    
+    NSDictionary *dcDict = [NSDictionary dictionaryWithObjectsAndKeys:_m.className,@"className",_doctorName,@"doctorName",nameStr,@"nameStr",telStr,@"telStr", nil];
+    
+    
     
     NSFileManager *fm = [NSFileManager defaultManager];
 
@@ -235,8 +243,12 @@
     NSString *regPath = [documentsDirectory stringByAppendingPathComponent:@"regList.plist"];
 
     if ([fm fileExistsAtPath:regPath]) {
-        NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict,dcDict,nil];
+//        NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict,dcDict,nil];
+        NSArray *arr = [NSArray arrayWithObjects:dcDict,nil];
+
         [arr writeToFile:regPath atomically:YES];
+        
+        
         NSLog(@"文件存在");
     }
     else{

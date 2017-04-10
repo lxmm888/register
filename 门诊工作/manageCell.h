@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "regPerson.h"
 
 @interface manageCell : UITableViewCell
+
+@property (nonatomic, strong) regPerson *rp;
+
 + (UITableViewCell *)tableViewToCell:(UITableView *)tableView;
 
 @end

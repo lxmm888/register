@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "regPerson.h"
 
 @interface manageController : UIViewController
 @property (nonatomic, strong) UITableView *tView;
+@property (nonatomic, strong) regPerson *regPerson;
+
 - (void)initData;
 
 @end

@@ -11,7 +11,9 @@
 		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
 		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
 		DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D1FF91E82103500D16612 /* popMenu.m */; };
+		DF49D6A41E9B4DBC007E3A62 /* LXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF49D6A31E9B4DBC007E3A62 /* LXButton.m */; };
 		DF5DA72E1E7404F3000E10A3 /* AlphaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF5DA72D1E7404F3000E10A3 /* AlphaViewController.m */; };
+		DF7C421D1E99C8FD006048E6 /* regPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C421C1E99C8FD006048E6 /* regPerson.m */; };
 		DF7F2ECE1E8D180500057FF0 /* manageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7F2ECD1E8D180500057FF0 /* manageCell.m */; };
 		DF88A5F61E7288400091ABD4 /* manageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF88A5F51E7288400091ABD4 /* manageController.m */; };
 		DF9A99861E8529530010F24E /* RegList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9A99851E8529530010F24E /* RegList.plist */; };
@@ -71,8 +73,12 @@
 		DF32CDF41E70067900BF2D58 /* regController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regController.m; sourceTree = "<group>"; };
 		DF3D1FF81E82103500D16612 /* popMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popMenu.h; sourceTree = "<group>"; };
 		DF3D1FF91E82103500D16612 /* popMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = popMenu.m; sourceTree = "<group>"; };
+		DF49D6A21E9B4DBC007E3A62 /* LXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXButton.h; sourceTree = "<group>"; };
+		DF49D6A31E9B4DBC007E3A62 /* LXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXButton.m; sourceTree = "<group>"; };
 		DF5DA72C1E7404F3000E10A3 /* AlphaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlphaViewController.h; sourceTree = "<group>"; };
 		DF5DA72D1E7404F3000E10A3 /* AlphaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlphaViewController.m; sourceTree = "<group>"; };
+		DF7C421B1E99C8FD006048E6 /* regPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regPerson.h; sourceTree = "<group>"; };
+		DF7C421C1E99C8FD006048E6 /* regPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regPerson.m; sourceTree = "<group>"; };
 		DF7F2ECC1E8D180500057FF0 /* manageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageCell.h; sourceTree = "<group>"; };
 		DF7F2ECD1E8D180500057FF0 /* manageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageCell.m; sourceTree = "<group>"; };
 		DF88A5F41E7288400091ABD4 /* manageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageController.h; sourceTree = "<group>"; };
@@ -191,6 +197,8 @@
 				DF3D1FF71E82101300D16612 /* view */,
 				DF88A5F41E7288400091ABD4 /* manageController.h */,
 				DF88A5F51E7288400091ABD4 /* manageController.m */,
+				DF7C421B1E99C8FD006048E6 /* regPerson.h */,
+				DF7C421C1E99C8FD006048E6 /* regPerson.m */,
 			);
 			name = manage;
 			sourceTree = "<group>";
@@ -202,6 +210,8 @@
 				DF3D1FF91E82103500D16612 /* popMenu.m */,
 				DF7F2ECC1E8D180500057FF0 /* manageCell.h */,
 				DF7F2ECD1E8D180500057FF0 /* manageCell.m */,
+				DF49D6A21E9B4DBC007E3A62 /* LXButton.h */,
+				DF49D6A31E9B4DBC007E3A62 /* LXButton.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -229,25 +239,12 @@
 		DF9E110F1E6CF44B00405BDF /* 门诊工作 */ = {
 			isa = PBXGroup;
 			children = (
-				DF9E11131E6CF44B00405BDF /* AppDelegate.h */,
-				DF9E11141E6CF44B00405BDF /* AppDelegate.m */,
-				DFD056371E6FD2FD0015D7E6 /* LXBorder.h */,
-				DFD056381E6FD2FD0015D7E6 /* LXBorder.m */,
+				DFB4A9321E96890F00C3D17C /* main */,
+				DFB4A9331E96893C00C3D17C /* tool */,
 				DF9E11461E6CF48300405BDF /* home */,
-				DF9E11511E6CFC2D00405BDF /* tab.h */,
-				DF9E11521E6CFC2D00405BDF /* tab.m */,
 				DF3D1FF61E82100300D16612 /* manage */,
-				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
-				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
 				DF9E111C1E6CF44B00405BDF /* Assets.xcassets */,
 				DFDBFBFE1E764375005AE652 /* Masonry */,
-				DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */,
-				DF9E11211E6CF44B00405BDF /* Info.plist */,
-				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
-				DF9E114B1E6CF54D00405BDF /* UIView+Extension.h */,
-				DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */,
-				DF9A99851E8529530010F24E /* RegList.plist */,
-				DF0480511E6FB5760058FC86 /* DepartmentList.plist */,
 				DF9E11101E6CF44B00405BDF /* Supporting Files */,
 			);
 			path = "门诊工作";
@@ -287,6 +284,35 @@
 				DFD056361E6FD2EC0015D7E6 /* view */,
 			);
 			name = home;
+			sourceTree = "<group>";
+		};
+		DFB4A9321E96890F00C3D17C /* main */ = {
+			isa = PBXGroup;
+			children = (
+				DF9E111E1E6CF44B00405BDF /* LaunchScreen.storyboard */,
+				DF9E11211E6CF44B00405BDF /* Info.plist */,
+				DF9E11131E6CF44B00405BDF /* AppDelegate.h */,
+				DF9E11141E6CF44B00405BDF /* AppDelegate.m */,
+				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
+				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
+				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
+				DF9A99851E8529530010F24E /* RegList.plist */,
+				DF0480511E6FB5760058FC86 /* DepartmentList.plist */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		DFB4A9331E96893C00C3D17C /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				DFD056371E6FD2FD0015D7E6 /* LXBorder.h */,
+				DFD056381E6FD2FD0015D7E6 /* LXBorder.m */,
+				DF9E11511E6CFC2D00405BDF /* tab.h */,
+				DF9E11521E6CFC2D00405BDF /* tab.m */,
+				DF9E114B1E6CF54D00405BDF /* UIView+Extension.h */,
+				DF9E114C1E6CF54D00405BDF /* UIView+Extension.m */,
+			);
+			name = tool;
 			sourceTree = "<group>";
 		};
 		DFD056321E6FC68E0015D7E6 /* model */ = {
@@ -483,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF49D6A41E9B4DBC007E3A62 /* LXButton.m in Sources */,
 				DF88A5F61E7288400091ABD4 /* manageController.m in Sources */,
 				DFA4C1C61E70E5DB00BA0E4D /* regCell.m in Sources */,
 				DF9E114D1E6CF54D00405BDF /* UIView+Extension.m in Sources */,
@@ -510,6 +537,7 @@
 				DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */,
 				DF5DA72E1E7404F3000E10A3 /* AlphaViewController.m in Sources */,
 				DFD056311E6FC2660015D7E6 /* departModel.m in Sources */,
+				DF7C421D1E99C8FD006048E6 /* regPerson.m in Sources */,
 				DFDBFC1B1E764375005AE652 /* MASLayoutConstraint.m in Sources */,
 				DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */,
 				DF9E11531E6CFC2D00405BDF /* tab.m in Sources */,
