@@ -209,10 +209,7 @@
 
 - (void)closeBtnClick
 {
-//    if (self.btnBlock != nil) {
-//        self.btnBlock(self);
-//        
-//    }
+
     [UIView animateWithDuration:0.5 animations:^{
         self.isDim = NO;
         
@@ -230,8 +227,16 @@
 - (void)bottomBtnClick
 {
     [self endEditing:YES];
+    //实例化一个NSDateFormatter对象
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    //设定时间格式,这里可以设置成自己需要的格式
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    //用[NSDate date]可以获取系统当前时间
+    NSString *regTime = [dateFormatter stringFromDate:[NSDate date]];
+   
     
-    NSDictionary *dcDict = [NSDictionary dictionaryWithObjectsAndKeys:_m.className,@"className",_doctorName,@"doctorName",nameStr,@"nameStr",telStr,@"telStr", nil];
+    NSDictionary *dcDict = [NSDictionary dictionaryWithObjectsAndKeys:_m.className,@"className",_doctorName,@"doctorName",nameStr,@"nameStr",telStr,@"telStr",_m.departName,@"departName",regTime,@"regTime" ,nil];
+//    NSLog(@"%@",_m.departName);
     
     
     
@@ -243,7 +248,9 @@
     NSString *regPath = [documentsDirectory stringByAppendingPathComponent:@"regList.plist"];
 
     if ([fm fileExistsAtPath:regPath]) {
-//        NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict,dcDict,nil];
+//        NSMutableArray *tempArr = [NSMutableArray arrayWithContentsOfFile:regPath];
+//        [tempArr addObject:dcDict];
+//        [tempArr writeToFile:regPath atomically:YES];
         NSArray *arr = [NSArray arrayWithObjects:dcDict,nil];
 
         [arr writeToFile:regPath atomically:YES];

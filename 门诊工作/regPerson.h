@@ -14,6 +14,8 @@
 @property (nonatomic, strong) NSString *telStr;
 @property (nonatomic, strong) NSString *className;
 @property (nonatomic, strong) NSString *doctorName;
+@property (nonatomic, strong) NSString *departName;
+@property (nonatomic, strong) NSString *regTime;
 
 
 

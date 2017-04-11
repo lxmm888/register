@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DF04804F1E6FA0380058FC86 /* LXSegment.m */; };
 		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
+		DF173FA21E9C7C1700FE87CC /* manageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF173FA11E9C7C1700FE87CC /* manageCellView.m */; };
 		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
 		DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D1FF91E82103500D16612 /* popMenu.m */; };
 		DF49D6A41E9B4DBC007E3A62 /* LXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF49D6A31E9B4DBC007E3A62 /* LXButton.m */; };
@@ -69,6 +70,8 @@
 		DF04804E1E6FA0380058FC86 /* LXSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSegment.h; sourceTree = "<group>"; };
 		DF04804F1E6FA0380058FC86 /* LXSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSegment.m; sourceTree = "<group>"; };
 		DF0480511E6FB5760058FC86 /* DepartmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DepartmentList.plist; sourceTree = "<group>"; };
+		DF173FA01E9C7C1700FE87CC /* manageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageCellView.h; sourceTree = "<group>"; };
+		DF173FA11E9C7C1700FE87CC /* manageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageCellView.m; sourceTree = "<group>"; };
 		DF32CDF31E70067900BF2D58 /* regController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regController.h; sourceTree = "<group>"; };
 		DF32CDF41E70067900BF2D58 /* regController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regController.m; sourceTree = "<group>"; };
 		DF3D1FF81E82103500D16612 /* popMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = popMenu.h; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 				DF7F2ECD1E8D180500057FF0 /* manageCell.m */,
 				DF49D6A21E9B4DBC007E3A62 /* LXButton.h */,
 				DF49D6A31E9B4DBC007E3A62 /* LXButton.m */,
+				DF173FA01E9C7C1700FE87CC /* manageCellView.h */,
+				DF173FA11E9C7C1700FE87CC /* manageCellView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 				DFA4C1C91E71622500BA0E4D /* noticeView.m in Sources */,
 				DFDBFC1E1E764375005AE652 /* NSArray+MASAdditions.m in Sources */,
 				DFDBFC1F1E764375005AE652 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				DF173FA21E9C7C1700FE87CC /* manageCellView.m in Sources */,
 				DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */,
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
 				DFB03C741E889E2C00731FC9 /* noticeCell.m in Sources */,

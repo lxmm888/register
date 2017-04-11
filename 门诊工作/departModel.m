@@ -18,6 +18,7 @@
         NSMutableArray *arr = [NSMutableArray array];
         for (NSDictionary *dic in _departClass) {
             classModel *model = [classModel dictToModel:dic];
+            model.departName = [dict valueForKey:@"departName"];
             [arr addObject:model];
         }
         self.classModelArr = [arr copy];

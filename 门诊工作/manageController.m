@@ -9,6 +9,7 @@
 #import "manageCell.h"
 #import "manageController.h"
 #import "popMenu.h"
+#import "manageCellView.h"
 
 @interface manageController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -31,21 +32,24 @@
 {
     tView = [UITableView new];
     tView.frame = self.view.bounds;
+    tView.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
     tView.tableFooterView = [UIView new];
     tView.delegate = self;
     tView.dataSource = self;
-    tView.rowHeight = 200;
+    tView.rowHeight = 260;
+    tView.allowsSelection = NO;
+    tView.separatorColor = [UIColor clearColor];
     [self.view addSubview:tView];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
     [self setTableView];
 
 
     UIButton *titleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-    [titleBtn setTitle:@"挂号单" forState:UIControlStateNormal];
+    [titleBtn setTitle:@"病人信息" forState:UIControlStateNormal];
     self.navigationItem.titleView = titleBtn;
     [titleBtn addTarget:self action:@selector(titleBtnClick) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view.
@@ -80,9 +84,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    manageCell *cell = [manageCell tableViewToCell:tableView];
-    cell.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
-    cell.rp = dataSource[indexPath.row];
+//    manageCell *cell = [manageCell tableViewToCell:tableView];
+//    cell.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
+//    cell.rp = dataSource[indexPath.row];
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    manageCellView *mcv = [[manageCellView alloc] initWithFrame:CGRectMake(0, 0, 375, 260)];
+    mcv.regPerson =dataSource[indexPath.row];
+    mcv.centerX = self.view.centerX;
+    [cell.contentView addSubview:mcv];
     return cell;
 }
 

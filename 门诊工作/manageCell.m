@@ -8,6 +8,7 @@
 
 #import "manageCell.h"
 #import "LXButton.h"
+#import "manageCellView.h"
 
 
 @implementation manageCell{
@@ -24,6 +25,8 @@
     manageCell *cell = [tableView dequeueReusableCellWithIdentifier:idd];
     if (cell == nil) {
         cell = [[manageCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idd];
+//        manageCellView *mcv = [[manageCellView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
+//        [cell addSubview:mcv];
     }
     return cell;
 }

@@ -15,10 +15,13 @@
         //        [dict setValuesForKeysWithDictionary:dict];
         self.className = [dict valueForKey:@"className"];
         self.classDoctor = [dict valueForKey:@"classDoctor"];
+
         //
     }
     return self;
 }
+
+
 
 + (classModel *)dictToModel:(NSDictionary *)dict{
     return [[self alloc] initDictToModel:dict];

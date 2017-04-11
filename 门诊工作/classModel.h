@@ -13,6 +13,7 @@
 
 @property (nonatomic, strong) NSString *className;
 @property (nonatomic, strong) NSArray *classDoctor;
+@property (nonatomic, strong) NSString *departName;
 - (classModel *)initDictToModel:(NSDictionary *)dict;
 + (classModel *)dictToModel:(NSDictionary *)dict;
 @end

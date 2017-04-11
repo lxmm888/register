@@ -22,6 +22,8 @@
     self.doctorName = dict[@"doctorName"];
     self.telStr = dict[@"telStr"];
     self.nameStr = dict[@"nameStr"];
+    self.departName = dict[@"departName"];
+    self.regTime = dict[@"regTime"];
     return self;
 }
 
