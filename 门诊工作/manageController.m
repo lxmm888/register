@@ -17,6 +17,7 @@
 
 @implementation manageController{
     UITableView *tView;
+    //传进来的字典，for in后转成模型，添加到dataSource
     NSMutableArray *dataSource;
 }
 
@@ -74,6 +75,7 @@
 {
     popMenu *pm = [[popMenu alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.height)];
     pm.isDim = YES;
+    pm.dataSource = dataSource;
     [[UIApplication sharedApplication].keyWindow addSubview:pm];
 }
 
@@ -88,7 +90,7 @@
 //    cell.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
 //    cell.rp = dataSource[indexPath.row];
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    manageCellView *mcv = [[manageCellView alloc] initWithFrame:CGRectMake(0, 0, 375, 260)];
+    manageCellView *mcv = [[manageCellView alloc] initWithFrame:CGRectMake(0, 0, LXScreenW, 260)];
     mcv.regPerson =dataSource[indexPath.row];
     mcv.centerX = self.view.centerX;
     [cell.contentView addSubview:mcv];

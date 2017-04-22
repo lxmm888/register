@@ -11,6 +11,8 @@
 #import "manageController.h"
 #import "noticeCell.h"
 #import "regPerson.h"
+#import "tab.h"
+#import "manageController.h"
 @interface noticeView()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
 @end
@@ -155,7 +157,7 @@
     UITextField *textField = [UITextField new];
     textField.tag = indexPath.row;
     textField.delegate = self;
-    [textField addTarget:self  action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
+//    [textField addTarget:self  action:@selector(textFieldChange:) forControlEvents:UIControlEventEditingChanged];
     [cell.contentView addSubview:textField];
     if (indexPath.row == 0) {
         textField.placeholder = @"请输入您的姓名";
@@ -189,7 +191,7 @@
     return cell;
 }
 
-- (void)textFieldChange:(UITextField *)textField
+- (void)textFieldDidEndEditing:(UITextField *)textField
 {
     if (textField.tag == 0) {
         [nameDict setValue:textField.text forKey:@"name"];
@@ -202,10 +204,8 @@
     
     NSLog(@"name:%@",nameStr);
     NSLog(@"tel:%@",telStr);
+
 }
-
-
-
 
 - (void)closeBtnClick
 {
@@ -227,6 +227,16 @@
 - (void)bottomBtnClick
 {
     [self endEditing:YES];
+    if (nameStr == nil|| telStr == nil) {
+        NSLog(@"有空");
+        return;
+    }
+    else{
+    NSLog(@"name:%@",nameStr);
+    NSLog(@"tel:%@",telStr);
+
+   
+//    [self endEditing:YES];
     //实例化一个NSDateFormatter对象
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     //设定时间格式,这里可以设置成自己需要的格式
@@ -248,12 +258,12 @@
     NSString *regPath = [documentsDirectory stringByAppendingPathComponent:@"regList.plist"];
 
     if ([fm fileExistsAtPath:regPath]) {
-//        NSMutableArray *tempArr = [NSMutableArray arrayWithContentsOfFile:regPath];
-//        [tempArr addObject:dcDict];
-//        [tempArr writeToFile:regPath atomically:YES];
-        NSArray *arr = [NSArray arrayWithObjects:dcDict,nil];
-
-        [arr writeToFile:regPath atomically:YES];
+        NSMutableArray *tempArr = [NSMutableArray arrayWithContentsOfFile:regPath];
+        [tempArr addObject:dcDict];
+        [tempArr writeToFile:regPath atomically:YES];
+//        NSArray *arr = [NSArray arrayWithObjects:dcDict,nil];
+//
+//        [arr writeToFile:regPath atomically:YES];
         
         
         NSLog(@"文件存在");
@@ -261,24 +271,26 @@
     else{
         [fm createFileAtPath:regPath contents:nil attributes:nil];
         NSLog(@"新建文件");
+        NSArray *arr = [NSArray arrayWithObjects:dcDict, nil];
+        [arr writeToFile:regPath atomically:YES];
+        
     }
-    
-
-    
-//    NSString *p = @"/Users/lxmm/Desktop/lxmm/门诊工作/门诊工作";
-//
-//    NSString *path = [p stringByAppendingPathComponent:@"RegList.plist"];
-//    
-//    NSArray *arr = [NSArray arrayWithObjects:telDict,nameDict, nil];
-//    [arr writeToFile:path atomically:YES];
-//
-//    NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:path];
-//    NSLog(@"%@", data1);
-
     
     [UIView animateWithDuration:0.5 animations:^{
         self.isDim = NO;
     }];
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"title" message:@"正在挂号" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+//        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:okAction];
+        [alert addAction:cancelAction];
+//        [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController popToViewController:[manageController new] animated:YES];
+//
+//        
+    }
+    
 }
 
 

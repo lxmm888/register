@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface regPerson : NSObject
-
+/** 病人姓名*/
 @property (nonatomic, strong) NSString *nameStr;
 @property (nonatomic, strong) NSString *telStr;
 @property (nonatomic, strong) NSString *className;

@@ -37,6 +37,7 @@
 		DFD056311E6FC2660015D7E6 /* departModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056301E6FC2660015D7E6 /* departModel.m */; };
 		DFD056351E6FC6A60015D7E6 /* classModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056341E6FC6A60015D7E6 /* classModel.m */; };
 		DFD056391E6FD2FD0015D7E6 /* LXBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD056381E6FD2FD0015D7E6 /* LXBorder.m */; };
+		DFD4819A1EA85A4200C21416 /* meController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD481991EA85A4200C21416 /* meController.m */; };
 		DFDBFC181E764375005AE652 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDBFC001E764375005AE652 /* MASCompositeConstraint.m */; };
 		DFDBFC191E764375005AE652 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDBFC031E764375005AE652 /* MASConstraint.m */; };
 		DFDBFC1A1E764375005AE652 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = DFDBFC051E764375005AE652 /* MASConstraintMaker.m */; };
@@ -127,6 +128,8 @@
 		DFD056341E6FC6A60015D7E6 /* classModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = classModel.m; sourceTree = "<group>"; };
 		DFD056371E6FD2FD0015D7E6 /* LXBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBorder.h; sourceTree = "<group>"; };
 		DFD056381E6FD2FD0015D7E6 /* LXBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBorder.m; sourceTree = "<group>"; };
+		DFD481981EA85A4200C21416 /* meController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = meController.h; sourceTree = "<group>"; };
+		DFD481991EA85A4200C21416 /* meController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = meController.m; sourceTree = "<group>"; };
 		DFDBFBFF1E764375005AE652 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
 		DFDBFC001E764375005AE652 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		DFDBFC011E764375005AE652 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
@@ -248,6 +251,7 @@
 				DFB4A9331E96893C00C3D17C /* tool */,
 				DF9E11461E6CF48300405BDF /* home */,
 				DF3D1FF61E82100300D16612 /* manage */,
+				DFD481971EA8590400C21416 /* me */,
 				DF9E111C1E6CF44B00405BDF /* Assets.xcassets */,
 				DFDBFBFE1E764375005AE652 /* Masonry */,
 				DF9E11101E6CF44B00405BDF /* Supporting Files */,
@@ -298,8 +302,6 @@
 				DF9E11211E6CF44B00405BDF /* Info.plist */,
 				DF9E11131E6CF44B00405BDF /* AppDelegate.h */,
 				DF9E11141E6CF44B00405BDF /* AppDelegate.m */,
-				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
-				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
 				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
 				DF9A99851E8529530010F24E /* RegList.plist */,
 				DF0480511E6FB5760058FC86 /* DepartmentList.plist */,
@@ -312,6 +314,8 @@
 			children = (
 				DFD056371E6FD2FD0015D7E6 /* LXBorder.h */,
 				DFD056381E6FD2FD0015D7E6 /* LXBorder.m */,
+				DF9E114E1E6CFAB200405BDF /* LXNav.h */,
+				DF9E114F1E6CFAB200405BDF /* LXNav.m */,
 				DF9E11511E6CFC2D00405BDF /* tab.h */,
 				DF9E11521E6CFC2D00405BDF /* tab.m */,
 				DF9E114B1E6CF54D00405BDF /* UIView+Extension.h */,
@@ -348,6 +352,15 @@
 				DFC123121E6F9C0700C6D82B /* desView.m */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		DFD481971EA8590400C21416 /* me */ = {
+			isa = PBXGroup;
+			children = (
+				DFD481981EA85A4200C21416 /* meController.h */,
+				DFD481991EA85A4200C21416 /* meController.m */,
+			);
+			name = me;
 			sourceTree = "<group>";
 		};
 		DFDBFBFE1E764375005AE652 /* Masonry */ = {
@@ -449,7 +462,7 @@
 				TargetAttributes = {
 					DF9E110C1E6CF44B00405BDF = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 7EP93Z2D6P;
+						DevelopmentTeam = N562C9YJJL;
 					};
 					DF9E11251E6CF44B00405BDF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -525,6 +538,7 @@
 				DFDBFC181E764375005AE652 /* MASCompositeConstraint.m in Sources */,
 				DFDBFC201E764375005AE652 /* View+MASAdditions.m in Sources */,
 				DF9E11491E6CF50900405BDF /* regView.m in Sources */,
+				DFD4819A1EA85A4200C21416 /* meController.m in Sources */,
 				DF7F2ECE1E8D180500057FF0 /* manageCell.m in Sources */,
 				DFD056391E6FD2FD0015D7E6 /* LXBorder.m in Sources */,
 				DFC123131E6F9C0700C6D82B /* desView.m in Sources */,
@@ -682,13 +696,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7EP93Z2D6P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/门诊工作/PrefixHeader.pch";
 				INFOPLIST_FILE = "门诊工作/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jj.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -696,13 +714,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7EP93Z2D6P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/门诊工作/PrefixHeader.pch";
 				INFOPLIST_FILE = "门诊工作/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jj.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

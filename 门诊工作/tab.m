@@ -9,6 +9,7 @@
 #import "tab.h"
 #import "homeController.h"
 #import "LXNav.h"
+#import "meController.h"
 #import "manageController.h"
 
 @interface tab ()
@@ -19,14 +20,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self.tabBar setBackgroundColor:[UIColor blackColor]];
-//    [self.tabBar setBarTintColor:[UIColor blackColor]];
     homeController *home = [homeController new];
     [self addChild:home imageName:@"tabbar_home" selectImageName:@"tabbar_home_selected"];
     
     manageController *mc = [manageController new];
-    mc.title = @"我的预约";
+    mc.title = @"预约单";
     [self addChild:mc imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
+    
+    meController *me = [meController new];
+    me.title = @"我";
+    [self addChild:me imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
+    
+    
 }
 
 - (void)addChild:(UIViewController *)childVc imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName

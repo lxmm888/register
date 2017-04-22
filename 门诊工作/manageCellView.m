@@ -27,7 +27,7 @@
         contentView.layer.cornerRadius = 10;
         contentView.layer.shadowOffset = CGSizeMake(0, 0);
         contentView.layer.shadowColor = [UIColor orangeColor].CGColor;
-        contentView.layer.shadowOpacity = 0.8;
+        contentView.layer.shadowOpacity = 0.25;
         
         UIBezierPath *path = [UIBezierPath bezierPath];
         float width = contentView.bounds.size.width;

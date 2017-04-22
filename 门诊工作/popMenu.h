@@ -22,4 +22,6 @@ typedef enum {
 /** */
 @property (nonatomic, assign) ArrowPosition arrowPosition;
 
+@property (nonatomic, strong) NSMutableArray *dataSource;
+
 @end

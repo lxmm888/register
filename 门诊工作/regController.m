@@ -63,17 +63,17 @@
 //    [self.view addSubview:nView];
     
 
-    _nView.btnBlock=^(id obj){
-        if ([obj isKindOfClass:[UIView class]]) {
-//            [ws.navigationController pushViewController:obj animated:YES];
-            [UIView animateWithDuration:0.5 animations:^{
-                ((UIView *)obj).y = ws.view.height;
-                fuzzyView.alpha = 0;
-
-            }];
-        }
-    };
-    
+//    _nView.btnBlock=^(id obj){
+//        if ([obj isKindOfClass:[UIView class]]) {
+////            [ws.navigationController pushViewController:obj animated:YES];
+//            [UIView animateWithDuration:0.5 animations:^{
+//                ((UIView *)obj).y = ws.view.height;
+//                fuzzyView.alpha = 0;
+//
+//            }];
+//        }
+//    };
+//    
 //    [nView addGestureRecognizer:gr];
         [[UIApplication sharedApplication].keyWindow addSubview:_nView];
 //    AlphaViewController *ac = [[AlphaViewController alloc] init];
@@ -116,6 +116,21 @@
     nview.isDim = YES;
     nview.m = _m;
     [self.view addSubview:nview];
+    
+     __weak typeof (self) ws=self;
+    
+        
+//        if ([obj isKindOfClass:[UIView class]]) {
+//            //            [ws.navigationController pushViewController:obj animated:YES];
+////            [UIView animateWithDuration:0.5 animations:^{
+////                ((UIView *)obj).y = ws.view.height;
+////                fuzzyView.alpha = 0;
+////                
+////            }];
+//            [ws.navigationController popToRootViewControllerAnimated:YES];
+        
+
+
     
 }
 

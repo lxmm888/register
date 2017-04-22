@@ -104,6 +104,7 @@
     for (int i = 0; i < model.classModelArr.count; i ++) {
         classModel *m = model.classModelArr[i];
         MyButton *btn = [[MyButton alloc] initWithFrame:CGRectMake(0, i * 44, 200, 44)];
+        btn.centerX = detailView.width * 0.5;
         [btn setTitle:m.className forState:UIControlStateNormal];
         btn.m=m;
 //        [btn setFont:[UIFont systemFontOfSize:14]];

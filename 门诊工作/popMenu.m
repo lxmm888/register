@@ -7,6 +7,8 @@
 //
 
 #import "popMenu.h"
+#import "regPerson.h"
+
 
 @interface popMenu()<UITableViewDelegate, UITableViewDataSource>
 
@@ -57,6 +59,7 @@
     insideTableView.backgroundColor = [UIColor clearColor];
     insideTableView.delegate = self;
     insideTableView.dataSource = self;
+    insideTableView.tableFooterView = [UIView new];
     [containView addSubview:insideTableView];
     
 }
@@ -112,6 +115,12 @@
     }
 }
 
+-(void)setDataSource:(NSMutableArray *)dataSource
+{
+    _dataSource = dataSource;
+    [insideTableView reloadData];
+}
+
 - (void)coverClick
 {
     self.isDim = NO;
@@ -119,13 +128,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return _dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    regPerson *r = _dataSource[indexPath.row];
+    cell.textLabel.text = r.nameStr;//[NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    
     cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
