@@ -29,7 +29,7 @@
     
     meController *me = [meController new];
     me.title = @"我";
-    [self addChild:me imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
+    [self addChild:me imageName:@"预约单" selectImageName:@"tabbar_profile_selected"];
     
     
 }
