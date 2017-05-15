@@ -5,7 +5,7 @@
 //
 //  Created by Xuan on 2017/3/9.
 //  Copyright © 2017年 Xuan. All rights reserved.
-//
+// 症状描述 预约时间
 
 #import "noticeView.h"
 #import "manageController.h"
@@ -280,12 +280,12 @@
         self.isDim = NO;
     }];
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"title" message:@"正在挂号" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"title" message:@"正在挂号" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+////        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
 //        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-        [alert addAction:okAction];
-        [alert addAction:cancelAction];
+//        [alert addAction:okAction];
+//        [alert addAction:cancelAction];
 //        [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController popToViewController:[manageController new] animated:YES];
 //
 //        

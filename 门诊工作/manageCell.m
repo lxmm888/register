@@ -60,6 +60,14 @@
         
         [self addSubview:telBtn];
         //masnory autolayout
+        [containView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(iconView.mas_bottom).with.offset(15);
+            make.centerX.equalTo(self);
+//            make.width.mas_equalTo(330);
+//            make.height.mas_equalTo(90);
+            make.size.mas_equalTo(CGSizeMake(self.width * 0.9, 90));
+        }];
+        
         [iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).with.offset(40);
             make.top.equalTo(self).with.offset(20);
@@ -73,12 +81,7 @@
             make.left.equalTo(iconView.mas_right).with.offset(15);
         }];
        
-        [containView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(iconView.mas_bottom).with.offset(15);
-            make.centerX.equalTo(self);
-            make.width.mas_equalTo(330);
-            make.height.mas_equalTo(90);
-        }];
+        
         
     }
     

@@ -11,6 +11,20 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+//        int former = 1;
+//        int later = 1;
+//        int temp = 0;
+//        
+//        
+//        for (int i = 2; i < 10; i ++) {
+//            temp = former + later;
+//            former = later;
+//            later = temp;
+//            NSLog(@"%d",temp);
+//
+//        }
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        
+        
     }
 }

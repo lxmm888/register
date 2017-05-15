@@ -13,5 +13,6 @@
 
 @property (nonatomic, strong) regPerson *regPerson;
 
+@property (nonatomic, assign) CGFloat cellH;
 
 @end

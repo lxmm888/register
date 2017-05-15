@@ -22,7 +22,7 @@
         labelArr = [NSMutableArray array];
         self.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
 //        设置contentView
-        UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(12, 80, 351, 140)];
+        UIView *contentView = [[UIView alloc] init];//initWithFrame:CGRectMake(12, 80, 351, 140)];
         contentView.backgroundColor = [UIColor whiteColor];
         contentView.layer.cornerRadius = 10;
         contentView.layer.shadowOffset = CGSizeMake(0, 0);
@@ -64,20 +64,52 @@
         [self addSubview:contentView];
         
         UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"病人1"]];
-        iconView.frame = CGRectMake(26, 23, 65, 65);
+        iconView.size = CGSizeMake(65, 65);
+//        iconView.frame = CGRectMake(26, 23, 65, 65);
         [self addSubview:iconView];
         
-        nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 9, iconView.y + 13, 100, 18)];
+        
+        
+        nameLabel = [UILabel new];//[[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 9, iconView.y + 13, 100, 18)];
         nameLabel.textColor = [UIColor orangeColor];
         nameLabel.font = [UIFont systemFontOfSize:18];
         [self addSubview:nameLabel];
         
-        UILabel *locationLabel = [[UILabel alloc] initWithFrame:CGRectMake(nameLabel.x, CGRectGetMaxY(nameLabel.frame) + 2, 200, 23)];
+        UILabel *locationLabel = [UILabel new];//[[UILabel alloc] initWithFrame:CGRectMake(nameLabel.x, CGRectGetMaxY(nameLabel.frame) + 2, 200, 23)];
         locationLabel.text = @"广州，广东";
         locationLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
         locationLabel.textColor = textColo;
         
         [self addSubview:locationLabel];
+        
+        //masnory
+        [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self);
+//            make.top.equalTo(self).with.offset(80);
+            make.bottom.equalTo(self).with.offset(-30);
+            make.size.mas_equalTo(CGSizeMake(self.width * 0.9, 130));
+        }];
+        
+        [iconView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(contentView).with.offset(20);
+            make.centerY.mas_equalTo(contentView.mas_top).with.offset(-20);
+            make.size.mas_equalTo(CGSizeMake(65, 65));
+        }];
+        
+        [nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(iconView.mas_right).with.offset(10);
+            make.top.equalTo(iconView).with.offset(15);
+            make.size.mas_equalTo(CGSizeMake(100, 18));
+        }];
+        
+        [locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(nameLabel);
+            make.top.mas_equalTo(nameLabel.mas_bottom);
+            make.size.mas_equalTo(CGSizeMake(100, 18));
+            
+        }];
+        
+        _cellH = CGRectGetMaxY(contentView.frame) + 20;
         
 //        [locationLabel mas_makeConstraints:^(MASConstraintMaker *make) {
 //            make.left.mas_equalTo(iconView.mas_right).with.offset(10);

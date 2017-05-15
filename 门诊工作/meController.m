@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,nil]];  
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self initData];
     [self setTableView];
@@ -28,16 +29,22 @@
 {
     dataSource = [NSMutableArray array];
     
-    NSDictionary *dict0 = [NSDictionary dictionaryWithObject:@"积分" forKey:@"0"];
+    NSDictionary *dict0 = [NSDictionary dictionaryWithObjectsAndKeys:@"区鹿干",@"title",@"stig",@"iconName",@"WeChat ID:k211",@"detail", nil];
     NSArray *arr0 = [NSArray arrayWithObject:dict0];
     [dataSource addObject:arr0];
     
-    NSDictionary *dict10 = [NSDictionary dictionaryWithObject:@"name" forKey:@"0"];
-    NSDictionary *dict11 = [NSDictionary dictionaryWithObject:@"tel" forKey:@"1"];
-    NSArray *arr1 = [NSArray arrayWithObjects:dict10,dict11, nil];
+    NSDictionary *dict10 = [NSDictionary dictionaryWithObjectsAndKeys:@"collect",@"iconName",@"收藏",@"title", nil];
+    NSDictionary *dict11 = [NSDictionary dictionaryWithObjectsAndKeys:@"vip",@"iconName",@"会员特权",@"title", nil];
+    
+    NSDictionary *dict12 = [NSDictionary dictionaryWithObjectsAndKeys:@"card",@"iconName",@"卡片",@"title", nil];
+    
+    NSDictionary *dict13 = [NSDictionary dictionaryWithObjectsAndKeys:@"pay",@"iconName",@"支付",@"title", nil];
+    NSArray *arr1 = [NSArray arrayWithObjects:dict10,dict11,dict12,dict13, nil];
+    
     
     [dataSource addObject:arr1];
 
+    
     
 }
 
@@ -62,14 +69,44 @@
     
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 88;
+    }
+    else{
+        return 44;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
     NSArray *arr = dataSource[indexPath.section];
     NSDictionary *dict = arr[indexPath.row];
-    cell.textLabel.text = [dict valueForKey:[NSString stringWithFormat:@"%ld",(long)indexPath.row]];
-//    cell.detailTextLabel.text = []
-//    dataSource[indexPath.section];
+    UIImage *im = [UIImage imageNamed:[dict valueForKey:@"iconName"]];
+    if (indexPath.section == 0) {
+        UIImageView *iconView = [[UIImageView alloc] initWithImage:im];
+//        iconView.layer.cornerRadius = 10.0;
+        CGFloat WH = 50;//btnW and btnH
+        CGFloat XY = (88 - WH) * 0.5;//btnX and Y
+        iconView.frame = CGRectMake(XY, XY, WH, WH);
+        [cell.contentView addSubview:iconView];
+        
+        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 25, iconView.y, 200, 80)];
+        nameLabel.font = [UIFont systemFontOfSize:14];
+        nameLabel.numberOfLines = 2;
+        
+        nameLabel.text = [NSString stringWithFormat:@"%@\n%@",[dict valueForKey:@"title"],[dict valueForKey:@"detail"]];
+        [nameLabel sizeToFit];
+
+        [cell.contentView addSubview:nameLabel];
+    }
+    else{
+    cell.imageView.image = im;
+    cell.textLabel.text = [dict valueForKey:@"title"];
+    }
     return cell;
 }
 

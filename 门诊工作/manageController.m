@@ -46,14 +46,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
+    [self setNav];
     [self setTableView];
 
 
+    
+    // Do any additional setup after loading the view.
+}
+
+- (void)setNav
+{
     UIButton *titleBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     [titleBtn setTitle:@"病人信息" forState:UIControlStateNormal];
     self.navigationItem.titleView = titleBtn;
     [titleBtn addTarget:self action:@selector(titleBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    // Do any additional setup after loading the view.
+    UIImage *im = [UIImage imageNamed:@"navigationbar_more"];
+    im = [im imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithImage:im style:UIBarButtonItemStyleDone target:self action:@selector(rightBtnClick)];
+    self.navigationItem.rightBarButtonItem = rightBtn;
+    
 }
 
 - (void)initData
@@ -91,6 +102,7 @@
 //    cell.rp = dataSource[indexPath.row];
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     manageCellView *mcv = [[manageCellView alloc] initWithFrame:CGRectMake(0, 0, LXScreenW, 260)];
+//    cell.height = mcv.cellH;
     mcv.regPerson =dataSource[indexPath.row];
     mcv.centerX = self.view.centerX;
     [cell.contentView addSubview:mcv];

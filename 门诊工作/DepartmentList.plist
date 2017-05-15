@@ -39,7 +39,7 @@
 				<array>
 					<string>long</string>
 					<string>pan</string>
-					<string>chu</string>
+					<string>金毅</string>
 				</array>
 			</dict>
 		</array>
@@ -53,12 +53,12 @@
 		<array>
 			<dict>
 				<key>className</key>
-				<string>心血管内科门诊</string>
+				<string>心血管内科</string>
 				<key>classDoctor</key>
 				<array>
-					<string>秋位</string>
+					<string>李时珍</string>
 					<string>肖申克</string>
-					<string>阿龙</string>
+					<string>星巴克</string>
 				</array>
 			</dict>
 			<dict>
@@ -88,7 +88,7 @@
 				<array>
 					<string>秋位</string>
 					<string>肖申克</string>
-					<string>阿龙</string>
+					<string>桑彪</string>
 				</array>
 			</dict>
 		</array>

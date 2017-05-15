@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DF04804F1E6FA0380058FC86 /* LXSegment.m */; };
 		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
+		DF13D3681EC953CC00D4D814 /* File in Resources */ = {isa = PBXBuildFile; fileRef = DF13D3671EC953CC00D4D814 /* File */; };
 		DF173FA21E9C7C1700FE87CC /* manageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF173FA11E9C7C1700FE87CC /* manageCellView.m */; };
 		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
 		DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D1FF91E82103500D16612 /* popMenu.m */; };
@@ -71,6 +72,7 @@
 		DF04804E1E6FA0380058FC86 /* LXSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSegment.h; sourceTree = "<group>"; };
 		DF04804F1E6FA0380058FC86 /* LXSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSegment.m; sourceTree = "<group>"; };
 		DF0480511E6FB5760058FC86 /* DepartmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DepartmentList.plist; sourceTree = "<group>"; };
+		DF13D3671EC953CC00D4D814 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		DF173FA01E9C7C1700FE87CC /* manageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageCellView.h; sourceTree = "<group>"; };
 		DF173FA11E9C7C1700FE87CC /* manageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageCellView.m; sourceTree = "<group>"; };
 		DF32CDF31E70067900BF2D58 /* regController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regController.h; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
 				DF9A99851E8529530010F24E /* RegList.plist */,
 				DF0480511E6FB5760058FC86 /* DepartmentList.plist */,
+				DF13D3671EC953CC00D4D814 /* File */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -462,7 +465,7 @@
 				TargetAttributes = {
 					DF9E110C1E6CF44B00405BDF = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N562C9YJJL;
+						DevelopmentTeam = 7EP93Z2D6P;
 					};
 					DF9E11251E6CF44B00405BDF = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -503,6 +506,7 @@
 				DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */,
 				DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */,
 				DF9A99861E8529530010F24E /* RegList.plist in Resources */,
+				DF13D3681EC953CC00D4D814 /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

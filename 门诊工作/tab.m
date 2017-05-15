@@ -28,7 +28,7 @@
     [self addChild:mc imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
     
     meController *me = [meController new];
-    me.title = @"我";
+    me.title = @"我的资料";
     [self addChild:me imageName:@"预约单" selectImageName:@"tabbar_profile_selected"];
     
     
