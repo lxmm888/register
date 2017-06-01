@@ -10,6 +10,8 @@
 #import "regPerson.h"
 
 @interface manageController : UIViewController
+@property (nonatomic, strong) NSString *userName;
+
 @property (nonatomic, strong) UITableView *tView;
 @property (nonatomic, strong) regPerson *regPerson;
 

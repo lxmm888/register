@@ -12,6 +12,8 @@
 
 
 @interface regController : UIViewController
+@property (nonatomic, strong) NSString *userName;
+
 @property (nonatomic, strong) NSArray *classDoctor;
 @property (nonatomic, strong) NSString *className;
 

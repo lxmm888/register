@@ -75,7 +75,11 @@
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *regPath = [documentsDirectory stringByAppendingPathComponent:@"regList.plist"];
 
-    for (NSDictionary *dict in [NSArray arrayWithContentsOfFile:regPath]) {
+    //拿出当前用户数据数组，再for in
+    NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:regPath];
+    
+    
+    for (NSDictionary *dict in [dic valueForKey:self.userName]){//[NSArray arrayWithContentsOfFile:regPath]) {
         regPerson *rp = [regPerson dictToModel:dict];
         [dataSource addObject:rp];
     }

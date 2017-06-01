@@ -85,8 +85,8 @@
         //masnory
         [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
-//            make.top.equalTo(self).with.offset(80);
-            make.bottom.equalTo(self).with.offset(-30);
+            make.top.equalTo(self).with.offset(80);
+//            make.bottom.equalTo(self).with.offset(-30);
             make.size.mas_equalTo(CGSizeMake(self.width * 0.9, 130));
         }];
         

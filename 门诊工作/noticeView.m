@@ -254,25 +254,60 @@
 
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSLog(@"app_home_doc: %@",documentsDirectory);
+//    NSLog(@"app_home_doc: %@",documentsDirectory);
     NSString *regPath = [documentsDirectory stringByAppendingPathComponent:@"regList.plist"];
-
+        NSLog(@"%@",regPath);
+        
+        
+        /*数据存放格式：
+         dic{
+            key:username value:arr{
+                                dic0 dic1 dic2
+                                }
+         
+         */
     if ([fm fileExistsAtPath:regPath]) {
-        NSMutableArray *tempArr = [NSMutableArray arrayWithContentsOfFile:regPath];
-        [tempArr addObject:dcDict];
-        [tempArr writeToFile:regPath atomically:YES];
+//        NSMutableArray *tempArr = [NSMutableArray arrayWithContentsOfFile:regPath];
+//        [tempArr addObject:dcDict];
+//        [tempArr writeToFile:regPath atomically:YES];
 //        NSArray *arr = [NSArray arrayWithObjects:dcDict,nil];
 //
 //        [arr writeToFile:regPath atomically:YES];
         
         
+        NSMutableDictionary *tempDic = [NSMutableDictionary dictionaryWithContentsOfFile:regPath];
+        //第一次登陆，之前没数据
+        if ([tempDic valueForKey:self.userName] == nil) {
+            NSArray *arr = [NSArray arrayWithObject:dcDict];
+//            NSDictionary *dict = [NSDictionary dictionaryWithObject:dcDict forKey:self.userName];
+            [tempDic setValue:arr forKey:self.userName];
+        }
+//        登陆过，有数据
+        else{
+            NSMutableArray *arr = [tempDic valueForKey:self.userName];
+            [arr addObject:dcDict];
+            [tempDic setValue:arr forKey:self.userName];
+        }
+        [tempDic writeToFile:regPath atomically:YES];
+
+//        NSMutableArray *arr = [tempDic valueForKey:self.userName];
+//        [arr addObject:dcDict];
+//        [tempDic setValue:arr forKey:@"username"];
+//        [tempDic writeToFile:regPath atomically:YES];
         NSLog(@"文件存在");
     }
     else{
         [fm createFileAtPath:regPath contents:nil attributes:nil];
         NSLog(@"新建文件");
-        NSArray *arr = [NSArray arrayWithObjects:dcDict, nil];
-        [arr writeToFile:regPath atomically:YES];
+        NSArray *arr = [NSArray arrayWithObject:dcDict];
+//        [tempDic setValue:arr forKey:self.userName];
+
+        NSDictionary *dict = [NSDictionary dictionaryWithObject:arr forKey:self.userName];
+        
+        
+        [dict writeToFile:regPath atomically:YES];
+//        NSArray *arr = [NSArray arrayWithObjects:dcDict, nil];
+//        [arr writeToFile:regPath atomically:YES];
         
     }
     
@@ -289,6 +324,7 @@
 //        [[UIApplication sharedApplication].keyWindow.rootViewController.navigationController popToViewController:[manageController new] animated:YES];
 //
 //        
+        
     }
     
 }

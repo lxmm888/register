@@ -8,7 +8,6 @@
 #import "regCell.h"
 #import "regController.h"
 #import "noticeController.h"
-#import "AlphaViewController.h"
 
 @interface regController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverPresentationControllerDelegate>
 
@@ -114,6 +113,7 @@
     NSString *doctorName = _m.classDoctor[indexPath.row];
     nview.doctorName = doctorName;
     nview.isDim = YES;
+    nview.userName = self.userName;
     nview.m = _m;
     [self.view addSubview:nview];
     

@@ -16,22 +16,39 @@
 
 @end
 
-@implementation tab
+@implementation tab{
+    homeController *home;
+    manageController *mc;
+    meController *me;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    homeController *home = [homeController new];
+    home = [homeController new];
     [self addChild:home imageName:@"tabbar_home" selectImageName:@"tabbar_home_selected"];
     
-    manageController *mc = [manageController new];
+    mc = [manageController new];
     mc.title = @"预约单";
     [self addChild:mc imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
     
-    meController *me = [meController new];
+    me = [meController new];
     me.title = @"我的资料";
     [self addChild:me imageName:@"预约单" selectImageName:@"tabbar_profile_selected"];
     
     
+}
+
+- (void)setName:(NSString *)name
+{
+    _name = name;
+    me.name = name;
+}
+
+-(void)setUserName:(NSString *)userName
+{
+    _userName = userName;
+    home.userName = userName;
+    mc.userName = userName;
 }
 
 - (void)addChild:(UIViewController *)childVc imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName

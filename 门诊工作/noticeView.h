@@ -10,6 +10,9 @@
 #import "classModel.h"
 
 @interface noticeView : UIView
+@property (nonatomic, strong) NSString *userName;
+
+
 @property (nonatomic, strong) int(^btnBlock)(void);
 @property (nonatomic, strong) classModel *m;
 @property (nonatomic, strong) UIViewController *regController;

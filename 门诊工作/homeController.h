@@ -10,4 +10,7 @@
 
 @interface homeController : UIViewController
 
+@property (nonatomic, strong) NSString *userName;
+
+
 @end

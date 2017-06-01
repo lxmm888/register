@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface tab : UITabBarController
+//账号
+@property (nonatomic, strong) NSString *userName;
+//用户名
+@property (nonatomic, strong) NSString *name;
 
 @end

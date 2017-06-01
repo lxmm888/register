@@ -22,12 +22,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
 //        [self setBtns];
         viewArr = [NSMutableArray array];
         btnArr = [NSMutableArray array];
         
     }
+    
     return self;
 }
 - (void)addViewAndTitleWithArray:(NSArray *)arr
@@ -36,7 +37,7 @@
     CGFloat btnW = 100;
     
     CGFloat margin = (self.width - c * btnW) / (c + 1);
-    CGFloat wid = self.width / (c * 2);
+//    CGFloat wid = self.width / (c * 2);
     for (int i = 0; i < c; i ++) {
         NSDictionary *dic = arr[i];
         UIView *v = [[dic allValues] firstObject];
@@ -50,7 +51,7 @@
             [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         }
         else{
-            [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
 
         }
 //        [btn setTitleColor:[UIColor greenColor] forState:UIControlStateSelected];
@@ -79,7 +80,7 @@
             ((UIView *)viewArr[tempBtn.tag]).hidden = NO;
         }
         else{
-            [tempBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            [tempBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
             ((UIView *)viewArr[tempBtn.tag]).hidden = YES;
         }
     }

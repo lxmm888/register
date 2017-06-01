@@ -60,6 +60,7 @@
     
     rView = [[regView alloc] initWithFrame:choosenRect];
     __weak typeof (self) ws=self;
+    rView.userName = self.userName;
     rView.btnBlock=^(id obj){
         if ([obj isKindOfClass:[UIViewController class]]) {
             [ws.navigationController pushViewController:obj animated:YES];
@@ -91,7 +92,6 @@
     
     
     self.navigationItem.title = @"李氏中医精神病院";
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20],NSFontAttributeName, nil];
     [self.navigationController.navigationBar setTitleTextAttributes:dic];
     //    NSDictionary *dict = [NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName];
