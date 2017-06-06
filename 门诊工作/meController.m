@@ -95,14 +95,16 @@
         iconView.frame = CGRectMake(XY, XY, WH, WH);
         [cell.contentView addSubview:iconView];
         
-        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 25, iconView.y, 200, 80)];
+        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 25, iconView.y, 200, 30)];
         nameLabel.font = [UIFont systemFontOfSize:14];
-        nameLabel.numberOfLines = 2;
-        
-        nameLabel.text = [NSString stringWithFormat:@"%@\n%@",[dict valueForKey:@"title"],[dict valueForKey:@"detail"]];
-        [nameLabel sizeToFit];
+//        nameLabel.numberOfLines = 2;
+        nameLabel.text = [NSString stringWithFormat:@"用户名：%@",self.name];
 
+        UILabel *accountLabel = [[UILabel alloc] initWithFrame:CGRectMake(nameLabel.x, CGRectGetMaxY(nameLabel.frame) + 15, 200, 30)];
+        accountLabel.font = [UIFont systemFontOfSize:14];;
+        accountLabel.text =[NSString stringWithFormat:@"账号：%@",self.userName];
         [cell.contentView addSubview:nameLabel];
+        [cell.contentView addSubview:accountLabel];
     }
     else{
     cell.imageView.image = im;

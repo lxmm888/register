@@ -49,6 +49,7 @@
     _userName = userName;
     home.userName = userName;
     mc.userName = userName;
+    me.userName = userName;
 }
 
 - (void)addChild:(UIViewController *)childVc imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName

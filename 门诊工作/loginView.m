@@ -60,7 +60,7 @@
         UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
         loginBtn.center = CGPointMake(self.bounds.size.width * 0.5, CGRectGetMaxY(passwd.frame) + 50);
         //    [loginBtn setBackgroundImage:bgImage forState:UIControlStateNormal];
-        [loginBtn setBackgroundColor:[UIColor colorWithRed:71/255.0 green:191/255.0 blue:58/255.0 alpha:1.0]];
+        [loginBtn setBackgroundColor:[UIColor orangeColor]];//[UIColor colorWithRed:71/255.0 green:191/255.0 blue:58/255.0 alpha:1.0]];
         [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
         loginBtn.layer.cornerRadius = 5.0;
         [loginBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
@@ -79,12 +79,15 @@
     //判断是否为空
     if (accountTF.text.length == 0 || passwd.text.length == 0) {
         NSLog(@"账号密码不能为空");
+        [self alertControllerNotice:@"账号密码不能为空，请重新输入"];
+        return;
     }
     NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
     NSDictionary *userDict = [defaults objectForKey:accountTF.text];
     if (userDict == nil) {
         //用户不存在
         NSLog(@"不存在此用户");
+        [self alertControllerNotice:@"用户不存在"];
     }
     else{
         //存在 则判断账号密码是否一致
@@ -94,21 +97,24 @@
             tab *t = [[tab alloc] init];
             t.userName = accountTF.text;
             t.name = [userDict valueForKey:@"name"];
-            [UIApplication sharedApplication].keyWindow.rootViewController = t;
+            
+            [UIView animateWithDuration:0.5 animations:^{
+                [UIApplication sharedApplication].keyWindow.rootViewController = t;
+            }];
         }
         else{
             NSLog(@"密码错误");
+            [self alertControllerNotice:@"密码错误"];
         }
     }
+}
 
-//
-
-    
-        
-        //是否存在此用户
-
-
-    
+- (void)alertControllerNotice:(NSString *)message
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:confirmAction];
+    [[UIApplication sharedApplication].windows[0].rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
 @end

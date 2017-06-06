@@ -22,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     i = 5;
-    self.view.backgroundColor = [UIColor colorWithRed:51/255.0 green:204/255.0 blue:255/255.0 alpha:1];
+    self.view.backgroundColor = [UIColor whiteColor];//[UIColor colorWithRed:51/255.0 green:204/255.0 blue:255/255.0 alpha:1];
     [self setSubviews];
     // Do any additional setup after loading the view.
 }
@@ -35,19 +35,22 @@
     CGFloat labelW = 40;
     CGFloat labelH = 44;
     
+    UIImageView *mainImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainIcon"]];
+    mainImage.size = CGSizeMake(100, 120);
+    mainImage.center = CGPointMake(self.view.bounds.size.width * 0.5, 150);
+    [self.view addSubview:mainImage];
     
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 60)];
-    titleLabel.center = CGPointMake(self.view.bounds.size.width * 0.5, 100);
-    titleLabel.text = @"预约系统";
-    titleLabel.font = [UIFont systemFontOfSize:25];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.textColor = [UIColor whiteColor];
-    [self.view addSubview:titleLabel];
+//    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 60)];
+//    titleLabel.center = CGPointMake(self.view.bounds.size.width * 0.5, 100);
+//    titleLabel.text = @"预约系统";
+//    titleLabel.font = [UIFont systemFontOfSize:25];
+//    titleLabel.textAlignment = NSTextAlignmentCenter;
+//    titleLabel.textColor = [UIColor whiteColor];
+//    [self.view addSubview:titleLabel];
 
  
     
-    LXSegment *seg = [[LXSegment alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(titleLabel.frame) + 20, self.view.bounds.size.width, 44)];
+    LXSegment *seg = [[LXSegment alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(mainImage.frame) + 20, self.view.bounds.size.width, 44)];
   
     [self.view addSubview:seg];
       CGRect choosenRect = CGRectMake(0, CGRectGetMaxY(seg.frame), self.view.width, self.view.height - CGRectGetMaxY(seg.frame));
@@ -84,31 +87,10 @@
     //设置登录按钮及背景色
 //    UIImage *image = [UIImage imageNamed:@"RedButton"];
 //    UIImage *bgImage = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
-    CGFloat y = CGRectGetMaxY(passwd.frame) + 50;//CGRectGetMaxY(im.frame) + 30;
-    CGFloat x = 20;
-    UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
-    loginBtn.center = CGPointMake(self.view.bounds.size.width * 0.5, CGRectGetMaxY(passwd.frame) + 50);
-//    [loginBtn setBackgroundImage:bgImage forState:UIControlStateNormal];
-    [loginBtn setBackgroundColor:[UIColor colorWithRed:71/255.0 green:191/255.0 blue:58/255.0 alpha:1.0]];
-    [loginBtn setTitle:@"登录" forState:UIControlStateNormal];
-    loginBtn.layer.cornerRadius = 5.0;
-    [loginBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateHighlighted];
     
     
     
-    confirmBtn = [[UIButton alloc] init];
-    [confirmBtn setFrame:CGRectMake(self.view.bounds.size.width - 150, CGRectGetMaxY(loginBtn.frame) + 30, 100, 50)];
-//    [confirmBtn setBackgroundColor:[UIColor greenColor]];
-    confirmBtn.layer.cornerRadius = 5.0;
-    [confirmBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [confirmBtn addTarget:self action:@selector(confirmBtnClick) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:confirmBtn];
     
-    UIButton *regBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 150, CGRectGetMaxY(loginBtn.frame) + 30, 100, 50)];
-    [regBtn setTitle:@"注册" forState:UIControlStateNormal];
-    [regBtn addTarget:self action:@selector(regBtnClick) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:regBtn];
-
 
 }
 
