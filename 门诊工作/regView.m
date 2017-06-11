@@ -125,7 +125,8 @@
 //    classModel *m = btn.m;
     regController *rc = [regController new];
     rc.m = btn.m;
-    rc.userName = self.userName;
+    rc.account = self.account;
+    rc.name = self.name;
     if (self.btnBlock != nil) {
         self.btnBlock(rc);
         

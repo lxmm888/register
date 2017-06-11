@@ -95,7 +95,7 @@
             //密码正确
             NSLog(@"密码正确");
             tab *t = [[tab alloc] init];
-            t.userName = accountTF.text;
+            t.account = accountTF.text;
             t.name = [userDict valueForKey:@"name"];
             
             [UIView animateWithDuration:0.5 animations:^{
@@ -115,6 +115,12 @@
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
     [alert addAction:confirmAction];
     [[UIApplication sharedApplication].windows[0].rootViewController presentViewController:alert animated:YES completion:nil];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self endEditing:YES];
+    return YES;
 }
 
 @end

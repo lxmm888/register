@@ -29,11 +29,11 @@
     
     mc = [manageController new];
     mc.title = @"预约单";
-    [self addChild:mc imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
+    [self addChild:mc imageName:@"tabbar_discover" selectImageName:@"tabbar_discover_selected"];
     
     me = [meController new];
     me.title = @"我的资料";
-    [self addChild:me imageName:@"预约单" selectImageName:@"tabbar_profile_selected"];
+    [self addChild:me imageName:@"tabbar_profile" selectImageName:@"tabbar_profile_selected"];
     
     
 }
@@ -41,15 +41,17 @@
 - (void)setName:(NSString *)name
 {
     _name = name;
+    home.name = name;
     me.name = name;
 }
 
--(void)setUserName:(NSString *)userName
+-(void)setAccount:(NSString *)account
 {
-    _userName = userName;
-    home.userName = userName;
-    mc.userName = userName;
-    me.userName = userName;
+    _account = account;
+    home.account = account;
+    mc.account = account;
+    me.account = account;
+ 
 }
 
 - (void)addChild:(UIViewController *)childVc imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName

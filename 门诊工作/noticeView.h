@@ -10,7 +10,8 @@
 #import "classModel.h"
 
 @interface noticeView : UIView
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *account;
+@property (nonatomic, strong) NSString *name;
 
 
 @property (nonatomic, strong) int(^btnBlock)(void);

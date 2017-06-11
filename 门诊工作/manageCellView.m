@@ -131,19 +131,19 @@
             label.textColor = textColo;
             [labelArr addObject:label];
             [contentView addSubview:label];
-            if (i == 2) {
-                timeLabel = [UILabel new];
-                timeLabel.textAlignment = NSTextAlignmentRight;
-                timeLabel.textColor = textColo;
-                timeLabel.font = [UIFont systemFontOfSize:13];
-                [self addSubview:timeLabel];
-                
-                [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-                    make.right.mas_equalTo(contentView.mas_right).with.offset(-20);
-                    make.bottom.mas_equalTo(contentView.mas_bottom).with.offset(-5);
-                    make.size.mas_equalTo(CGSizeMake(150, 23));
-                }];
-            }
+//            if (i == 2) {
+//                timeLabel = [UILabel new];
+//                timeLabel.textAlignment = NSTextAlignmentRight;
+//                timeLabel.textColor = textColo;
+//                timeLabel.font = [UIFont systemFontOfSize:13];
+//                [self addSubview:timeLabel];
+//                
+//                [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//                    make.right.mas_equalTo(contentView.mas_right).with.offset(-20);
+//                    make.bottom.mas_equalTo(contentView.mas_bottom).with.offset(-5);
+//                    make.size.mas_equalTo(CGSizeMake(150, 23));
+//                }];
+//            }
         }
         
     }
@@ -154,13 +154,14 @@
 {
     
     _regPerson = regPerson;
+    
     nameLabel.text = regPerson.nameStr;
     timeLabel.text = regPerson.regTime;
     for (UILabel *label in labelArr) {
         switch (label.tag) {
             case 0:
-//                电话号码
-                label.text = regPerson.telStr;
+//                预约时间
+                label.text = regPerson.regTime;
                 break;
                 
             case 1:

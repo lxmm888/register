@@ -60,7 +60,8 @@
     
     rView = [[regView alloc] initWithFrame:choosenRect];
     __weak typeof (self) ws=self;
-    rView.userName = self.userName;
+    rView.account = self.account;
+    rView.name = self.name;
     rView.btnBlock=^(id obj){
         if ([obj isKindOfClass:[UIViewController class]]) {
             [ws.navigationController pushViewController:obj animated:YES];

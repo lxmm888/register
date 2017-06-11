@@ -17,9 +17,11 @@
 		DF3F26E51EC9DBA5006E56CA /* loginView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3F26E41EC9DBA5006E56CA /* loginView.m */; };
 		DF3F26E81EC9E584006E56CA /* zhuceView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3F26E71EC9E584006E56CA /* zhuceView.m */; };
 		DF49D6A41E9B4DBC007E3A62 /* LXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DF49D6A31E9B4DBC007E3A62 /* LXButton.m */; };
+		DF7C28531EED88D7001B72B9 /* LXDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C28521EED88D7001B72B9 /* LXDatePickerView.m */; };
 		DF7C421D1E99C8FD006048E6 /* regPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7C421C1E99C8FD006048E6 /* regPerson.m */; };
 		DF7F2ECE1E8D180500057FF0 /* manageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DF7F2ECD1E8D180500057FF0 /* manageCell.m */; };
 		DF88A5F61E7288400091ABD4 /* manageController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF88A5F51E7288400091ABD4 /* manageController.m */; };
+		DF9421B41EE6EDF400A04B57 /* advice in Resources */ = {isa = PBXBuildFile; fileRef = DF9421B31EE6EDF400A04B57 /* advice */; };
 		DF9A99861E8529530010F24E /* RegList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF9A99851E8529530010F24E /* RegList.plist */; };
 		DF9E11121E6CF44B00405BDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11111E6CF44B00405BDF /* main.m */; };
 		DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9E11141E6CF44B00405BDF /* AppDelegate.m */; };
@@ -91,12 +93,15 @@
 		DF3F26E71EC9E584006E56CA /* zhuceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhuceView.m; sourceTree = "<group>"; };
 		DF49D6A21E9B4DBC007E3A62 /* LXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXButton.h; sourceTree = "<group>"; };
 		DF49D6A31E9B4DBC007E3A62 /* LXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXButton.m; sourceTree = "<group>"; };
+		DF7C28511EED88D7001B72B9 /* LXDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXDatePickerView.h; path = ../LXDatePickerView.h; sourceTree = "<group>"; };
+		DF7C28521EED88D7001B72B9 /* LXDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXDatePickerView.m; path = ../LXDatePickerView.m; sourceTree = "<group>"; };
 		DF7C421B1E99C8FD006048E6 /* regPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regPerson.h; sourceTree = "<group>"; };
 		DF7C421C1E99C8FD006048E6 /* regPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = regPerson.m; sourceTree = "<group>"; };
 		DF7F2ECC1E8D180500057FF0 /* manageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageCell.h; sourceTree = "<group>"; };
 		DF7F2ECD1E8D180500057FF0 /* manageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageCell.m; sourceTree = "<group>"; };
 		DF88A5F41E7288400091ABD4 /* manageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageController.h; sourceTree = "<group>"; };
 		DF88A5F51E7288400091ABD4 /* manageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageController.m; sourceTree = "<group>"; };
+		DF9421B31EE6EDF400A04B57 /* advice */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = advice; sourceTree = "<group>"; };
 		DF9A99851E8529530010F24E /* RegList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RegList.plist; sourceTree = "<group>"; };
 		DF9E110D1E6CF44B00405BDF /* 门诊工作.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "门诊工作.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9E11111E6CF44B00405BDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -289,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				DF9E11111E6CF44B00405BDF /* main.m */,
+				DF9421B31EE6EDF400A04B57 /* advice */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -369,6 +375,8 @@
 		DFD056361E6FD2EC0015D7E6 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				DF7C28511EED88D7001B72B9 /* LXDatePickerView.h */,
+				DF7C28521EED88D7001B72B9 /* LXDatePickerView.m */,
 				DFA4C1C41E70E5DB00BA0E4D /* regCell.h */,
 				DFA4C1C51E70E5DB00BA0E4D /* regCell.m */,
 				DF9E11471E6CF50900405BDF /* regView.h */,
@@ -529,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFB4D05C1EDA90B0004C0B82 /* accountList.plist in Resources */,
+				DF9421B41EE6EDF400A04B57 /* advice in Resources */,
 				DF9E11201E6CF44B00405BDF /* LaunchScreen.storyboard in Resources */,
 				DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */,
 				DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */,
@@ -587,6 +596,7 @@
 				DFDBFC1A1E764375005AE652 /* MASConstraintMaker.m in Sources */,
 				DF9E11121E6CF44B00405BDF /* main.m in Sources */,
 				DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */,
+				DF7C28531EED88D7001B72B9 /* LXDatePickerView.m in Sources */,
 				DFD056311E6FC2660015D7E6 /* departModel.m in Sources */,
 				DF7C421D1E99C8FD006048E6 /* regPerson.m in Sources */,
 				DFDBFC1B1E764375005AE652 /* MASLayoutConstraint.m in Sources */,

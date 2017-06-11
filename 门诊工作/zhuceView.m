@@ -105,6 +105,12 @@
     [[UIApplication sharedApplication].windows[0].rootViewController presentViewController:alert animated:YES completion:nil];
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [self endEditing:YES];
+    return YES;
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

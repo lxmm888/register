@@ -79,7 +79,7 @@
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:regPath];
     
     
-    for (NSDictionary *dict in [dic valueForKey:self.userName]){//[NSArray arrayWithContentsOfFile:regPath]) {
+    for (NSDictionary *dict in [dic valueForKey:self.account]){//[NSArray arrayWithContentsOfFile:regPath]) {
         regPerson *rp = [regPerson dictToModel:dict];
         [dataSource addObject:rp];
     }

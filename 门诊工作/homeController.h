@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface homeController : UIViewController
+@property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *account;
 
 
 @end

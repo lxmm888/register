@@ -10,7 +10,7 @@
 
 @interface meController : UIViewController
 
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *account;
 
 @property (nonatomic, strong) NSString *name;
 

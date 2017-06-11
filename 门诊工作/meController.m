@@ -89,20 +89,22 @@
     UIImage *im = [UIImage imageNamed:[dict valueForKey:@"iconName"]];
     if (indexPath.section == 0) {
         UIImageView *iconView = [[UIImageView alloc] initWithImage:im];
+        iconView.layer.cornerRadius = 10;
 //        iconView.layer.cornerRadius = 10.0;
         CGFloat WH = 50;//btnW and btnH
         CGFloat XY = (88 - WH) * 0.5;//btnX and Y
         iconView.frame = CGRectMake(XY, XY, WH, WH);
         [cell.contentView addSubview:iconView];
         
-        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 25, iconView.y, 200, 30)];
+        UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame) + 25, iconView.y, 200, 25)];
         nameLabel.font = [UIFont systemFontOfSize:14];
 //        nameLabel.numberOfLines = 2;
+        
         nameLabel.text = [NSString stringWithFormat:@"用户名：%@",self.name];
 
-        UILabel *accountLabel = [[UILabel alloc] initWithFrame:CGRectMake(nameLabel.x, CGRectGetMaxY(nameLabel.frame) + 15, 200, 30)];
+        UILabel *accountLabel = [[UILabel alloc] initWithFrame:CGRectMake(nameLabel.x, CGRectGetMaxY(nameLabel.frame), 200, nameLabel.height)];
         accountLabel.font = [UIFont systemFontOfSize:14];;
-        accountLabel.text =[NSString stringWithFormat:@"账号：%@",self.userName];
+        accountLabel.text =[NSString stringWithFormat:@"账号：%@",self.account];
         [cell.contentView addSubview:nameLabel];
         [cell.contentView addSubview:accountLabel];
     }

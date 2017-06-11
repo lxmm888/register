@@ -10,7 +10,7 @@
 
 @interface tab : UITabBarController
 //账号
-@property (nonatomic, strong) NSString *userName;
+@property (nonatomic, strong) NSString *account;
 //用户名
 @property (nonatomic, strong) NSString *name;
 

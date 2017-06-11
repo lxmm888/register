@@ -113,7 +113,8 @@
     NSString *doctorName = _m.classDoctor[indexPath.row];
     nview.doctorName = doctorName;
     nview.isDim = YES;
-    nview.userName = self.userName;
+    nview.account = self.account;
+    nview.name = self.name;
     nview.m = _m;
     [self.view addSubview:nview];
     
