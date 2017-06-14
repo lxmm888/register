@@ -21,20 +21,15 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        CGFloat labelX = 70;
-        CGFloat labelY = 150;
-        CGFloat labelW = 40;
         CGFloat labelH = 44;
         
         //    CGFloat fieldX = CGRectGetMaxX(accountLabel.frame) + 30;
-        CGFloat fieldY = labelY;
         CGFloat fieldW = 300;
         CGFloat fieldH = labelH;
         
         nameTF = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, fieldW, fieldH)];
         nameTF.center = CGPointMake(self.bounds.size.width * 0.5, 50);
         nameTF.placeholder = @"请设置昵称";
-        //    [accountTF setFrame:CGRectMake(fieldX,fieldY, fieldW, fieldH)];
         nameTF.borderStyle = UITextBorderStyleRoundedRect;
         nameTF.delegate = self;
         [self addSubview:nameTF];

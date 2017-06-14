@@ -68,12 +68,12 @@
     
     
     NSMutableDictionary *textAttr = [NSMutableDictionary dictionary];
-    textAttr[UITextAttributeTextColor] = [UIColor blackColor];
-    textAttr[UITextAttributeFont] = [UIFont systemFontOfSize:10];
+    textAttr[NSForegroundColorAttributeName] = [UIColor blackColor];
+    textAttr[NSFontAttributeName] = [UIFont systemFontOfSize:10];
     [childVc.tabBarItem setTitleTextAttributes:textAttr forState:UIControlStateNormal];
     
     NSMutableDictionary *selectdTextAttr = [NSMutableDictionary dictionary];
-    selectdTextAttr[UITextAttributeTextColor] = [UIColor orangeColor];
+    selectdTextAttr[NSForegroundColorAttributeName] = [UIColor orangeColor];
     [childVc.tabBarItem setTitleTextAttributes:selectdTextAttr forState:UIControlStateSelected];
     LXNav* nav=[[LXNav alloc]initWithRootViewController:childVc];
     [self addChildViewController:nav];

@@ -10,6 +10,6 @@
 
 @interface LXDatePickerView : UIPickerView
 
-
+- (NSString *)getTitle;
 
 @end

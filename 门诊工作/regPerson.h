@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSString *doctorName;
 @property (nonatomic, strong) NSString *departName;
 @property (nonatomic, strong) NSString *regTime;
+@property (nonatomic, strong) NSString *orderTime;
 
 
 

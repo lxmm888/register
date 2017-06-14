@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],UITextAttributeTextColor,nil]];  
+    [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     [self initData];
     [self setTableView];
@@ -28,7 +28,6 @@
 - (void)initData
 {
     dataSource = [NSMutableArray array];
-    
     NSDictionary *dict0 = [NSDictionary dictionaryWithObjectsAndKeys:_name,@"title",@"stig",@"iconName",@"WeChat ID:k211",@"detail", nil];
     NSArray *arr0 = [NSArray arrayWithObject:dict0];
     [dataSource addObject:arr0];

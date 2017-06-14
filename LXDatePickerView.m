@@ -17,6 +17,9 @@
     NSMutableArray *arr0;
     NSArray *arr1;
     NSArray *arr2;
+    NSInteger dateNum;
+    NSInteger hourNum;
+    NSInteger minNum;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -31,6 +34,7 @@
 
 - (void)dataInit
 {
+    dateNum = hourNum = minNum = 0;
     arr0 = [NSMutableArray array];
     NSInteger weekDay = [self getNowWeekday];
     for (NSInteger i = weekDay; i < weekDay + 7; i ++) {
@@ -68,7 +72,7 @@
 
         //日期string
         NSString *dateStr = [formatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:i * 86400]];
-        NSLog(@"%@",[NSString stringWithFormat:@"%@ %@",dateStr,weekDayStr]);
+//        NSLog(@"%@",[NSString stringWithFormat:@"%@ %@",dateStr,weekDayStr]);
         [arr0 addObject:[NSString stringWithFormat:@"%@ %@",dateStr,weekDayStr]];
     }
     
@@ -77,7 +81,7 @@
     self.dataSource = self;
     self.delegate = self;
     dataSource = [NSMutableArray arrayWithObjects:arr0,arr1,arr2, nil];
-
+    
 }
 
 //返回1 是周日
@@ -113,6 +117,35 @@
     return arr[row];
     
 }
+
+- (NSString *)getTitle{
+    dateNum = [self selectedRowInComponent:0];
+    hourNum = [self selectedRowInComponent:1];
+    minNum  =[self selectedRowInComponent:2];
+    NSString *str0 = [((NSArray *)dataSource[0]) objectAtIndex:dateNum];
+    NSString *str1 = [((NSArray *)dataSource[1]) objectAtIndex:hourNum];
+    NSString *str2 = [((NSArray *)dataSource[2]) objectAtIndex:minNum];
+    NSString *str = [NSString stringWithFormat:@"%@ %@:%@",str0,str1,str2];
+    return str;
+    
+}
+
+
+//
+//- (void)selectRow:(NSInteger)row inComponent:(NSInteger)component animated:(BOOL)animated
+//{
+//    if (component == 0) {
+//        dateNum = row;
+//    }
+//    else if (component == 1)
+//    {
+//        hourNum = row;
+//    }
+//    else{
+//        minNum =row;
+//    }
+//    
+//}
 
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component
 {

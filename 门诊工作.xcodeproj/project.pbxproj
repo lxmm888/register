@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DF0480501E6FA0380058FC86 /* LXSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = DF04804F1E6FA0380058FC86 /* LXSegment.m */; };
 		DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF0480511E6FB5760058FC86 /* DepartmentList.plist */; };
-		DF13D3681EC953CC00D4D814 /* File in Resources */ = {isa = PBXBuildFile; fileRef = DF13D3671EC953CC00D4D814 /* File */; };
 		DF173FA21E9C7C1700FE87CC /* manageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF173FA11E9C7C1700FE87CC /* manageCellView.m */; };
 		DF32CDF51E70067900BF2D58 /* regController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF32CDF41E70067900BF2D58 /* regController.m */; };
 		DF3D1FFA1E82103500D16612 /* popMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3D1FF91E82103500D16612 /* popMenu.m */; };
@@ -37,7 +36,6 @@
 		DFA4C1C61E70E5DB00BA0E4D /* regCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C51E70E5DB00BA0E4D /* regCell.m */; };
 		DFA4C1C91E71622500BA0E4D /* noticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C81E71622500BA0E4D /* noticeView.m */; };
 		DFA4C1CC1E71645600BA0E4D /* noticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1CB1E71645600BA0E4D /* noticeController.m */; };
-		DFB03C741E889E2C00731FC9 /* noticeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB03C731E889E2C00731FC9 /* noticeCell.m */; };
 		DFB4D05A1EDA8FFD004C0B82 /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4D0591EDA8FFD004C0B82 /* CacheTool.m */; };
 		DFB4D05C1EDA90B0004C0B82 /* accountList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFB4D05B1EDA90B0004C0B82 /* accountList.plist */; };
 		DFC123131E6F9C0700C6D82B /* desView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC123121E6F9C0700C6D82B /* desView.m */; };
@@ -78,7 +76,6 @@
 		DF04804E1E6FA0380058FC86 /* LXSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXSegment.h; sourceTree = "<group>"; };
 		DF04804F1E6FA0380058FC86 /* LXSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSegment.m; sourceTree = "<group>"; };
 		DF0480511E6FB5760058FC86 /* DepartmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DepartmentList.plist; sourceTree = "<group>"; };
-		DF13D3671EC953CC00D4D814 /* File */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
 		DF173FA01E9C7C1700FE87CC /* manageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = manageCellView.h; sourceTree = "<group>"; };
 		DF173FA11E9C7C1700FE87CC /* manageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = manageCellView.m; sourceTree = "<group>"; };
 		DF32CDF31E70067900BF2D58 /* regController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = regController.h; sourceTree = "<group>"; };
@@ -133,8 +130,6 @@
 		DFA4C1C81E71622500BA0E4D /* noticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeView.m; sourceTree = "<group>"; };
 		DFA4C1CA1E71645600BA0E4D /* noticeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeController.h; sourceTree = "<group>"; };
 		DFA4C1CB1E71645600BA0E4D /* noticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeController.m; sourceTree = "<group>"; };
-		DFB03C721E889E2C00731FC9 /* noticeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeCell.h; sourceTree = "<group>"; };
-		DFB03C731E889E2C00731FC9 /* noticeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeCell.m; sourceTree = "<group>"; };
 		DFB4D0581EDA8FFD004C0B82 /* CacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheTool.h; sourceTree = "<group>"; };
 		DFB4D0591EDA8FFD004C0B82 /* CacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheTool.m; sourceTree = "<group>"; };
 		DFB4D05B1EDA90B0004C0B82 /* accountList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accountList.plist; sourceTree = "<group>"; };
@@ -219,8 +214,7 @@
 				DF3D1FF71E82101300D16612 /* view */,
 				DF88A5F41E7288400091ABD4 /* manageController.h */,
 				DF88A5F51E7288400091ABD4 /* manageController.m */,
-				DF7C421B1E99C8FD006048E6 /* regPerson.h */,
-				DF7C421C1E99C8FD006048E6 /* regPerson.m */,
+				DFBB911C1EF0C95E00C9C67A /* model */,
 			);
 			name = manage;
 			sourceTree = "<group>";
@@ -243,12 +237,9 @@
 		DF3F26DF1EC9DB2E006E56CA /* login */ = {
 			isa = PBXGroup;
 			children = (
-				DF3F26E61EC9E584006E56CA /* zhuceView.h */,
-				DF3F26E71EC9E584006E56CA /* zhuceView.m */,
+				DFBB911D1EF0C9D600C9C67A /* view */,
 				DF3F26E01EC9DB41006E56CA /* loginController.h */,
 				DF3F26E11EC9DB41006E56CA /* loginController.m */,
-				DF3F26E31EC9DBA5006E56CA /* loginView.h */,
-				DF3F26E41EC9DBA5006E56CA /* loginView.m */,
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -337,7 +328,6 @@
 				DF9E114A1E6CF54D00405BDF /* PrefixHeader.pch */,
 				DF9A99851E8529530010F24E /* RegList.plist */,
 				DF0480511E6FB5760058FC86 /* DepartmentList.plist */,
-				DF13D3671EC953CC00D4D814 /* File */,
 			);
 			name = main;
 			sourceTree = "<group>";
@@ -359,6 +349,26 @@
 				DF04804F1E6FA0380058FC86 /* LXSegment.m */,
 			);
 			name = tool;
+			sourceTree = "<group>";
+		};
+		DFBB911C1EF0C95E00C9C67A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DF7C421B1E99C8FD006048E6 /* regPerson.h */,
+				DF7C421C1E99C8FD006048E6 /* regPerson.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		DFBB911D1EF0C9D600C9C67A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DF3F26E61EC9E584006E56CA /* zhuceView.h */,
+				DF3F26E71EC9E584006E56CA /* zhuceView.m */,
+				DF3F26E31EC9DBA5006E56CA /* loginView.h */,
+				DF3F26E41EC9DBA5006E56CA /* loginView.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		DFD056321E6FC68E0015D7E6 /* model */ = {
@@ -383,8 +393,6 @@
 				DF9E11481E6CF50900405BDF /* regView.m */,
 				DFA4C1C71E71622500BA0E4D /* noticeView.h */,
 				DFA4C1C81E71622500BA0E4D /* noticeView.m */,
-				DFB03C721E889E2C00731FC9 /* noticeCell.h */,
-				DFB03C731E889E2C00731FC9 /* noticeCell.m */,
 				DFC123111E6F9C0700C6D82B /* desView.h */,
 				DFC123121E6F9C0700C6D82B /* desView.m */,
 			);
@@ -542,7 +550,6 @@
 				DF9E111D1E6CF44B00405BDF /* Assets.xcassets in Resources */,
 				DF0480521E6FB5760058FC86 /* DepartmentList.plist in Resources */,
 				DF9A99861E8529530010F24E /* RegList.plist in Resources */,
-				DF13D3681EC953CC00D4D814 /* File in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +596,6 @@
 				DF173FA21E9C7C1700FE87CC /* manageCellView.m in Sources */,
 				DF9E11501E6CFAB200405BDF /* LXNav.m in Sources */,
 				DF9E11151E6CF44B00405BDF /* AppDelegate.m in Sources */,
-				DFB03C741E889E2C00731FC9 /* noticeCell.m in Sources */,
 				DF32CDF51E70067900BF2D58 /* regController.m in Sources */,
 				DFDBFC211E764375005AE652 /* ViewController+MASAdditions.m in Sources */,
 				DFDBFC1D1E764375005AE652 /* MASViewConstraint.m in Sources */,

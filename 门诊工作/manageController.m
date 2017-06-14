@@ -45,13 +45,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
     [self setNav];
     [self setTableView];
-
-
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)setNav
@@ -62,8 +57,8 @@
     [titleBtn addTarget:self action:@selector(titleBtnClick) forControlEvents:UIControlEventTouchUpInside];
     UIImage *im = [UIImage imageNamed:@"navigationbar_more"];
     im = [im imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithImage:im style:UIBarButtonItemStyleDone target:self action:@selector(rightBtnClick)];
-    self.navigationItem.rightBarButtonItem = rightBtn;
+//    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc] initWithImage:im style:UIBarButtonItemStyleDone target:self action:@selector(rightBtnClick)];
+//    self.navigationItem.rightBarButtonItem = rightBtn;
     
 }
 
@@ -77,8 +72,6 @@
 
     //拿出当前用户数据数组，再for in
     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:regPath];
-    
-    
     for (NSDictionary *dict in [dic valueForKey:self.account]){//[NSArray arrayWithContentsOfFile:regPath]) {
         regPerson *rp = [regPerson dictToModel:dict];
         [dataSource addObject:rp];
@@ -101,12 +94,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    manageCell *cell = [manageCell tableViewToCell:tableView];
-//    cell.backgroundColor = [UIColor colorWithRed:246/255.0 green:247/255.0 blue:251/255.0 alpha:1.0];
-//    cell.rp = dataSource[indexPath.row];
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     manageCellView *mcv = [[manageCellView alloc] initWithFrame:CGRectMake(0, 0, LXScreenW, 260)];
-//    cell.height = mcv.cellH;
     mcv.regPerson =dataSource[indexPath.row];
     mcv.centerX = self.view.centerX;
     [cell.contentView addSubview:mcv];

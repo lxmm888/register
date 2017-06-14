@@ -131,19 +131,19 @@
             label.textColor = textColo;
             [labelArr addObject:label];
             [contentView addSubview:label];
-//            if (i == 2) {
-//                timeLabel = [UILabel new];
-//                timeLabel.textAlignment = NSTextAlignmentRight;
-//                timeLabel.textColor = textColo;
-//                timeLabel.font = [UIFont systemFontOfSize:13];
-//                [self addSubview:timeLabel];
-//                
-//                [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//                    make.right.mas_equalTo(contentView.mas_right).with.offset(-20);
-//                    make.bottom.mas_equalTo(contentView.mas_bottom).with.offset(-5);
-//                    make.size.mas_equalTo(CGSizeMake(150, 23));
-//                }];
-//            }
+            if (i == 2) {
+                timeLabel = [UILabel new];
+                timeLabel.textAlignment = NSTextAlignmentRight;
+                timeLabel.textColor = textColo;
+                timeLabel.font = [UIFont systemFontOfSize:13];
+                [self addSubview:timeLabel];
+                
+                [timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+                    make.right.mas_equalTo(contentView.mas_right).with.offset(-20);
+                    make.bottom.mas_equalTo(contentView.mas_bottom).with.offset(-5);
+                    make.size.mas_equalTo(CGSizeMake(150, 23));
+                }];
+            }
         }
         
     }
@@ -161,7 +161,7 @@
         switch (label.tag) {
             case 0:
 //                预约时间
-                label.text = regPerson.regTime;
+                label.text = regPerson.orderTime;
                 break;
                 
             case 1:
@@ -173,8 +173,6 @@
 //                所选医生姓名
                 label.text = [NSString stringWithFormat:@"%@ 医生",regPerson.doctorName];
                 break;
-                
-                
             default:
                 break;
         }

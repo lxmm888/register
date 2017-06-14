@@ -24,6 +24,7 @@
     self.nameStr = dict[@"nameStr"];
     self.departName = dict[@"departName"];
     self.regTime = dict[@"regTime"];
+    self.orderTime = dict[@"orderTime"];
     return self;
 }
 

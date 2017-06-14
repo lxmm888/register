@@ -25,13 +25,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         //创建两个label，两个textField
-        CGFloat labelX = 70;
-        CGFloat labelY = 150;
-        CGFloat labelW = 40;
         CGFloat labelH = 44;
 
         //    CGFloat fieldX = CGRectGetMaxX(accountLabel.frame) + 30;
-        CGFloat fieldY = labelY;
         CGFloat fieldW = 300;
         CGFloat fieldH = labelH;
         
@@ -55,8 +51,7 @@
         //设置登录按钮及背景色
         //    UIImage *image = [UIImage imageNamed:@"RedButton"];
         //    UIImage *bgImage = [image stretchableImageWithLeftCapWidth:image.size.width * 0.5 topCapHeight:image.size.height * 0.5];
-        CGFloat y = CGRectGetMaxY(passwd.frame) + 50;//CGRectGetMaxY(im.frame) + 30;
-        CGFloat x = 20;
+     
         UIButton *loginBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
         loginBtn.center = CGPointMake(self.bounds.size.width * 0.5, CGRectGetMaxY(passwd.frame) + 50);
         //    [loginBtn setBackgroundImage:bgImage forState:UIControlStateNormal];

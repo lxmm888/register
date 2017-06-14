@@ -118,7 +118,7 @@
     nview.m = _m;
     [self.view addSubview:nview];
     
-     __weak typeof (self) ws=self;
+//     __weak typeof (self) ws=self;
     
         
 //        if ([obj isKindOfClass:[UIView class]]) {

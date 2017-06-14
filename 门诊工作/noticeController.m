@@ -16,9 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CGFloat contentH = 100;
-    CGFloat btnH = (self.view.height - contentH) * 0.5;
-    
     UIButton *topBtn = [[UIButton alloc] initWithFrame:CGRectMake(self.view.centerX, self.view.height, 200, 100)];
     NSLog(@"width%f",self.view.frame.size.width);
     NSLog(@"hei%f",self.view.frame.size.height);

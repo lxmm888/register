@@ -30,9 +30,7 @@
 - (void)setSubviews
 {
     //创建两个label，两个textField
-    CGFloat labelX = 70;
     CGFloat labelY = 150;
-    CGFloat labelW = 40;
     CGFloat labelH = 44;
     
     UIImageView *mainImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainIcon"]];
@@ -64,7 +62,6 @@
     NSArray *arr = @[dic1,dic2];
     [seg addViewAndTitleWithArray:arr];
     
-    CGFloat fieldY = labelY;
     CGFloat fieldW = 300;
     CGFloat fieldH = labelH;
     
