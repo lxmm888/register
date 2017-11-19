@@ -15,6 +15,7 @@
 #import "LXDatePickerView.h"
 @interface noticeView()<UITextFieldDelegate>
 
+
 @end
 
 @implementation noticeView{
@@ -248,17 +249,30 @@
         }
         [UIView animateWithDuration:0.5 animations:^{
             self.isDim = NO;
+            
         }];
+//        [t setSelectedIndex:1];
+//        [t presentViewController:t.childViewControllers[1] animated:YES completion:^{
+        
+//        }];
+        if ([self.delegate respondsToSelector:@selector(returnToHomePage)]) {
+            [self.delegate returnToHomePage];
+        }
+        NSLog(@"this is delegate");
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-
+        [self removeFromSuperview];
+//        [[UIApplication sharedApplication].keyWindow.rootViewController.presentedViewController popoverPresentationController];
+//        [t.navigationController popoverPresenta/tionController];
+        
+//        [t.selectedViewController.presentingViewController
     }];
     [alert addAction:okAction];
     [alert addAction:cancelAction];
     [[UIApplication sharedApplication].windows[0].rootViewController presentViewController:alert animated:YES completion:^{
         
-        }];
- 
+      
+    }];
 }
 
 

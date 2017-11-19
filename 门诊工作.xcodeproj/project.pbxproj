@@ -36,6 +36,7 @@
 		DFA4C1C61E70E5DB00BA0E4D /* regCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C51E70E5DB00BA0E4D /* regCell.m */; };
 		DFA4C1C91E71622500BA0E4D /* noticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1C81E71622500BA0E4D /* noticeView.m */; };
 		DFA4C1CC1E71645600BA0E4D /* noticeController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA4C1CB1E71645600BA0E4D /* noticeController.m */; };
+		DFAF00E71EF275FB00CFFB1F /* LXController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFAF00E61EF275FB00CFFB1F /* LXController.m */; };
 		DFB4D05A1EDA8FFD004C0B82 /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB4D0591EDA8FFD004C0B82 /* CacheTool.m */; };
 		DFB4D05C1EDA90B0004C0B82 /* accountList.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFB4D05B1EDA90B0004C0B82 /* accountList.plist */; };
 		DFC123131E6F9C0700C6D82B /* desView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFC123121E6F9C0700C6D82B /* desView.m */; };
@@ -130,6 +131,8 @@
 		DFA4C1C81E71622500BA0E4D /* noticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeView.m; sourceTree = "<group>"; };
 		DFA4C1CA1E71645600BA0E4D /* noticeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noticeController.h; sourceTree = "<group>"; };
 		DFA4C1CB1E71645600BA0E4D /* noticeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = noticeController.m; sourceTree = "<group>"; };
+		DFAF00E51EF275FB00CFFB1F /* LXController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXController.h; sourceTree = "<group>"; };
+		DFAF00E61EF275FB00CFFB1F /* LXController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXController.m; sourceTree = "<group>"; };
 		DFB4D0581EDA8FFD004C0B82 /* CacheTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheTool.h; sourceTree = "<group>"; };
 		DFB4D0591EDA8FFD004C0B82 /* CacheTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheTool.m; sourceTree = "<group>"; };
 		DFB4D05B1EDA90B0004C0B82 /* accountList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accountList.plist; sourceTree = "<group>"; };
@@ -404,6 +407,8 @@
 			children = (
 				DFD481981EA85A4200C21416 /* meController.h */,
 				DFD481991EA85A4200C21416 /* meController.m */,
+				DFAF00E51EF275FB00CFFB1F /* LXController.h */,
+				DFAF00E61EF275FB00CFFB1F /* LXController.m */,
 			);
 			name = me;
 			sourceTree = "<group>";
@@ -574,6 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFAF00E71EF275FB00CFFB1F /* LXController.m in Sources */,
 				DF49D6A41E9B4DBC007E3A62 /* LXButton.m in Sources */,
 				DF88A5F61E7288400091ABD4 /* manageController.m in Sources */,
 				DFA4C1C61E70E5DB00BA0E4D /* regCell.m in Sources */,

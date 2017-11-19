@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "classModel.h"
 
+@protocol noticeDelegate <NSObject>
+
+- (void)returnToHomePage;
+
+@end
+
 @interface noticeView : UIView
 @property (nonatomic, strong) NSString *account;
 @property (nonatomic, strong) NSString *name;
@@ -23,4 +29,8 @@
 
 @property (nonatomic, assign) BOOL isDim;
 
+
+@property (nonatomic, weak) id<noticeDelegate> delegate;
+
 @end
+

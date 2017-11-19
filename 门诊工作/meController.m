@@ -7,6 +7,7 @@
 //
 
 #import "meController.h"
+#import "LXController.h"
 #import "loginController.h"
 @interface meController ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *tView;
@@ -134,9 +135,11 @@
 //        [UIApplication sharedApplication].keyWindow.rootViewController = [[loginController alloc] init];
     }
     else{
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor blueColor];
-    [self.navigationController pushViewController:vc animated:YES];
+//    UIViewController *vc = [[UIViewController alloc] init];
+//    vc.view.backgroundColor = [UIColor blueColor];
+        LXController *lc = [[LXController alloc] init];
+        
+    [self.navigationController pushViewController:lc animated:YES];
     }
 }
 

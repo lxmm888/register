@@ -9,7 +9,7 @@
 #import "regController.h"
 #import "noticeController.h"
 
-@interface regController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverPresentationControllerDelegate>
+@interface regController ()<UITableViewDelegate,UITableViewDataSource,UIPopoverPresentationControllerDelegate, noticeDelegate>
 
 @end
 
@@ -115,6 +115,7 @@
     nview.isDim = YES;
     nview.account = self.account;
     nview.name = self.name;
+    nview.delegate = self;
     nview.m = _m;
     [self.view addSubview:nview];
     
@@ -129,10 +130,11 @@
 ////                
 ////            }];
 //            [ws.navigationController popToRootViewControllerAnimated:YES];
-        
+}
 
-
-    
+- (void)returnToHomePage
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)popAMenu
